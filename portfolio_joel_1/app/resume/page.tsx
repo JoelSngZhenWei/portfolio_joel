@@ -82,7 +82,7 @@ const experience = {
 const education = {
   icon: '',
   title: 'My Education',
-  description: 'Double degree first class honours student from Singapore Management University. Dean\'s list for all applicable years. Former president of committee overseeing 22 community service clubs in SMU, former member of SMU Student Association Council, former president of SMU\'s largest community service project.',
+  description: 'Double degree first class honours student from Singapore Management University. Dean\'s list for all applicable years. ',
   items: [
     {
       instituition: 'Singapore Management University',
