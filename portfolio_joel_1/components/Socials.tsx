@@ -9,8 +9,12 @@ const socials = [
     icon: <FaLinkedinIn />, path:''
   },
 ]
+interface SocialsProps {
+  containerStyles?: string;
+  iconStyles?: string;
+}
 
-const Socials = ({containerStyles, iconStyles}) => {
+const Socials: React.FC<SocialsProps> = ({ containerStyles, iconStyles }) => {
   return (
     <div className={containerStyles}>
       {socials.map((item,index)=>{

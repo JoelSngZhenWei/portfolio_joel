@@ -9,7 +9,7 @@ const projects = [
     title: 'Options Pricing using Machine Learning',
     description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, suscipit deleniti!',
     skills: ['Machine Learning','Neural Networks','Python'],
-    href: 'projects/optionspricing'
+    href: 'projects/options'
   },
   {
     num: '02',
@@ -32,7 +32,7 @@ const projects = [
   },
 ]
 
-export default function Contact() {
+export default function Projects() {
   return (
     <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
       <div className="container mx-auto">
