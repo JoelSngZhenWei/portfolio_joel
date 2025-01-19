@@ -43,7 +43,7 @@ export default function Projects() {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeIn" }
           }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-[60px]"
+          className="grid grid-cols-1 md:grid-cols-2 gap-[30px] xl:gap-[60px]"
         >
           {projects.map((project, index) => {
             return (
