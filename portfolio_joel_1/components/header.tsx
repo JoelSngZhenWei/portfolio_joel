@@ -6,10 +6,9 @@ import { Nav } from "./nav"
 import MobileNav from "./MobileNav"
  
 export function Header() {
-
   return (
-    <header>
-      <div className="py-4 xl:py-6 px-4 sticky top-0">
+    <header className="sticky top-0 z-50 bg-primary/80 backdrop-blur-sm">
+      <div className="py-4 xl:py-6 px-4">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo */}
           <Link href='/'>
@@ -19,7 +18,6 @@ export function Header() {
           {/* windows nav */}
           <div className="hidden xl:flex items-center gap-8">
             <Nav />
-
           </div>
 
           {/* mobile nav */}
@@ -27,9 +25,8 @@ export function Header() {
             <MobileNav/>
           </div>
         </div>
-        
-        
       </div>
     </header>
   )
 }
+
