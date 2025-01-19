@@ -9,7 +9,7 @@ export function Header() {
 
   return (
     <header>
-      <div className="py-4 xl:py-6 px-4">
+      <div className="py-4 xl:py-6 px-4 sticky top-0">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo */}
           <Link href='/'>
