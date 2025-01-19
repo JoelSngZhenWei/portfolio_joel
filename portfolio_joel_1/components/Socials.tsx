@@ -6,7 +6,7 @@ const socials = [
     icon: <FaGithub />, path:''
   },
   {
-    icon: <FaLinkedinIn />, path:''
+    icon: <FaLinkedinIn />, path:'https://www.linkedin.com/in/joelsngzw/'
   },
 ]
 interface SocialsProps {
