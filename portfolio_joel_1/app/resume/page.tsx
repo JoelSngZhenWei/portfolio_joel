@@ -10,11 +10,10 @@ import {
 } from 'react-icons/fa'
 
 import {
-  SiTailwindcss,
   SiNextdotjs,
 } from 'react-icons/si'
 import { TbSql } from "react-icons/tb";
-import { SiScikitlearn, SiPandas, SiTensorflow, SiSelenium, SiUipath, SiTableau } from "react-icons/si";
+import { SiScikitlearn, SiPandas, SiTensorflow, SiSelenium, SiUipath, SiTableau, SiFlask } from "react-icons/si";
 import { VscAzure } from "react-icons/vsc";
 import { BsBarChartFill } from "react-icons/bs";
 
@@ -148,14 +147,14 @@ const skills = {
       description: "Library in Python for machine learning and deep learning."
     },
     {
+      icon: <SiFlask />,
+      name: "Flask",
+      description: "Python library for application backend development."
+    },
+    {
       icon: <SiNextdotjs />,
       name: "next.js",
       description: "Modern, react based framework for efficient web development."
-    },
-    {
-      icon: <SiTailwindcss />,
-      name: "tailwind.CSS",
-      description: "Modern CSS framework for efficient web development."
     },
     {
       icon: <FaNodeJs />,

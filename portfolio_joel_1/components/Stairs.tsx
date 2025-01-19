@@ -1,4 +1,3 @@
-import { reverse } from "dns";
 import { motion } from "framer-motion"
 
 const stairAnimation = {
@@ -13,7 +12,7 @@ const stairAnimation = {
     },
 };
 
-const reverseIndex = (index) => {
+const reverseIndex = (index: number) => {
     const totalSteps = 6;
     return totalSteps - index - 1;
 }

@@ -83,4 +83,12 @@ body {
   .accent {
     color: #ff5733; /* Replace with your desired accent color */
   }
+
+  .text-outline{
+    -webkit-text-stroke: 1px #ffffff;
+  }
+
+  .text-outline-hover {
+    -webkit-text-stroke: 1px #ff5733;
+  }
 }
