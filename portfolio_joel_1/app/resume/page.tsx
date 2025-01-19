@@ -2,6 +2,7 @@
 import { Button } from '@/components/ui/button';
 import { FiDownload } from 'react-icons/fi'
 
+
 import {
   FaHtml5,
   FaJs,
@@ -20,12 +21,11 @@ import { VscAzure } from "react-icons/vsc";
 import { BsBarChartFill } from "react-icons/bs";
 
 
-// Software Tools: Azure, PowerBi, UiPath, Tableau
-
 // about data
 const about = {
   title: 'About me',
-  description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quia enim assumenda magnam? Dicta nobis, voluptatibus cumque incidunt dolore ex aut exercitationem excepturi molestias, tempore illo perferendis nam at voluptatem?',
+  description: 'I am a highly motivated individual with a strong background in data science, analytics, and digital transformation. With over 2 years of experience, I specialize in leveraging machine learning, NLP, and cloud technologies to deliver innovative solutions. Beyond my technical expertise, I am passionate about leadership, community service, and continuous learning, which have shaped me into a well-rounded professional driven to make a positive impact.',
+
   info: [
     {
       fieldName: 'Name',
@@ -104,7 +104,7 @@ const education = {
 
 const skills = {
   title: "My skills",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic rem ipsum, perspiciatis perferendis nemo obcaecati expedita unde? Consectetur quisquam quis debitis est voluptas? Aut sequi quasi ducimus iusto doloribus maiores.",
+  description: "I have extensive experience and expertise in machine learning, automation, data manipulation, and software development. Scroll to see all the programming languages, libraries \& frameworks, and software I have expertise in.",
   langlist: [
     {
       icon: <FaPython />,
