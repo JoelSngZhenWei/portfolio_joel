@@ -1,12 +1,12 @@
 import Link from "next/link"
-import {FaGithub, FaLinkedinIn} from'react-icons/fa'
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 
 const socials = [
   {
-    icon: <FaGithub />, path:'https://github.com/JoelSngZhenWei'
+    icon: <FaGithub />, path: 'https://github.com/JoelSngZhenWei'
   },
   {
-    icon: <FaLinkedinIn />, path:'https://www.linkedin.com/in/joelsngzw/'
+    icon: <FaLinkedinIn />, path: 'https://www.linkedin.com/in/joelsngzw/'
   },
 ]
 interface SocialsProps {
@@ -17,12 +17,12 @@ interface SocialsProps {
 const Socials: React.FC<SocialsProps> = ({ containerStyles, iconStyles }) => {
   return (
     <div className={containerStyles}>
-      {socials.map((item,index)=>{
+      {socials.map((item, index) => {
         return (
-        <Link key={index} href={item.path} className={iconStyles}>
-          {item.icon}
-        </Link>
-      );
+          <Link key={index} href={item.path} className={iconStyles} target="_blank" rel="noopener noreferrer">
+            {item.icon}
+          </Link>
+        );
       })}
     </div>
   )

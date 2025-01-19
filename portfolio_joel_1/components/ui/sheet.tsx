@@ -5,7 +5,8 @@ import * as SheetPrimitive from "@radix-ui/react-dialog"
 import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
-import {IoMdClose} from 'react-icons/io'
+import { FaChevronRight } from "react-icons/fa6";
+
 
 const Sheet = SheetPrimitive.Root
 
@@ -64,8 +65,8 @@ const SheetContent = React.forwardRef<
       className={cn(sheetVariants({ side }), className)}
       {...props}
     >
-      <SheetPrimitive.Close className="absolute right-8 top-8 transition-opacity outline-none">
-        <IoMdClose className="text-3xl accent"/>
+      <SheetPrimitive.Close className="absolute left-8 top-8 transition-opacity outline-none">
+        <FaChevronRight className="text-3xl accent"/>
         <span className="sr-only">Close</span>
       </SheetPrimitive.Close>
       {children}

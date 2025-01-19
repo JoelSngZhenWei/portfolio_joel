@@ -103,7 +103,7 @@ const education = {
 }
 
 const skills = {
-  title: "My skills",
+  title: "My Skills",
   description: "I have extensive experience and expertise in machine learning, automation, data manipulation, and software development. Scroll to see all the programming languages, libraries \& frameworks, and software I have expertise in.",
   langlist: [
     {
@@ -214,10 +214,10 @@ export default function Resume() {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" }
       }}
-      className='min-h-[80vh] flex items-center justify-center py-12 xl:py-0'
+      className='min-h-[80vh] flex items-center justify-center py-6 xl:py-0'
     >
       <div className='container mx-auto'>
-        <Tabs defaultValue='experience' className='flex flex-col xl:flex-row gap-[60px]'>
+        <Tabs defaultValue='experience' className='flex flex-col xl:flex-row gap-[30px]'>
           <div className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
             <TabsList className="flex flex-row justify-center xl:justify-start w-full gap-2 xl:gap-6 xl:flex-col">
               <TabsTrigger value="experience" className="bg-[#232329] px-4 flex-grow xl:flex-grow-0">Experience</TabsTrigger>

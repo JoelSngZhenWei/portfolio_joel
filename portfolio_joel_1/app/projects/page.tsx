@@ -47,28 +47,27 @@ export default function Projects() {
         >
           {projects.map((project, index) => {
             return (
-              <div key={index} className="flex-1 flex flex-col justify-center gap-6 group">
+              <div key={index} className="flex-1 flex flex-col justify-center gap-3 xl:gap-6 group">
                 {/* Top */}
                 <div className="w-full flex justify-between items-center">
-                  <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">{project.num}</div>
+                  <div className="text-3xl xl:text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">{project.num}</div>
                   <Link href={project.href} className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45">
                     <BsArrowDownRight className="text-primary text-3xl" />
                   </Link>
                 </div>
                 {/* title */}
-                <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">
+                <h2 className="text-[30px] xl:text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">
                   {project.title}
                 </h2>
                 {/* description */}
-                <p className="text-white/60">{project.description}</p>
+                <p className="text-white/60 text-sm">{project.description}</p>
                 <div className="flex flex-row gap-4">
                   {project.skills.map((skill, index) => {
                     return (
                       <div key={index}>
-                        <div className="bg-[#27272c] rounded-full px-6">
+                        <div className="bg-[#27272c] rounded-full px-6 py-3 text-sm">
                           {skill}
                         </div>
-
                       </div>
                     )
                   })}
