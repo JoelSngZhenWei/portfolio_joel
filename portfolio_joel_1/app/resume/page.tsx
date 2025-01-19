@@ -1,4 +1,6 @@
 "use client";
+import { Button } from '@/components/ui/button';
+import { FiDownload } from 'react-icons/fi'
 
 import {
   FaHtml5,
@@ -56,7 +58,7 @@ const about = {
 const experience = {
   icon: '',
   title: 'My Experience',
-  description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur expedita animi rerum nesciunt totam vel error rem reiciendis delectus veniam, temporibus, eligendi reprehenderit ducimus nulla doloribus minus dolores, inventore commodi?',
+  description: "Experienced in data science, analytics, and software development, with specialties in machine learning, NLP, RPA, and cloud development to deliver impactful solutions.",
   items: [
     {
       company: 'Zurich Insurance',
@@ -80,7 +82,7 @@ const experience = {
 const education = {
   icon: '',
   title: 'My Education',
-  description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur expedita animi rerum nesciunt totam vel error rem reiciendis delectus veniam, temporibus, eligendi reprehenderit ducimus nulla doloribus minus dolores, inventore commodi?',
+  description: 'Double degree first class honours student from Singapore Management University. Dean\'s list for all applicable years. Former president of committee overseeing 22 community service clubs in SMU, former member of SMU Student Association Council, former president of SMU\'s largest community service project.',
   items: [
     {
       instituition: 'Singapore Management University',
@@ -221,6 +223,12 @@ export default function Resume() {
             <TabsTrigger value='education' className='bg-[#232329] px-4'>Education</TabsTrigger>
             <TabsTrigger value='skills' className='bg-[#232329] px-4'>Skills</TabsTrigger>
             <TabsTrigger value='about' className='bg-[#232329] px-4'>About me</TabsTrigger>
+            <Button variant="outline" size="lg" className="uppercase ">
+              <a href="/assets/resume_joelsng.pdf" download="resume_joelsng.pdf" className='flex items-center gap-2'>
+                <span>Download CV</span>
+                <FiDownload className="text-xl" />
+              </a>
+            </Button>
           </TabsList>
 
           {/* content */}
@@ -295,7 +303,7 @@ export default function Resume() {
                   <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>
                     {skills.description}
                   </p>
-                  <ScrollArea className='h-[480px]'>
+                  <ScrollArea className='h-[400px]'>
                     <div className='flex flex-col gap-2'>
                       <span className='text-accent font-bold'>Langauges</span>
                       <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]'>
