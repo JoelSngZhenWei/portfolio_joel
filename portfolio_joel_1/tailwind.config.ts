@@ -21,7 +21,7 @@ export default {
   				foreground: 'hsl(var(--popover-foreground))'
   			},
   			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
+  				DEFAULT: '#1c1c22',
   				foreground: 'hsl(var(--primary-foreground))'
   			},
   			secondary: {
@@ -33,7 +33,7 @@ export default {
   				foreground: 'hsl(var(--muted-foreground))'
   			},
   			accent: {
-  				DEFAULT: 'hsl(var(--accent))',
+  				DEFAULT: '#ff5733',
   				foreground: 'hsl(var(--accent-foreground))'
   			},
   			destructive: {
@@ -51,6 +51,10 @@ export default {
   				'5': 'hsl(var(--chart-5))'
   			}
   		},
+		borderColor: (theme)=>({
+			...theme("colors"),
+			accent: theme("colors.accent"),
+		}),
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',

@@ -30,10 +30,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header/>
-        <StairTransition/>
+        <Header />
+        <StairTransition />
         <PageTransition>
-          {children}
+          <div className="px-4">
+            {children}
+          </div>
+
         </PageTransition>
       </body>
     </html>
