@@ -2,12 +2,11 @@
 
 import {
   FaHtml5,
-  FaCss3,
   FaJs,
   FaReact,
-  FaFigma,
   FaNodeJs,
   FaPython,
+  FaAws
 } from 'react-icons/fa'
 
 import {
@@ -15,9 +14,11 @@ import {
   SiNextdotjs,
 } from 'react-icons/si'
 import { TbSql } from "react-icons/tb";
-import { SiScikitlearn,SiPandas } from "react-icons/si";
+import { SiScikitlearn, SiPandas, SiTensorflow, SiSelenium, SiUipath, SiTableau } from "react-icons/si";
+import { VscAzure } from "react-icons/vsc";
+import { BsBarChartFill } from "react-icons/bs";
 
-// Frameworks/Libraries: Scikit, Selenium, NextJS, ReactJS
+
 // Software Tools: Azure, PowerBi, UiPath, Tableau
 
 // about data
@@ -72,22 +73,7 @@ const experience = {
       company: 'PwC',
       position: 'Digital Transformation Consulting Intern',
       duration: 'May 2023 - Aug 2023'
-    },
-    {
-      company: 'PwC',
-      position: 'Digital Transformation Consulting Intern',
-      duration: 'May 2023 - Aug 2023'
-    },
-    {
-      company: 'PwC',
-      position: 'Digital Transformation Consulting Intern',
-      duration: 'May 2023 - Aug 2023'
-    },
-    {
-      company: 'PwC',
-      position: 'Digital Transformation Consulting Intern',
-      duration: 'May 2023 - Aug 2023'
-    },
+    }
   ]
 }
 
@@ -99,7 +85,7 @@ const education = {
   items: [
     {
       instituition: 'Singapore Management University',
-      degree: 'Double Bachelor Degree in Information Systems and Business Management',
+      degree: 'Double Bachelor Degree in Info Systems and Business Management',
       duration: 'Aug 2021 - Present'
     },
     {
@@ -122,7 +108,7 @@ const skills = {
     {
       icon: <FaPython />,
       name: "Python",
-      description: ""
+      description: "Data analysis, machine learning, and backend development."
     },
     {
       icon: <FaHtml5 />,
@@ -132,51 +118,83 @@ const skills = {
     {
       icon: <FaJs />,
       name: "javascript",
-      description: "Higher level web development functionality."
+      description: "Adding interactivity and dynamic functionality to web applications."
     },
     {
       icon: <TbSql />,
       name: "SQL",
-      description:""
+      description: "Managing and querying relational databases efficiently."
     }
   ],
   frameworklist: [
     {
+      icon: <SiSelenium />,
+      name: "Selenium",
+      description: "Automating web browsers to perform testing, data collection, and scraping tasks."
+    },
+    {
       icon: <SiScikitlearn />,
       name: "ScikitLearn",
-      description: ""
+      description: "Machine learning library for Python, with tools for data analysis and predictive modeling."
     },
     {
       icon: <SiPandas />,
       name: "Pandas",
-      description: "Web development."
+      description: "Python library for data manipulation and analysis."
     },
     {
-      icon: <FaJs />,
-      name: "javascript",
-      description: "Higher level web development functionality."
-    },
-    {
-      icon: <TbSql />,
-      name: "SQL",
-      description:""
+      icon: <SiTensorflow />,
+      name: "Tensor Flow",
+      description: "Library in Python for machine learning and deep learning."
     },
     {
       icon: <SiNextdotjs />,
-      name: "next.js"
+      name: "next.js",
+      description: "Modern, react based framework for efficient web development."
     },
     {
       icon: <SiTailwindcss />,
-      name: "tailwind.css"
+      name: "tailwind.CSS",
+      description: "Modern CSS framework for efficient web development."
     },
     {
       icon: <FaNodeJs />,
-      name: "node.js"
+      name: "node.js",
+      description: "For building fast and scalable server-side applications."
     },
     {
-      icon: <FaFigma />,
-      name: "figma"
+      icon: <FaReact />,
+      name: "React.js",
+      description: "Building component-based user interfaces."
     },
+  ],
+  softwarelist: [
+    {
+      icon: <VscAzure />,
+      name: "Azure",
+      description: "Deploying, hosting, and monitoring cloud applications for company usage."
+    },
+    {
+      icon: <FaAws />,
+      name: "AWS",
+      description: "Deploying and managing backend applications and databases."
+    },
+    {
+      icon: <SiUipath />,
+      name: "UiPath",
+      description: "Low-code robotic process automation to automate repetitive tasks."
+    },
+    {
+      icon: <SiTableau />,
+      name: "Tableau",
+      description: "Data visualization tool for creating interactive dashboards and reports."
+    },
+    {
+      icon: <BsBarChartFill />,
+      name: "PowerBI",
+      description: "Visualizing data for business analytics."
+    },
+
   ]
 }
 
@@ -269,7 +287,7 @@ export default function Resume() {
             </TabsContent>
 
             {/* skill */}
-            <TabsContent value='skills' className='w-full h-full'>
+            <TabsContent value='skills' className='w-full'>
               <div className="flex flex-col gap-[30px]">
                 <div className='flex flex-col gap-[30px] text-center xl:text-left'>
                   <h3 className='text-4xl font-bold'>
@@ -278,32 +296,83 @@ export default function Resume() {
                   <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>
                     {skills.description}
                   </p>
-                  <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]'>
-                    {skills.langlist.map((lang, index) => {
-                      return (
-                        <li key={index}>
-                          <TooltipProvider delayDuration={100}>
-                            <Tooltip>
-                              <TooltipTrigger className='w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group'>
-                                <div className='text-6xl group-hover:text-accent transition-all duration-300'>{lang.icon}</div>
-                              </TooltipTrigger>
-                              <TooltipContent>
-                                <p className='capitalize'>
-                                  {lang.name}
-                                </p>
-                                <p>
-                                  {lang.description}
-                                </p>
-                              </TooltipContent>
-                            </Tooltip>
-                          </TooltipProvider>
-                        </li>
-                      )
-                    })}
-                  </ul>
+                  <ScrollArea className='h-[480px]'>
+                    <div className='flex flex-col gap-2'>
+                      <span className='text-accent font-bold'>Langauges</span>
+                      <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]'>
+                        {skills.langlist.map((lang, index) => {
+                          return (
+                            <li key={index}>
+                              <TooltipProvider delayDuration={100}>
+                                <Tooltip>
+                                  <TooltipTrigger className='w-full h-[150px] bg-[#232329] rounded-xl flex flex-col justify-center items-center group'>
+                                    <div className='text-6xl group-hover:text-accent transition-all duration-300'>{lang.icon}</div>
+                                    <span className='capitalize group-hover:text-accent transition-all duration-300'>{lang.name}</span>
+                                  </TooltipTrigger>
+                                  <TooltipContent>
+                                    <p>
+                                      {lang.description}
+                                    </p>
+                                  </TooltipContent>
+                                </Tooltip>
+                              </TooltipProvider>
+                            </li>
+                          )
+                        })}
+                      </ul>
+
+                      <span className='text-accent font-bold'>Libraries and Frameworks</span>
+                      <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]'>
+                        {skills.frameworklist.map((fw, index) => {
+                          return (
+                            <li key={index}>
+                              <TooltipProvider delayDuration={100}>
+                                <Tooltip>
+                                  <TooltipTrigger className='w-full h-[150px] bg-[#232329] rounded-xl flex flex-col justify-center items-center group'>
+                                    <div className='text-6xl group-hover:text-accent transition-all duration-300'>{fw.icon}</div>
+                                    <span className='capitalize group-hover:text-accent transition-all duration-300'>{fw.name}</span>
+                                  </TooltipTrigger>
+                                  <TooltipContent>
+                                    <p>
+                                      {fw.description}
+                                    </p>
+                                  </TooltipContent>
+                                </Tooltip>
+                              </TooltipProvider>
+                            </li>
+                          )
+                        })}
+                      </ul>
+
+                      <span className='text-accent font-bold'>Software</span>
+                      <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]'>
+                        {skills.softwarelist.map((sw, index) => {
+                          return (
+                            <li key={index}>
+                              <TooltipProvider delayDuration={100}>
+                                <Tooltip>
+                                  <TooltipTrigger className='w-full h-[150px] bg-[#232329] rounded-xl flex flex-col justify-center items-center group '>
+                                    <div className='text-6xl group-hover:text-accent transition-all duration-300'>{sw.icon}</div>
+                                    <span className='capitalize group-hover:text-accent transition-all duration-300'>{sw.name}</span>
+                                  </TooltipTrigger>
+                                  <TooltipContent>
+                                    <p>
+                                      {sw.description}
+                                    </p>
+                                  </TooltipContent>
+                                </Tooltip>
+                              </TooltipProvider>
+                            </li>
+                          )
+                        })}
+                      </ul>
+                    </div>
+                  </ScrollArea>
 
                 </div>
+
               </div>
+
             </TabsContent>
 
             {/* about */}
@@ -326,7 +395,7 @@ export default function Resume() {
           </div>
 
         </Tabs>
-      </div>
-    </motion.div>
+      </div >
+    </motion.div >
   );
 }
