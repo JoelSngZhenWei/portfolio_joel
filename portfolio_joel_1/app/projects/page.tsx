@@ -61,7 +61,7 @@ export default function Projects() {
                 </h2>
                 {/* description */}
                 <p className="text-white/60 text-sm">{project.description}</p>
-                <div className="flex flex-row gap-4">
+                <div className="flex flex-row gap-4 flex-wrap">
                   {project.skills.map((skill, index) => {
                     return (
                       <div key={index}>
