@@ -40,7 +40,7 @@ export default function Contact() {
                 Let`s work together
               </h3>
               <p className="text-white/60">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, quis, dicta a nesciunt ex eveniet accusantium molestias nemo consequuntur consequatur maxime omnis, sed quas. Molestias voluptates vitae harum possimus rem?
+                Whether you are an employer seeking a passionate data scientist or developer, a collaborator with an exciting project, or simply looking to connect, I would love to hear from you! Feel free to send me an email or leave a message, and I will get back to you as soon as possible.
               </p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -63,7 +63,7 @@ export default function Contact() {
 
           {/* info */}
           <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
-            <ul className="flex flex-col gap-10">
+            <ul className="flex flex-row xl:flex-col gap-10">
               {info.map((item, index) => {
                 return (
                   <li key={index} className="flex items-center gap-6">
