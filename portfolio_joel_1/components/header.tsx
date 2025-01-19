@@ -13,7 +13,7 @@ export function Header() {
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo */}
           <Link href='/'>
-            <h1 className="text-3xl font-semibold">Joel Sng</h1>
+            <h1 className="text-xl xl:text-3xl font-semibold">Joel Sng</h1>
           </Link>
 
           {/* windows nav */}
