@@ -82,7 +82,7 @@ const experience = {
 const education = {
   icon: '',
   title: 'My Education',
-  description: 'Double degree first class honours student from Singapore Management University. Dean\'s list for all applicable years. ',
+  description: 'Double degree first class honours student from Singapore Management University. Dean\'s list for all applicable years.',
   items: [
     {
       instituition: 'Singapore Management University',
@@ -218,18 +218,20 @@ export default function Resume() {
     >
       <div className='container mx-auto'>
         <Tabs defaultValue='experience' className='flex flex-col xl:flex-row gap-[60px]'>
-          <TabsList className='flex flex-row justify-center xl:justify-normal xl:flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6'>
-            <TabsTrigger value='experience' className='bg-[#232329] px-4'>Experience</TabsTrigger>
-            <TabsTrigger value='education' className='bg-[#232329] px-4'>Education</TabsTrigger>
-            <TabsTrigger value='skills' className='bg-[#232329] px-4'>Skills</TabsTrigger>
-            <TabsTrigger value='about' className='bg-[#232329] px-4'>About me</TabsTrigger>
-            <Button variant="outline" size="lg" className="uppercase ">
-              <a href="/assets/resume_joelsng.pdf" download="resume_joelsng.pdf" className='flex items-center gap-2'>
+          <div className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+            <TabsList className="flex flex-row justify-center xl:justify-start w-full gap-2 xl:gap-6 xl:flex-col">
+              <TabsTrigger value="experience" className="bg-[#232329] px-4 flex-grow xl:flex-grow-0">Experience</TabsTrigger>
+              <TabsTrigger value="education" className="bg-[#232329] px-4 flex-grow xl:flex-grow-0">Education</TabsTrigger>
+              <TabsTrigger value="skills" className="bg-[#232329] px-4 flex-grow xl:flex-grow-0">Skills</TabsTrigger>
+              <TabsTrigger value="about" className="bg-[#232329] px-4 flex-grow xl:flex-grow-0 hidden xl:flex">About me</TabsTrigger>
+            </TabsList>
+            <Button variant="outline" size="lg" className="uppercase w-full xl:w-auto">
+              <a href="/assets/resume_joelsng.pdf" download="resume_joelsng.pdf" className="flex items-center justify-center gap-2 w-full">
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
               </a>
             </Button>
-          </TabsList>
+          </div>
 
           {/* content */}
           <div className='min-h-[70vh] w-full'>
