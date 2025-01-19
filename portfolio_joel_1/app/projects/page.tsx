@@ -7,14 +7,14 @@ const projects = [
   {
     num: '01',
     title: 'Options Pricing using Machine Learning',
-    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, suscipit deleniti!',
+    description: 'Using machine learning models including SVR, artificial neural networks, and LSTM, to price options and evaluating performance against traditional mathematical models.',
     skills: ['Machine Learning', 'Neural Networks', 'Python'],
     href: 'projects/options'
   },
   {
     num: '02',
     title: 'Project Management for Software Development',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, illo tenetur provident!',
+    description: 'Led a software development project over 5 months as both Srum Master and backend developer. Developed an HRMS scheduling web application.',
     skills: ['SCRUM', 'Agile Development', 'Flask', 'Python'],
     href: ''
   },
