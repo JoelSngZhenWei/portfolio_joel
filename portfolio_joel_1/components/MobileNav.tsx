@@ -43,7 +43,7 @@ const MobileNav = () => {
                 {/* Logo */}
                 <div className='mt-28 mb-20 text-center text-2xl'>
                     <Link href="/" onClick={() => setIsOpen(false)}>
-                        <h1 className='text-4xl font-semibold tracking-wide'>Joel Sng</h1>
+                        <h1 className='text-4xl font-semibold tracking-wide hover:text-accent transition-all duration-300'>Joel Sng</h1>
                     </Link>
                 </div>
                 {/* nav */}
@@ -53,7 +53,7 @@ const MobileNav = () => {
                             <Link 
                                 href={link.path} 
                                 key={index} 
-                                className={`${link.path === pathname ? "accent border-b-2 border-accent" : ""} text-xl capitalize hover:accent transition-all tracking-wide`}
+                                className={`${link.path === pathname ? "accent border-b-2 border-accent" : ""} text-xl capitalize hover:accent transition-all duration-300 font-semibold tracking-wide`}
                                 onClick={() => setIsOpen(false)}
                             >
                                 {link.name}

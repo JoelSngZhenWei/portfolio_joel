@@ -37,15 +37,15 @@ export default function Contact() {
           <div className="xl:h-[54%] order-2 xl:order-none">
             <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl" action="">
               <h3 className="text-lg lg:text-4xl text-accent font-semibold">
-                Let`s work together
+                Let&apos;s work together
               </h3>
               <p className="text-white/60 text-sm lg:text-base">
-                Whether you are an employer seeking a passionate data scientist or developer, a collaborator with an exciting project, or simply looking to connect, I would love to hear from you! Feel free to send me an email or leave a message, and I will get back to you as soon as possible.
+                Whether you&apos;re an employer seeking a passionate data scientist or developer, a collaborator with an exciting project, or simply looking to connect, I would love to hear from you! Feel free to send me an email or leave a message, and I&apos;ll get back to you as soon as possible.
               </p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="Firstname" />
-                <Input type="lastname" placeholder="Lastname" />
+                <Input type="firstname" placeholder="First name" />
+                <Input type="lastname" placeholder="Last name" />
                 <Input type="email" placeholder="Email address" />
                 <Input type="phone" placeholder="Phone number" />
               </div>
@@ -71,8 +71,8 @@ export default function Contact() {
                       <div className="text-[20px] lg:text-[28px]">{item.icon}</div>
                     </div>
                     <div className="flex-1">
-                      <p className="text-white/60 text-sm lg:text-base">{item.title}</p>
-                      <h3 className="text-base xl:text-xl">{item.description}</h3>
+                      <p className="text-white/60 text-sm lg:text-base tracking-wide">{item.title}</p>
+                      <h3 className="text-base xl:text-xl tracking-wide">{item.description}</h3>
                     </div>
                   </li>
                 )

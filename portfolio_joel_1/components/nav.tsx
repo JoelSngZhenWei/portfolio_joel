@@ -22,7 +22,7 @@ export function Nav() {
           <Link
             href={link.path}
             key={index}
-            className="relative capitalize font-medium hover:text-accent transition-colors duration-300 py-0 tracking-wide"
+            className="relative capitalize font-semibold hover:text-accent transition-colors duration-300 py-0 tracking-wide"
           >
             {link.name}
             {isActive && (

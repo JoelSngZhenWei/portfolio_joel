@@ -3,7 +3,7 @@
 export default function Options() {
   return (
     <section className="">
-      hello
+      Options Pricing page in progress
     </section>
 
   );
