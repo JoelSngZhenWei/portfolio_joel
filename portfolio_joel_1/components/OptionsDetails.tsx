@@ -33,7 +33,7 @@ export default function OptionsDetails() {
             <div>
                 <h3 className="text-lg font-bold mb-4">Long Short-Term Memory (LSTM)</h3>
                 <section className="flex flex-col md:flex-row gap-8 items-center">
-                    <div className="flex-1">
+                    <div className="flex-1 order-2 lg:order-1">
                         <p className="text-white/80">
                             LSTM networks were used to capture temporal dependencies in options pricing. Their ability to remember or
                             forget information over long sequences made them ideal for modeling time-series financial data. Our LSTM
@@ -41,7 +41,7 @@ export default function OptionsDetails() {
                             improvements in pricing accuracy, especially for options with longer time horizons.
                         </p>
                     </div>
-                    <div className="flex-1 flex justify-center items-center">
+                    <div className="flex-1 flex justify-center items-center order-1 lg:order-2">
                         <Image
                             src="/assets/LSTM.png"
                             alt="LSTM Model Architecture"
@@ -55,8 +55,8 @@ export default function OptionsDetails() {
 
             <div>
                 <h3 className="text-lg font-bold mb-4">Artificial Neural Network (ANN)</h3>
-                <section className="flex flex-col md:flex-row gap-8 items-center">
-                    <div className="flex-1">
+                <section className="flex flex-col md:flex-row gap-8 items-center ">
+                    <div className="flex-1 order-2 lg:order-1">
                         <p className="text-white/80">
                             Our project culminated in a hybrid ANN approach, combining classification and regression techniques. This
                             model first categorized options based on moneyness and time to maturity, then applied specialized regression
@@ -64,7 +64,7 @@ export default function OptionsDetails() {
                             various option types and market scenarios, opening new avenues for risk management and trading strategies.
                         </p>
                     </div>
-                    <div className="flex-1 flex justify-center items-center">
+                    <div className="flex-1 flex justify-center items-center order-1 lg:order-2">
                         <Image
                             src="/assets/ANN_final.png"
                             alt="Hybrid ANN Model Diagram"
