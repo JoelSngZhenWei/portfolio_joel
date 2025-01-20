@@ -30,21 +30,21 @@ const StatItem = ({ num, text }: { num: number; text: string }) => {
   return (
     <div
       ref={ref}
-      className="flex-1 flex gap-4 items-center justify-center xl:justify-start bg-[#232329] rounded-xl p-3 lg:p-6"
+      className="flex-1 flex gap-3 lg:gap-4 items-center justify-center xl:justify-start bg-[#232329] rounded-xl p-4 lg:p-6"
     >
       <CountUp
         start={0}
         end={num}
         duration={4}
         delay={2}
-        className="text-2xl lg:text-5xl font-extrabold"
+        className="text-3xl lg:text-5xl font-extrabold"
         useEasing={true}
         useGrouping={true}
         separator=","
       >
         {({ countUpRef }) => <span ref={countUpRef} />}
       </CountUp>
-      <p className="text-sm lg:text-base leading-snug text-white/80">{text}</p>
+      <p className="text-xs lg:text-base leading-snug text-white/80">{text}</p>
     </div>
   )
 }

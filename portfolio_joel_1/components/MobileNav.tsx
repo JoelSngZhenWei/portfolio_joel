@@ -41,7 +41,7 @@ const MobileNav = () => {
             <SheetTitle></SheetTitle>
             <SheetContent className='flex flex-col text-white'>
                 {/* Logo */}
-                <div className='mt-32 mb-40 text-center text-2xl'>
+                <div className='mt-28 mb-20 text-center text-2xl'>
                     <Link href="/" onClick={() => setIsOpen(false)}>
                         <h1 className='text-4xl font-semibold'>Joel Sng</h1>
                     </Link>
