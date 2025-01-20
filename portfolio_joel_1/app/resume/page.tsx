@@ -237,23 +237,23 @@ export default function Resume() {
           <div className='min-h-[70vh] w-full'>
             {/* experience */}
             <TabsContent value='experience' className='w-full h-full'>
-              <div className='flex flex-col gap-[30px] text-center xl:text-left'>
+              <div className='flex flex-col gap-2 lg:gap-8 text-center xl:text-left '>
                 <h3 className='text-lg xl:text-4xl font-bold'>
                   {experience.title}
                 </h3>
-                <p className='max-w-[600px] text-sm xl:text-base text-white/60 mx-auto xl:mx-0'>
+                <p className='max-w-[600px] h-20 text-sm  xl:text-base text-white/60 mx-auto xl:mx-0'>
                   {experience.description}
                 </p>
                 <ScrollArea className='h-[400px]'>
                   <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[30px] '>
                     {experience.items.map((item, index) => {
                       return (
-                        <li key={index} className='bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'>
+                        <li key={index} className='bg-secondary h-[136px] py-4 px-6 lg:h-[184px] lg:py-6 lg:px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'>
                           <span className='text-accent text-sm lg:text-base'>{item.duration}</span>
-                          <h3 className='text-base lg:text-xl max-w-[260px] min-h-[60px] text-center lg:text-left'>{item.position}</h3>
+                          <h3 className='text-base lg:text-xl max-w-[260px] min-h-[30px] lg:min-h-[60px] text-center lg:text-left'>{item.position}</h3>
                           <div className='flex items-center gap-3'>
                             {/* dot */}
-                            <span className='w-[6px] h-[6px] rounded-full bg-accent'></span>
+                            <span className='w-[4px] h-[4px] lg:w-[6px] lg:h-[6px] rounded-full bg-accent'></span>
                             <p className='text-white/60 text-sm lg:text-base'>{item.company}</p>
                           </div>
                         </li>
@@ -267,23 +267,23 @@ export default function Resume() {
 
             {/* education */}
             <TabsContent value='education' className='w-full h-full'>
-              <div className='flex flex-col gap-[30px] text-center xl:text-left'>
+              <div className='flex flex-col gap-2 lg:gap-8  text-center xl:text-left'>
                 <h3 className='text-lg xl:text-4xl font-bold'>
                   {education.title}
                 </h3>
-                <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0 text-sm xl:text-base'>
+                <p className='max-w-[600px] h-20 text-white/60 mx-auto xl:mx-0 text-sm xl:text-base'>
                   {education.description}
                 </p>
                 <ScrollArea className='h-[400px] bg-primary'>
                   <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[30px] '>
                     {education.items.map((item, index) => {
                       return (
-                        <li key={index} className='bg-secondary h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'>
+                        <li key={index} className='bg-secondary h-[136px] py-4 px-6 lg:h-[184px] lg:py-6 lg:px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'>
                           <span className='text-accent text-sm lg:text-base'>{item.duration}</span>
-                          <h3 className='text-base lg:text-xl max-w-[400px] min-h-[60px] text-center lg:text-left'>{item.degree}</h3>
+                          <h3 className='text-base lg:text-xl max-w-[260px] min-h-[30px] lg:min-h-[60px] text-center lg:text-left'>{item.degree}</h3>
                           <div className='flex items-center gap-3'>
                             {/* dot */}
-                            <span className='w-[6px] h-[6px] rounded-full bg-accent'></span>
+                            <span className='w-[4px] h-[4px] lg:w-[6px] lg:h-[6px] rounded-full bg-accent'></span>
                             <p className='text-white/60 text-sm lg:text-base'>{item.instituition}</p>
                           </div>
                         </li>
@@ -298,11 +298,11 @@ export default function Resume() {
             {/* skill */}
             <TabsContent value='skills' className='w-full'>
               <div className="flex flex-col gap-[30px]">
-                <div className='flex flex-col gap-[30px] text-center xl:text-left'>
+                <div className='flex flex-col gap-2 lg:gap-8 text-center xl:text-left'>
                   <h3 className='text-lg xl:text-4xl font-bold'>
                     {skills.title}
                   </h3>
-                  <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0 text-sm xl:text-base'>
+                  <p className='max-w-[600px] h-20 text-white/60 mx-auto xl:mx-0 text-sm xl:text-base'>
                     {skills.description}
                   </p>
                   <ScrollArea className='h-[400px] bg-secondary p-4 rounded-xl'>
