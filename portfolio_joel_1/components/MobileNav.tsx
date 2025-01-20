@@ -43,17 +43,17 @@ const MobileNav = () => {
                 {/* Logo */}
                 <div className='mt-28 mb-20 text-center text-2xl'>
                     <Link href="/" onClick={() => setIsOpen(false)}>
-                        <h1 className='text-4xl font-semibold'>Joel Sng</h1>
+                        <h1 className='text-4xl font-semibold tracking-wide'>Joel Sng</h1>
                     </Link>
                 </div>
                 {/* nav */}
-                <nav className='flex flex-col justify-center items-center gap-8'>
+                <nav className='flex flex-col justify-center items-center gap-8 '>
                     {links.map((link, index) => {
                         return (
                             <Link 
                                 href={link.path} 
                                 key={index} 
-                                className={`${link.path === pathname ? "accent border-b-2 border-accent" : ""} text-xl capitalize hover:accent transition-all`}
+                                className={`${link.path === pathname ? "accent border-b-2 border-accent" : ""} text-xl capitalize hover:accent transition-all tracking-wide`}
                                 onClick={() => setIsOpen(false)}
                             >
                                 {link.name}
