@@ -22,37 +22,37 @@ import { BsBarChartFill } from "react-icons/bs";
 
 
 // about data
-const about = {
-  title: 'About me',
-  description: 'I am a highly motivated individual with a strong background in data science, analytics, and digital transformation. With over 2 years of experience, I specialize in leveraging machine learning, NLP, and cloud technologies to deliver innovative solutions. Beyond my technical expertise, I am passionate about leadership, community service, and continuous learning, which have shaped me into a well-rounded professional driven to make a positive impact.',
+// const about = {
+//   title: 'About me',
+//   description: 'I am a highly motivated individual with a strong background in data science, analytics, and digital transformation. With over 2 years of experience, I specialize in leveraging machine learning, NLP, and cloud technologies to deliver innovative solutions.',
 
-  info: [
-    {
-      fieldName: 'Name',
-      fieldValue: 'Joel Sng'
-    },
-    {
-      fieldName: 'Phone',
-      fieldValue: '+65 8499 2823'
-    },
-    {
-      fieldName: 'Email',
-      fieldValue: 'joelsngzw@gmail.com'
-    },
-    {
-      fieldName: 'Experience',
-      fieldValue: '2+ years'
-    },
-    {
-      fieldName: 'Nationality',
-      fieldValue: 'Singaporean'
-    },
-    {
-      fieldName: 'LinkedIn',
-      fieldValue: 'https://www.linkedin.com/in/joelsngzw'
-    },
-  ]
-}
+//   info: [
+//     {
+//       fieldName: 'Name',
+//       fieldValue: 'Joel Sng'
+//     },
+//     {
+//       fieldName: 'Phone',
+//       fieldValue: '+65 8499 2823'
+//     },
+//     {
+//       fieldName: 'Email',
+//       fieldValue: 'joelsngzw@gmail.com'
+//     },
+//     {
+//       fieldName: 'Experience',
+//       fieldValue: '2+ years'
+//     },
+//     {
+//       fieldName: 'Nationality',
+//       fieldValue: 'Singaporean'
+//     },
+//     {
+//       fieldName: 'LinkedIn',
+//       fieldValue: 'https://www.linkedin.com/in/joelsngzw'
+//     },
+//   ]
+// }
 
 // experience data
 const experience = {
@@ -217,13 +217,13 @@ export default function Resume() {
       className='min-h-[80vh] flex items-center justify-center py-6 xl:py-0'
     >
       <div className='container mx-auto'>
-        <Tabs defaultValue='experience' className='flex flex-col xl:flex-row gap-[30px]'>
+        <Tabs defaultValue='experience' className='flex flex-col xl:flex-row gap-4'>
           <div className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
             <TabsList className="flex flex-row justify-center xl:justify-start w-full gap-2 xl:gap-6 xl:flex-col">
               <TabsTrigger value="experience" className="bg-[#232329] px-4 flex-grow xl:flex-grow-0">Experience</TabsTrigger>
               <TabsTrigger value="education" className="bg-[#232329] px-4 flex-grow xl:flex-grow-0">Education</TabsTrigger>
               <TabsTrigger value="skills" className="bg-[#232329] px-4 flex-grow xl:flex-grow-0">Skills</TabsTrigger>
-              <TabsTrigger value="about" className="bg-[#232329] px-4 flex-grow xl:flex-grow-0 hidden xl:flex">About me</TabsTrigger>
+              {/* <TabsTrigger value="about" className="bg-[#232329] px-4 flex-grow xl:flex-grow-0 hidden xl:flex">About me</TabsTrigger> */}
             </TabsList>
             <Button variant="outline" size="lg" className="uppercase w-full xl:w-auto">
               <a href="/assets/resume_joelsng.pdf" download="resume_joelsng.pdf" className="flex text-xs xl:text-base items-center justify-center gap-2 w-full">
@@ -385,10 +385,10 @@ export default function Resume() {
             </TabsContent>
 
             {/* about */}
-            <TabsContent value='about' className='w-full h-full text-center xl:text-left'>
-              <div className='flex flex-col gap-[30px]'>
+            {/* <TabsContent value='about' className='w-full h-full text-center xl:text-left'>
+              <div className='flex flex-col gap-2 lg:gap-8 '>
                 <h3 className='text-4xl font-bold'>{about.title}</h3>
-                <p className='text-white/60 mx-auto xl:mx-0'>{about.description}</p>
+                <p className='text-white/60 max-w-[600px] mx-auto xl:mx-0'>{about.description}</p>
                 <ul className='grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0'>
                   {about.info.map((item, index) => {
                     return (
@@ -400,7 +400,7 @@ export default function Resume() {
                   })}
                 </ul>
               </div>
-            </TabsContent>
+            </TabsContent> */}
           </div>
 
         </Tabs>
