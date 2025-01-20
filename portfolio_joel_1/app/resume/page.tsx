@@ -104,7 +104,7 @@ const education = {
 
 const skills = {
   title: "My Skills",
-  description: "I have extensive experience and expertise in machine learning, automation, data manipulation, and software development. Scroll to see all the programming languages, libraries \& frameworks, and software I have expertise in.",
+  description: "I have extensive experience and expertise in machine learning, automation, data manipulation, and software development.",
   langlist: [
     {
       icon: <FaPython />,
