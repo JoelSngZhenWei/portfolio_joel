@@ -25,6 +25,8 @@ const StatItem = ({ num, text }: { num: number; text: string }) => {
     threshold: 0.1,
   })
 
+  console.log(inView)
+
   return (
     <div
       ref={ref}
