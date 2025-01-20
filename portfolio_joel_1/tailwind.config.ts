@@ -33,7 +33,7 @@ export default {
   				foreground: 'hsl(var(--muted-foreground))'
   			},
   			accent: {
-  				DEFAULT: '#ff5733',
+  				DEFAULT: '#078dc4',
   				foreground: 'hsl(var(--accent-foreground))'
   			},
   			destructive: {
@@ -51,9 +51,6 @@ export default {
   				'5': 'hsl(var(--chart-5))'
   			}
   		},
-		  borderColor: {
-			accent: "#ff5733",
-		  },
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',

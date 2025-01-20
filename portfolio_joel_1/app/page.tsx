@@ -15,7 +15,7 @@ export default function Home() {
               Data Scientist
             </span>
             <h1 className="h2 xl:h1 mb-4 xl:mb-6">
-              <span className="accent">Joel Sng</span>
+              <span className="text-accent">Joel Sng</span>
             </h1>
             <p className="max-w-[500px] mb-4 xl:mb-9 text-white/80">
               I am a first class honours double degree undergraduate specialising in machine learning, automation, and software development.

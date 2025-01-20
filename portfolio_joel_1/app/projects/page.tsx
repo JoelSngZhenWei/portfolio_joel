@@ -14,8 +14,8 @@ const projects = [
   {
     num: '02',
     title: 'Project Management for Software Development',
-    description: 'Led a software development project over 5 months as both Srum Master and backend developer. Developed an HRMS scheduling web application.',
-    skills: ['SCRUM', 'Agile Development', 'Flask', 'Python'],
+    description: 'Led a software development project over 5 months as both Scrum Master and backend developer. Developed an HRMS scheduling web application.',
+    skills: ['Scrum', 'Agile Development', 'Flask', 'Python'],
     href: ''
   },
   // {
@@ -50,7 +50,7 @@ export default function Projects() {
               <div key={index} className="flex-1 flex flex-col justify-center gap-3 xl:gap-6 group">
                 {/* Top */}
                 <div className="w-full flex justify-between items-center">
-                  <div className="text-3xl xl:text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">{project.num}</div>
+                  <div className="text-3xl xl:text-5xl font-extrabold text-outline text-accent text-transparent group-hover:text-outline-hover transition-all duration-500">{project.num}</div>
                   <Link href={project.href} className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center group-hover:-rotate-45">
                     <BsArrowDownRight className="text-primary text-3xl" />
                   </Link>

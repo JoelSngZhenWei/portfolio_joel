@@ -274,11 +274,11 @@ export default function Resume() {
                 <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0 text-sm xl:text-base'>
                   {education.description}
                 </p>
-                <ScrollArea className='h-[400px]'>
+                <ScrollArea className='h-[400px] bg-primary'>
                   <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[30px] '>
                     {education.items.map((item, index) => {
                       return (
-                        <li key={index} className='bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'>
+                        <li key={index} className='bg-secondary h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'>
                           <span className='text-accent text-sm lg:text-base'>{item.duration}</span>
                           <h3 className='text-base lg:text-xl max-w-[400px] min-h-[60px] text-center lg:text-left'>{item.degree}</h3>
                           <div className='flex items-center gap-3'>
@@ -305,16 +305,16 @@ export default function Resume() {
                   <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0 text-sm xl:text-base'>
                     {skills.description}
                   </p>
-                  <ScrollArea className='h-[400px]'>
+                  <ScrollArea className='h-[400px] bg-secondary p-4 rounded-xl'>
                     <div className='flex flex-col gap-2'>
-                      <span className='text-accent font-bold'>Langauges</span>
+                      <span className='text-accent font-bold'>Languages</span>
                       <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]'>
                         {skills.langlist.map((lang, index) => {
                           return (
                             <li key={index}>
                               <TooltipProvider delayDuration={100}>
                                 <Tooltip>
-                                  <TooltipTrigger className='w-full h-[150px] bg-[#232329] rounded-xl flex flex-col justify-center items-center group'>
+                                  <TooltipTrigger className='w-full h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group'>
                                     <div className='text-6xl group-hover:text-accent transition-all duration-300'>{lang.icon}</div>
                                     <span className='capitalize group-hover:text-accent transition-all duration-300'>{lang.name}</span>
                                   </TooltipTrigger>
@@ -337,7 +337,7 @@ export default function Resume() {
                             <li key={index}>
                               <TooltipProvider delayDuration={100}>
                                 <Tooltip>
-                                  <TooltipTrigger className='w-full h-[150px] bg-[#232329] rounded-xl flex flex-col justify-center items-center group'>
+                                  <TooltipTrigger className='w-full h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group'>
                                     <div className='text-6xl group-hover:text-accent transition-all duration-300'>{fw.icon}</div>
                                     <span className='capitalize group-hover:text-accent transition-all duration-300'>{fw.name}</span>
                                   </TooltipTrigger>
@@ -360,7 +360,7 @@ export default function Resume() {
                             <li key={index}>
                               <TooltipProvider delayDuration={100}>
                                 <Tooltip>
-                                  <TooltipTrigger className='w-full h-[150px] bg-[#232329] rounded-xl flex flex-col justify-center items-center group '>
+                                  <TooltipTrigger className='w-full h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group '>
                                     <div className='text-6xl group-hover:text-accent transition-all duration-300'>{sw.icon}</div>
                                     <span className='capitalize group-hover:text-accent transition-all duration-300'>{sw.name}</span>
                                   </TooltipTrigger>
@@ -388,7 +388,7 @@ export default function Resume() {
             <TabsContent value='about' className='w-full h-full text-center xl:text-left'>
               <div className='flex flex-col gap-[30px]'>
                 <h3 className='text-4xl font-bold'>{about.title}</h3>
-                <p className='max-2-[600px] text-white/60 mx-auto xl:mx-0'>{about.description}</p>
+                <p className='text-white/60 mx-auto xl:mx-0'>{about.description}</p>
                 <ul className='grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0'>
                   {about.info.map((item, index) => {
                     return (

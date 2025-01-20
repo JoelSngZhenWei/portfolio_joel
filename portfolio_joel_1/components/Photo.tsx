@@ -1,48 +1,63 @@
-"use client";
-import { motion } from "framer-motion";
-import Image from "next/image";
+"use client"
+import { motion } from "framer-motion"
+import Image from "next/image"
 
 const Photo = () => {
   return (
-    <div className=" w-full h-full relative">
+    <div className="relative w-[300px] h-[300px] xl:w-[506px] xl:h-[506px]">
       <motion.div
+        className="w-full h-full"
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
-          transition: { delay: 1, duration: 0.4, ease: "easeIn" }
-        }}>
+          transition: { delay: 1, duration: 0.4, ease: "easeIn" },
+        }}
+      >
         {/* image */}
         <motion.div
+          className="absolute inset-0 z-10"
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
-            transition: { delay: 1.4, duration: 0.4, ease: "easeInOut" }
+            transition: { delay: 1.4, duration: 0.4, ease: "easeInOut" },
           }}
-          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] absolute">
-          <Image src="/assets/Formal.png" priority quality={100} fill alt="" className="object-contain rounded-full" />
+        >
+          <Image
+            src="/assets/Formal.png"
+            priority
+            quality={100}
+            fill
+            alt="Joel Sng's portrait"
+            className="object-cover rounded-full"
+          />
         </motion.div>
 
         {/* circle */}
-        <motion.svg className="w-[300px] xl:w-[506px] h-[300px] xl:h-[506px]" fill="transparent" viewBox="0 0 506 506" xmlns="http://www.w3.org/2000/svg">
+        <motion.svg
+          className="absolute inset-0 w-full h-full z-40"
+          fill="transparent"
+          viewBox="0 0 506 506"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <motion.circle
             cx="253"
             cy="253"
             r="250"
-            stroke="#ff5733"
-            strokeWidth='4'
-            strokeLinecap='round'
+            stroke="#078dc4"
+            strokeWidth="4"
+            strokeLinecap="round"
             strokeLinejoin="round"
             initial={{ strokeDasharray: "24 10 0 0" }}
             animate={{
-              strokeDasharray: ["15 120 25 25", "16 25 92 72", '4 250 22 22'],
-              // strokeDasharray: ["10 10", "20 20", "30 30"],
-              rotate: [120, 360]
+              strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"],
+              rotate: [120, 360],
             }}
             transition={{
-              duration:20,
-              repeat:Infinity,
-              repeatType:"reverse"
-            }} />
+              duration: 20,
+              repeat: Number.POSITIVE_INFINITY,
+              repeatType: "reverse",
+            }}
+          />
         </motion.svg>
       </motion.div>
     </div>
@@ -50,3 +65,4 @@ const Photo = () => {
 }
 
 export default Photo
+
