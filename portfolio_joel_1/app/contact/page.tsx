@@ -36,10 +36,10 @@ export default function Contact() {
           {/* form */}
           <div className="xl:h-[54%] order-2 xl:order-none">
             <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl" action="">
-              <h3 className="text-4xl text-accent">
+              <h3 className="text-base lg:text-4xl text-accent">
                 Let`s work together
               </h3>
-              <p className="text-white/60">
+              <p className="text-white/60 text-sm lg:text-base">
                 Whether you are an employer seeking a passionate data scientist or developer, a collaborator with an exciting project, or simply looking to connect, I would love to hear from you! Feel free to send me an email or leave a message, and I will get back to you as soon as possible.
               </p>
               {/* input */}
