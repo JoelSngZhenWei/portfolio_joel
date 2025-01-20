@@ -15,7 +15,7 @@ export default function OptionsDetails() {
                 <h3 className="text-lg font-bold mb-4">Black Scholes Model</h3>
                 <p className="text-white/80">
                     The Black-Scholes model, developed in 1973, prices European-style options assuming geometric Brownian motion
-                    of asset prices. Despite its revolutionary impact, the model's limitations include assumptions of constant
+                    of asset prices. Despite its revolutionary impact, the model&apos;s limitations include assumptions of constant
                     volatility and risk-free rates. Our project addressed these shortcomings using machine learning approaches.
                 </p>
             </section>
@@ -23,7 +23,7 @@ export default function OptionsDetails() {
             <section className="">
                 <h3 className="text-lg font-bold mb-4">Support Vector Regression (SVR)</h3>
                 <p className="text-white/80">
-                    We employed Support Vector Regression to capture non-linear relationships in options pricing data. SVR's
+                    We employed Support Vector Regression to capture non-linear relationships in options pricing data. SVR&apos;s
                     ability to handle high-dimensional feature spaces made it suitable for incorporating multiple pricing factors.
                     Our implementation showed improved accuracy over traditional models, especially in non-standard market
                     conditions.
