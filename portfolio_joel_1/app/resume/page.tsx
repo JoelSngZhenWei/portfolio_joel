@@ -220,10 +220,10 @@ export default function Resume() {
         <Tabs defaultValue='experience' className='flex flex-col xl:flex-row gap-4'>
           <div className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
             <TabsList className="flex flex-row justify-center xl:justify-start w-full gap-2 xl:gap-6 xl:flex-col">
-              <TabsTrigger value="experience" className="bg-[#232329] px-4 flex-grow xl:flex-grow-0">Experience</TabsTrigger>
-              <TabsTrigger value="education" className="bg-[#232329] px-4 flex-grow xl:flex-grow-0">Education</TabsTrigger>
-              <TabsTrigger value="skills" className="bg-[#232329] px-4 flex-grow xl:flex-grow-0">Skills</TabsTrigger>
-              {/* <TabsTrigger value="about" className="bg-[#232329] px-4 flex-grow xl:flex-grow-0 hidden xl:flex">About me</TabsTrigger> */}
+              <TabsTrigger value="experience" className="bg-secondary px-4 flex-grow xl:flex-grow-0">Experience</TabsTrigger>
+              <TabsTrigger value="education" className="bg-secondary px-4 flex-grow xl:flex-grow-0">Education</TabsTrigger>
+              <TabsTrigger value="skills" className="bg-secondary px-4 flex-grow xl:flex-grow-0">Skills</TabsTrigger>
+              {/* <TabsTrigger value="about" className="bg-secondary px-4 flex-grow xl:flex-grow-0 hidden xl:flex">About me</TabsTrigger> */}
             </TabsList>
             <Button variant="outline" size="lg" className="uppercase w-full xl:w-auto">
               <a href="/assets/resume_joelsng.pdf" download="resume_joelsng.pdf" className="flex text-xs xl:text-base items-center justify-center gap-2 w-full">
