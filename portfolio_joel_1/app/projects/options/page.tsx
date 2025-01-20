@@ -125,7 +125,7 @@ export default function Options() {
               {/* tab 2, project paper */}
               <TabsContent value="paper" className="h-[60vh]">
                 <div className="flex flex-col lg:flex-row h-full">
-                  <div className="lg:w-1/3 flex flex-col items-center justify-center space-y-4 p-4">
+                  <div className="lg:w-1/3 w-full h-full flex flex-col items-center justify-center space-y-4 p-4">
                     <h2 className="text-3xl font-semibold tracking-wide text-center">Report</h2>
                     <Button
                       onClick={handleDownload}
@@ -136,7 +136,7 @@ export default function Options() {
                       <Download className="h-4 w-4" />
                     </Button>
                   </div>
-                  <div className="lg:w-2/3 h-full">
+                  <div className="lg:w-2/3 w-full h-full">
                     <PDFViewer />
                   </div>
                 </div>
@@ -146,7 +146,6 @@ export default function Options() {
               <TabsContent value="techstack">
                 {/* Tech Stack */}
                 <div>
-                  <h2 className="text-3xl font-semibold tracking-wide mb-4">Tech Stack</h2>
                   <TechStack skills={skills} />
                 </div>
               </TabsContent>

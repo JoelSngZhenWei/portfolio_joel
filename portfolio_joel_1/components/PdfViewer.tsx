@@ -41,8 +41,8 @@ export default function PDFViewer() {
   }
 
   return (
-    <div className="flex flex-col items-center p-4">
-      <div className="bg-secondary rounded-lg shadow-lg p-6 max-w-3xl w-full">
+    <div className="flex flex-col items-center p-2">
+      <div className="bg-secondary rounded-lg shadow-lg p-6 w-full">
         <div className="mb-4 flex justify-between items-center">
           <Button onClick={() => changePage(-1)} disabled={pageNumber <= 1} variant="outline">
             <ChevronLeft className="h-4 w-4" />
