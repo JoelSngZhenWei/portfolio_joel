@@ -7,9 +7,9 @@ import Image from "next/image"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { TechStack } from "@/components/TechStack"
 import OptionsDetails from "@/components/OptionsDetails"
-import PDFViewer from "@/components/PDFViewer"
 import { Button } from "@/components/ui/button"
 import { Download } from "lucide-react"
+import PDFViewer from "@/components/PDFViewer"
 
 const skills = {
   langlist: [
