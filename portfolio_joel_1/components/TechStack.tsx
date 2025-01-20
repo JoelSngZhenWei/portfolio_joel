@@ -37,7 +37,7 @@ const SkillList: React.FC<{ title: string; items: Skill[]; onSkillClick: (skill:
 }) => (
   <>
     <span className="text-accent font-bold">{title}</span>
-    <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+    <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 xl:gap-[30px]">
       {items.map((item, index) => (
         <li key={index}>
           <TooltipProvider delayDuration={100}>

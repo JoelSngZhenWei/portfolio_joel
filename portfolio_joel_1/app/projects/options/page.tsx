@@ -6,7 +6,8 @@ import { SiPandas, SiScikitlearn, SiTensorflow } from "react-icons/si"
 import Image from "next/image"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { TechStack } from "@/components/TechStack"
-import PdfViewer from "@/components/PdfViewer"
+import OptionsDetails from "@/components/OptionsDetails"
+
 
 const skills = {
   langlist: [
@@ -47,29 +48,30 @@ export default function Options() {
         className=""
       >
         {/* title section */}
-        <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-20 lg:pt-9 lg-pb-24">
-          {/* Project Title */}
-          <div className="">
-            <h1 className="text-4xl font-bold tracking-tight">
+        <div className="flex flex-col lg:flex-row items-center justify-between lg:gap-12 py-12 lg:py-16">
+          {/* Project Title and Date */}
+          <div className="text-center lg:text-left mb-8 lg:mb-0">
+            <h1 className="text-xl lg:text-2xl font-bold tracking-tight mb-4">
               Options Pricing with <span className="text-accent">Machine Learning</span>
             </h1>
+            <p className="text-accent font-medium text-lg">Aug 2024 - Dec 2024</p>
           </div>
           {/* photo */}
-          <div className="relative w-full h-50 md:h-96 rounded-lg">
+          <div className="relative rounded-lg shadow-xl">
             <Image
               src="/assets/ANN_initial.png"
               alt="Options Pricing Visualization"
-              layout="fill"
-              objectFit="contain"
-              className="transition-transform duration-300 hover:scale-105"
+              width={500}
+              height={300}
+              className="transition-transform duration-300 hover:scale-105 rounded-lg shadow-lg"
             />
-            <p className="text-accent font-semibold">August 2023 - December 2023</p>
           </div>
         </div>
 
-        {/* Project Introduction */}
+
+        {/* Project Summary */}
         <div className="space-y-4">
-          <h2 className="text-2xl font-semibold tracking-wide">Project Introduction</h2>
+          <h2 className="text-2xl font-semibold tracking-wide">Project Summary</h2>
           <p className="text-white/80 leading-relaxed">
             In the rapidly evolving intersection of finance and artificial intelligence, our team embarked on an
             ambitious project to redefine options pricing. As part of the advanced &apos;Machine Learning & Applications&apos;
@@ -100,20 +102,21 @@ export default function Options() {
               </TabsList>
             </div>
 
-            <div className="min-h-screen w-full">
+            <div className="min-h-[80vh] w-full pt-8 pb-12">
               {/* tab 1, project details */}
               <TabsContent value="details">
-                <div>Project Details</div>
+                <h2 className="text-3xl font-semibold tracking-wide mb-4">Project Details</h2>
+                <OptionsDetails />
               </TabsContent>
               {/* tab 2, project paper */}
               <TabsContent value="paper">
-                <PdfViewer pdfUrl="/assets/MLA_Final_Report.pdf" />
+                paper
               </TabsContent>
               {/* tab 3, tech stack */}
               <TabsContent value="techstack">
                 {/* Tech Stack */}
                 <div>
-                  <h2 className="text-2xl font-semibold tracking-wide mb-4">Tech Stack</h2>
+                  <h2 className="text-3xl font-semibold tracking-wide mb-4">Tech Stack</h2>
                   <TechStack skills={skills} />
                 </div>
               </TabsContent>
@@ -121,46 +124,6 @@ export default function Options() {
 
 
           </Tabs>
-        </div>
-
-        {/* Paper.pdf found at public/assets/MLA_Final_Report.pdf*/}
-        <h2 className="text-2xl font-semibold tracking-wide">Paper</h2>
-        <span>pdf reader</span>
-        {/* Project Details */}
-        <div>
-          <h2 className="text-2xl font-semibold tracking-wide">Project Details</h2>
-          {/* Problem */}
-          <div className="text-base text-white/70">
-            The problem our group faced was...
-          </div>
-          {/* SVR */}
-          <div>
-            <h3 className="text-lg font-semibold tracking-wide">SVR</h3>
-            <div className="text-base text-white/70">
-              Our group employed SVR...
-            </div>
-          </div>
-          {/* LSTM */}
-          <div>
-            <h3 className="text-lg font-semibold tracking-wide">LSTM</h3>
-            <div className="text-base text-white/70">
-              Our group employed LSTM...
-            </div>
-          </div>
-          {/* Hybrid ANN */}
-          <div>
-            <h3 className="text-lg font-semibold tracking-wide">Hybrid ANN workflow</h3>
-            <div className="text-base text-white/70">
-              To over come the limitations of both, I proposed, built, and tested a hybrid classification and regression workflow...
-            </div>
-          </div>
-        </div>
-        {/* Project Conclusions */}
-        <div>
-          <h2 className="text-2xl font-semibold tracking-wide">Project Conclusions</h2>
-          <div className="text-white/70">
-            Conclusions
-          </div>
         </div>
       </motion.div>
     </section>
