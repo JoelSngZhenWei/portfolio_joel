@@ -17,7 +17,11 @@ export function Nav() {
   return (
     <nav className="flex gap-8">
       {links.map((link, index) => {
-        const isActive = link.path === pathname
+        const isActive =
+          link.path === "/"
+            ? pathname === "/"
+            : pathname.startsWith(link.path) // Highlight subpaths
+
         return (
           <Link
             href={link.path}
@@ -44,4 +48,3 @@ export function Nav() {
     </nav>
   )
 }
-
