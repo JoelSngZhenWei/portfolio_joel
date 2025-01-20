@@ -9,7 +9,7 @@ import { TechStack } from "@/components/TechStack"
 import OptionsDetails from "@/components/OptionsDetails"
 import { Button } from "@/components/ui/button"
 import { Download } from "lucide-react"
-import PdfViewer from "@/components/PdfViewer"
+import PdfView from "@/components/PdfView"
 
 const skills = {
   langlist: [
@@ -63,7 +63,7 @@ export default function Options() {
           <div className="flex flex-col lg:flex-row items-center justify-between lg:gap-12 py-12 lg:py-16">
             {/* Project Title and Date */}
             <div className="text-center lg:text-left mb-8 lg:mb-0">
-              <h1 className="text-2xl lg:text-3xl font-bold tracking-tight mb-4">
+              <h1 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
                 Options Pricing with <span className="text-accent">Machine Learning</span>
               </h1>
               <p className="text-accent font-medium text-lg">Aug 2024 - Dec 2024</p>
@@ -137,7 +137,7 @@ export default function Options() {
                     </Button>
                   </div>
                   <div className="lg:w-2/3 w-full h-full">
-                    <PdfViewer />
+                    <PdfView />
                   </div>
                 </div>
               </TabsContent>

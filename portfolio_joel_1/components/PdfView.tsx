@@ -10,7 +10,7 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css"
 
 pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.mjs"
 
-export default function PdfViewer() {
+export default function PdfView() {
   const [numPages, setNumPages] = useState<number>()
   const [pageNumber, setPageNumber] = useState<number>(1)
   // const [scale, setScale] = useState<number>(1.0)
