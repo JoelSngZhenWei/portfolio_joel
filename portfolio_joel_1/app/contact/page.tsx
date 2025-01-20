@@ -27,7 +27,7 @@ export default function Contact() {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" }
+        transition: { delay: 2, duration: 0.4, ease: "easeIn" }
       }}
       className="py-6"
     >
