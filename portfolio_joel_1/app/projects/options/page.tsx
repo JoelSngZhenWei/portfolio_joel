@@ -9,7 +9,7 @@ import { TechStack } from "@/components/TechStack"
 import OptionsDetails from "@/components/OptionsDetails"
 import { Button } from "@/components/ui/button"
 import { Download } from "lucide-react"
-import PDFViewer from "@/components/PDFViewer"
+import PdfViewer from "@/components/PdfViewer"
 
 const skills = {
   langlist: [
@@ -137,7 +137,7 @@ export default function Options() {
                     </Button>
                   </div>
                   <div className="lg:w-2/3 w-full h-full">
-                    <PDFViewer />
+                    <PdfViewer />
                   </div>
                 </div>
               </TabsContent>
