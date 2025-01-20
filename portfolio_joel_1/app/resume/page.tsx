@@ -214,7 +214,7 @@ export default function Resume() {
         opacity: 1,
         transition: { delay: 2, duration: 0.4, ease: "easeIn" }
       }}
-      className='min-h-[80vh] flex items-center justify-center py-6 xl:py-0'
+      className='min-h-[80vh] flex items-center justify-center py-3 xl:py-0'
     >
       <div className='container mx-auto'>
         <Tabs defaultValue='experience' className='flex flex-col xl:flex-row gap-4'>
