@@ -202,7 +202,7 @@ const skills = {
 // cca data
 const cca = {
   title: 'My Extracurricular Activities',
-  description: "I am passionate about community service and leadership, driving initiatives that positively impact communities and foster meaningful change. I have been recognised by Madam Halimah Yacob and spoken on CNA Radio.",
+  description: "I am passionate about community service and leadership, driving initiatives that positively impact communities and foster meaningful change. I have been recognised by Madam Halimah Yacob and led SMU\'s 2 largest community service organisations.",
   items: [
     {
       organisation: 'SMU Special Interest & Community Service Sodality',
