@@ -48,7 +48,7 @@ const handleDownload = () => {
 
 export default function Options() {
   return (
-    <section className="container mx-auto px-4 py-6">
+    <section className="container mx-auto px-4 py-3 lg:py-6">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{
@@ -83,7 +83,7 @@ export default function Options() {
 
           {/* Project Summary */}
           <div className="space-y-4">
-            <h2 className="text-2xl font-semibold tracking-wide">Project Summary</h2>
+            <h2 className="text-2xl font-semibold tracking-wide">Summary</h2>
             <p className="text-white/80 leading-relaxed">
               In this project my group sought to analyse different machine learning techniques in tackling a notoriously complex task: <strong>Options Pricing</strong>. We contrasted our models&apos; performance to a traditional and widely used mathematical model.
             </p>
@@ -110,7 +110,7 @@ export default function Options() {
             <div className="min-h-[80vh] w-full pt-8 pb-12">
               {/* tab 1, project details */}
               <TabsContent value="details">
-                <h2 className="text-3xl font-semibold tracking-wide mb-4">Project Details</h2>
+                <h2 className="text-2xl font-semibold tracking-wide mb-4">Project Details</h2>
                 <OptionsDetails />
               </TabsContent>
               {/* tab 2, project paper */}
