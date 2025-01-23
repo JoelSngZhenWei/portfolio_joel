@@ -92,3 +92,38 @@ body {
     -webkit-text-stroke: 1px #078dc4;
   }
 }
+
+@layer utilities {
+  .animate-in {
+    animation-duration: 300ms;
+    animation-timing-function: ease-out;
+  }
+  .animate-out {
+    animation-duration: 300ms;
+    animation-timing-function: ease-out;
+  }
+  .slide-in-from-right {
+    animation-name: slideInFromRight;
+  }
+  .slide-out-to-right {
+    animation-name: slideOutToRight;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutToRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}

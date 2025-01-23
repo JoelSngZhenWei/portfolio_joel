@@ -44,18 +44,18 @@ const SkillList: React.FC<{
   selectedSkill: Skill | null
 }> = ({ title, items, onSkillClick, selectedSkill }) => (
   <>
-    <span className="text-accent font-bold">{title}</span>
-    <ul className="grid grid-cols-3 md:grid-cols-3 gap-4 xl:gap-5">
+    <span className="text-accent text-sm lg:text-base font-bold">{title}</span>
+    <ul className="grid grid-cols-3 md:grid-cols-3 gap-3 xl:gap-5">
       {items.map((item, index) => (
         <li key={index}>
           <TooltipProvider delayDuration={100}>
             <Tooltip>
               <TooltipTrigger
-                className={`w-full py-3 lg:py-8 bg-primary rounded-xl flex flex-col justify-center items-center group cursor-pointer ${selectedSkill === item ? "text-accent" : ""}`}
+                className={`w-full py-4 lg:py-8 bg-primary rounded-xl flex flex-col justify-center items-center group cursor-pointer ${selectedSkill === item ? "text-accent" : ""}`}
                 onClick={() => onSkillClick(item)}
               >
                 <div className="text-4xl lg:text-6xl group-hover:text-accent transition-all duration-300">{item.icon}</div>
-                <span className="capitalize text-sm lg:text-base group-hover:text-accent transition-all duration-300">{item.name}</span>
+                <span className="capitalize text-xs lg:text-base group-hover:text-accent transition-all duration-300">{item.name}</span>
               </TooltipTrigger>
             </Tooltip>
           </TooltipProvider>
