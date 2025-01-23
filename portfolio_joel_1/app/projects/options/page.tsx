@@ -48,7 +48,7 @@ const handleDownload = () => {
 
 export default function Options() {
   return (
-    <section className="container mx-auto px-4 py-3 lg:py-6">
+    <section className="container mx-auto px-4 py-2 lg:py-6">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{
