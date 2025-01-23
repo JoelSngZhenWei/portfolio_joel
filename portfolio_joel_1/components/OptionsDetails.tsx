@@ -6,44 +6,54 @@ export default function OptionsDetails() {
         <div className="space-y-10">
             <section>
                 <p className="text-white/80">
-                    Options are financial derivatives that allow buyers to <Link href={'https://www.investopedia.com/terms/o/option.asp'}>blah blah blah</Link>. Accurate options pricing informs heding strategies by assessing potential risk in holding options and protecting portolios against adverse market moves, and represent key profit opportunities by revealing mispriced options in the market. As such, determining the fair value of options is a compelling problem statement. However, due to market unpredictability and complex and non-linear feature relationships, this is a notoriously difficult problem statement.
+                    Options are financial derivatives that grant buyers the right, but not the obligation, to buy or sell an asset at a predetermined price. Accurate options pricing is crucial for developing effective hedging strategies, assessing potential risks, and protecting portfolios against adverse market movements. Additionally, it creates profit opportunities by identifying mispriced options in the market. However, due to market unpredictability and the complex, non-linear relationships between features, accurately pricing options remains a significant and challenging problem.
                 </p>
                 <p className="text-white/80">
-                    The Black-Scholes model (BSM) is a widely used option pricing model that carries significant assumptions (Constant volatility, log-normal distribution of asset returns, and assumption of constant interest rates) that do not hold in a real options market, and hence cannot generalise well to the options market.
+                    The <span className="text-accent font-bold">Black-Scholes model (BSM)</span>, is a traditionally used mathematical option pricing framework, and relies on several key assumptions—constant volatility, a log-normal distribution of asset returns, and constant interest rates. These assumptions rarely hold true in real-world markets, limiting the model&apos;s ability to generalize effectively.
                 </p>
                 <p className="text-white/80">
-                    The complexity of non-linear feature relationships presents an opportunity to use ML to model and predict options prices. The ML models we used are Support Vector Regression (SVR), Long Short Term Memory Recurrent Neural Networks (LSTM), and Artificial Neural Networks (ANN).
+                    The inherent complexity of non-linear feature interactions in options pricing provides an opportunity to leverage machine learning (ML) models for better predictions. The ML models we employed include <span className="text-accent font-bold">Support Vector Regression (SVR)</span>, <span className="text-accent font-bold">Long Short-Term Memory (LSTM)</span> networks, and <span className="text-accent font-bold">Artificial Neural Networks (ANN)</span>.
                 </p>
             </section>
 
-            <section>
-                <h3 className="text-lg font-bold mb-4">Data Set</h3>
-                <p className="text-white/80">
-                    We analysed SPX and SPXW options data, with a total of 1&apos;021&apos;314 rows collected at intervals of 30 to 90 minutes from 6 trading days over a period of 4 months from July 2024 to October 2024. Our EDA exposed 3 key findings from our data:
+            <section className="">
+                <h3 className="text-xl font-bold mb-2 border-b border-white/20 pb-2">Data Set</h3>
+                <p className="text-white/80 mb-4">
+                    We analyzed SPX and SPXW options data, consisting of 1,021,314 rows collected at 30- to 90-minute intervals over
+                    six trading days across four months (July 2024 to October 2024). Our exploratory data analysis (EDA) revealed
+                    three key insights:
                 </p>
-                <ul className="text-white/80">
-                    <li>
-                        There are complex and non-linear relationships between features that are difficult to predict.
-                    </li>
-                    <li>
-                        The market is cautiously bullish.
-                    </li>
-                    <li>
-                        The market over the period we observe is generally stable.
-                    </li>
+                <ul className="text-white/80 space-y-3 mb-4 pl-5">
+                    {[
+                        "The data exhibits complex, non-linear relationships between features, making predictions challenging.",
+                        "The market exhibits a cautiously bullish sentiment.",
+                        "The market during the observed period is generally stable.",
+                    ].map((item, index) => (
+                        <li key={index} className="flex items-start">
+                            <span className="inline-block w-1 h-1 mr-2 mt-2 bg-accent rounded-full flex-shrink-0" />
+                            <span>{item}</span>
+                        </li>
+                    ))}
                 </ul>
-                <p className="text-white/80">
-                    Observation 1 indicates that this is a problem that machine learning has high potential to address. Observation 2 and 3 indicate that the market over the period we observe is overall stable, making it a good fit for training our data.
+                <p className="text-white/80 mb-4">
+                    The first observation underscores the potential for machine learning to address this problem effectively. The
+                    second and third observations suggest that the market&apos;s stability during the observed period makes it
+                    well-suited for training predictive models.
                 </p>
                 <p className="text-white/80">
-                    Our source was the <Link href={'https://www.cboe.com/data'}>Chicago Board Options Exchange</Link>.
+                    The data source for this project was the{" "}
+                    <Link href={"https://www.cboe.com/data"} className="text-accent hover:text-blue-300 underline transition-colors">
+                        Chicago Board Options Exchange
+                    </Link>
+                    .
                 </p>
             </section>
 
+
             <section>
-                <h3 className="text-lg font-bold mb-4">Black Scholes Model</h3>
+                <h3 className="text-xl font-bold mb-2 border-white/20 pb-2 border-b">Black Scholes Model</h3>
                 <p className="text-white/80">
-                    The Black-Scholes model (BSM), developed in 1973, prices European-style options with significant and unrealistic assumptions (Constant volatility, log-normal distribution of asset returns, and assumption of constant interest rates).  <span>Insert latex formula for BSM</span>.
+                    The <span className="text-accent font-bold">Black-Scholes model (BSM)</span>, developed in 1973, prices European-style options with significant and unrealistic assumptions (Constant volatility, log-normal distribution of asset returns, and assumption of constant interest rates).  <span>Insert latex formula for BSM</span>.
                 </p>
                 <p className="text-white/80">
                     This serves as our traditional baseline for comparison to evaluate performance improvements made by ML approaches.
@@ -52,20 +62,20 @@ export default function OptionsDetails() {
             </section>
 
             <section className="">
-                <h3 className="text-lg font-bold mb-4">Support Vector Regression (SVR)</h3>
+                <h3 className="text-xl font-bold mb-2 border-white/20 pb-2 border-b">Support Vector Regression (SVR)</h3>
                 <p className="text-white/80">
-                    SVR is an ML approach that aims to find a function that approximates the relationship between input features and output values. Limitations our group faced were exceptionally long running times with our large dataset.
+                    <span className="text-accent font-bold">SVR</span> is an ML approach that aims to find a function that approximates the relationship between input features and output values. Limitations our group faced were exceptionally long running times with our large dataset.
                 </p>
             </section>
 
             <div>
-                <h3 className="text-lg font-bold mb-4">Long Short-Term Memory (LSTM)</h3>
+                <h3 className="text-xl font-bold mb-2 border-b border-white/20 pb-2">Long Short-Term Memory (LSTM)</h3>
                 <section className="flex flex-col md:flex-row gap-8 items-center">
                     <div className="flex-1 order-2 lg:order-1">
                         <p className="text-white/80">
-                            The LSTM model is designed to handle data that depends on time sequences, making it effective for tasks like time-series forecasting. The key difference from traditional neural networks is that LSTM includes memory cells and gate mechanisms, letting it retain information from previous states. This &apos;memory&apos; allows the model to use historical data as context, ideally improving accuracy when predicting option prices over time.
+                            The <span className="font-bold text-accent">LSTM</span> model is designed to handle data that depends on time sequences, making it effective for tasks like time-series forecasting. The key difference from traditional neural networks is that LSTM includes memory cells and gate mechanisms, letting it retain information from previous states. This &apos;memory&apos; allows the model to use historical data as context, ideally improving accuracy when predicting option prices over time.
                             <br />
-                            Additionally, the structure of LSTM helps avoid issues like gradient explosion or vanishing gradients that traditional RNNs face, making it reliable for long-term sequences.
+                            Additionally, the structure of <span className="font-bold text-accent">LSTM</span> helps avoid issues like gradient explosion or vanishing gradients that traditional RNNs face, making it reliable for long-term sequences.
                         </p>
                     </div>
                     <div className="flex-1 flex justify-center items-center order-1 lg:order-2">
@@ -80,36 +90,33 @@ export default function OptionsDetails() {
                 </section>
                 <section>
                     <p className="text-white/80">
-                        Our LSTM out performed our SVR, but was outperformed by our ANN approach below. Our group believes that our training data is a limiting factor in this situation, and with longer continuous time sequences of data performance will improve.
+                        Our <span className="text-accent font-bold">LSTM</span> out performed our <span className="font-bold text-accent">SVR</span>, but was itself outperformed by our <span className="text-accent font-bold">ANN</span> approach below. Our group believes that our training data is a limiting factor in this situation, and with longer continuous time sequences of data performance will improve.
                     </p>
                 </section>
             </div>
 
             <div>
-                <h3 className="text-lg font-bold mb-4">Artificial Neural Network (ANN)</h3>
+                <h3 className="text-xl font-bold mb-2 border-b border-white/20 pb-2">Artificial Neural Network (ANN)</h3>
                 <section>
                     <p className="text-white/80">
-                        The final model our group employed was the ANN, a well established deep learning model. A feedforward ANN is composed of three primary components: an input layer that represents the features of the data, one or more hidden layers that process information through interconnected neurons, and an output layer that delivers the predicted outcome. The architecture&apos;s adaptability stems from its ability to modify weights and biases during training via back-propagation, a gradient-based optimization technique. ANNs are particularly advantageous in tasks that require learning from large datasets and capturing intricate, nonlinear dynamics, such as option pricing and
-                        other financial modeling tasks.
+                        Our final model, the <span className="font-bold text-accent">ANN</span>, is a deep learning model comprising an input layer for data features, hidden layers for processing, and an output layer for predictions. Its adaptability lies in adjusting weights and biases via back-propagation, making it ideal for tasks like option pricing and financial modeling.
                     </p>
                 </section>
                 <section>
                     <p className="text-white/80">
-                        Development of this model was one of my personal contributions to the project. Initially a &apos;Single-Stage ANN&apos; was developed, which took in input features from the data set, with 2 hidden layers of 64 and 32 nodes respecitvely, and a final node for predicting the option price.
-                        <br />
-                        This approach was limited and displayed exceptionally poor performance, particularly a high degree of overfitting. This is due to the nature of our data set, which consisted of a callbook of options data. This dataset documents all available options at specific points during the trading
-                        day, including those that were not traded. For options that were traded, the dataset recorded the corresponding closing price, while for untraded options, a value of zero was recorded as the closing price. The abundance of zero values,
-                        due to the non purchased options, introduced a significant amount of noise into the data. This not only skewed the model&apos;s performance but also led to an overrepresentation of zero values. A different approach was required.
+                        Developing this model was my key contribution. Initially, a <span className="text-accent font-bold">&apos;Single-Stage ANN&apos;</span> was implemented with two hidden layers (64 and 32 nodes) and an output node for price prediction. However, this approach suffered from overfitting due to the dataset&apos;s noise, as it included numerous untraded options recorded with a closing price of zero. These zeros skewed the model and led to poor performance, necessitating a new approach.
                     </p>
                 </section>
                 <section className="flex flex-col md:flex-row gap-8 items-center ">
                     <div className="flex-1 order-2 lg:order-1">
                         <p className="text-white/80">
-                            The final and most effective approach I developed was what my group termed the <span className="text-accent font-bold">&apos;Two-Stage ANN&apos;</span>.
-                            Stage 1: Binary Classifier. The first stage of the refined model focuses on a binary classification task, where
-                            the model is trained to predict whether an option is likely to be buyable. In the context of our data, an option is considered buyable if it has a significant probability of being purchased. This stage helps filter out options that are unlikely to be traded, based on historical data and certain features that may indicate whether an option is typically exercised. By classifying options as either buyable or not buyable, this stage serves to pre-process the data by eliminating options with no real trading potential (those with a closing price of zero, for example). Only rows of data that are identified as buyable move forward to the second stage for price prediction, ensuring that the model focuses only on relevant data and avoids training on unpurchased options.
-                            Stage 2: Price Regressor. In the second stage, the ANN model conducts a regression task specifically for the buyable options identified in Stage 1. The goal of this stage is to predict the price of each option that is classified as likely to be exercised. This involves taking the features of the options that passed through the first stage and using them to predict the continuous value of the option&apos;s price.
-                            By separating the classification and regression tasks into two distinct stages, the model is able to learn more effectively, with the first stage helping to filter the data and the second stage focusing solely on price prediction for options that are most relevant. This approach mitigates the problem of overfitting to irrelevant data, as the training process is now more focused and efficient.
+                            The most effective solution I devised was the <span className="text-accent font-bold">&apos;Two-Stage ANN&apos;</span>.
+                            <br />
+                            <span className="font-bold">Stage 1: Binary Classifier</span> - This stage predicts whether an option is buyable, filtering out irrelevant options (e.g., those with zero closing prices) to focus on tradable ones.
+                            <br />
+                            <span className="font-bold">Stage 2: Price Regressor</span> - The filtered data is used to predict the price of buyable options through regression.
+                            <br />
+                            By separating classification and regression, this approach improves focus, reduces overfitting, and enhances efficiency.
                         </p>
                     </div>
                     <div className="flex-1 flex justify-center items-center order-1 lg:order-2">
@@ -122,7 +129,9 @@ export default function OptionsDetails() {
                         />
                     </div>
                 </section>
+
                 <section>
+                    <h3 className="text-xl font-bold mb-2 border-b border-white/20 pb-2">Results</h3>
                     <p>
 
                     </p>
@@ -131,7 +140,7 @@ export default function OptionsDetails() {
 
             {/* conclusions */}
             <section>
-                <h3 className="text-lg font-bold mb-4">Conclusion</h3>
+                <h3 className="text-xl font-bold mb-2 border-b border-white/20 pb-2">Conclusion</h3>
                 <p className="text-white/80">
                     Our research demonstrated that machine learning models, particularly the hybrid ANN approach, can
                     significantly improve options pricing accuracy compared to traditional methods. By leveraging SVR, LSTM, and
