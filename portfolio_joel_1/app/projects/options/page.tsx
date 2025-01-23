@@ -51,7 +51,7 @@ const handleDownload = () => {
 
 export default function Options() {
   return (
-    <section className="container mx-auto px-4 py-2 lg:py-6">
+    <section className="container mx-auto  py-2 lg:py-6">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{
@@ -85,7 +85,7 @@ export default function Options() {
                   </Link>
                 </Button>
               </div>
-              
+
             </div>
             {/* photo */}
             <div className="relative rounded-lg shadow-xl">
@@ -101,22 +101,24 @@ export default function Options() {
 
 
           {/* Project Summary */}
-          <div className="space-y-4">
+          <div className="px-2">
             <h2 className="text-2xl font-semibold tracking-wide">Summary</h2>
-            <p className="text-white/80 leading-relaxed">
-              In this project my group sought to analyse different machine learning techniques in tackling a notoriously complex task: <span className="font-bold text-white">Options Pricing</span>. We contrasted our models&apos; performance to a traditional and widely used mathematical model.
-            </p>
-            <p className="text-white/80 leading-relaxed">
-              My specific contributions to this project were sourcing the data sets, the entirety of exploratory data analysis, and constructing the ANN model. What I was most proud of in my ANN approach was developing a hybrid ANN approach that used both a classification ANN and a regression ANN, and proved to be the most successful model we employed.
-            </p>
-            <p className="text-white/80 leading-relaxed">
-              This project was undertaken as part of an SMU module, &apos;Machine Learning &amp; Applications&apos;.
-            </p>
+            <div className="space-y-4">
+              <p className="text-white/80 leading-relaxed">
+                In this project my group sought to analyse different machine learning techniques in tackling a notoriously complex task: <span className="font-bold text-white">Options Pricing</span>. We contrasted our models&apos; performance to a traditional and widely used mathematical model.
+              </p>
+              <p className="text-white/80 leading-relaxed">
+                My specific contributions to this project were sourcing the data sets, the entirety of exploratory data analysis, and constructing the ANN model. What I was most proud of in my ANN approach was developing a hybrid ANN approach that used both a classification ANN and a regression ANN, and proved to be the most successful model we employed.
+              </p>
+              <p className="text-white/80 leading-relaxed">
+                This project was undertaken as part of an SMU module, &apos;IS460 Machine Learning &amp; Applications&apos;. My group received an A+ for this project.
+              </p>
+            </div>
           </div>
         </div>
 
 
-        <div className="container mx-auto ">
+        <div className="container mx-auto">
           <Tabs defaultValue="details" className="flex flex-col">
             <div className="flex flex-col gap-4">
               <TabsList className="flex flex-row gap-3 lg:gap-6">
@@ -126,7 +128,7 @@ export default function Options() {
               </TabsList>
             </div>
 
-            <div className="min-h-[80vh] w-full pt-8 pb-12 ">
+            <div className="min-h-[80vh] w-full pt-8 pb-12 px-2">
               {/* tab 1, project details */}
               <TabsContent value="details">
                 <h2 className="text-2xl font-semibold tracking-wide mb-4">Project Details</h2>
