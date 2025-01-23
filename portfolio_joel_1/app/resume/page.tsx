@@ -243,7 +243,7 @@ export default function Resume() {
               <TabsTrigger value="experience" className="bg-secondary px-4 flex-grow xl:flex-grow-0">Experience</TabsTrigger>
               <TabsTrigger value="education" className="bg-secondary px-4 flex-grow xl:flex-grow-0">Education</TabsTrigger>
               <TabsTrigger value="skills" className="bg-secondary px-4 flex-grow xl:flex-grow-0">Skills</TabsTrigger>
-              <TabsTrigger value="cca" className="bg-secondary px-4 flex-grow xl:flex-grow-0">Extra Curriculars</TabsTrigger>
+              <TabsTrigger value="cca" className="bg-secondary px-4 flex-grow xl:flex-grow-0">CCA</TabsTrigger>
             </TabsList>
             <Button variant="outline" size="lg" className="uppercase w-full xl:w-auto">
               <a href="/assets/resume_joelsng.pdf" download="resume_joelsng.pdf" className="flex text-xs xl:text-base items-center justify-center gap-2 w-full">
