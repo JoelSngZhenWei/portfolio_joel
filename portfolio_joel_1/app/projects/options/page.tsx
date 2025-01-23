@@ -85,22 +85,13 @@ export default function Options() {
           <div className="space-y-4">
             <h2 className="text-2xl font-semibold tracking-wide">Project Summary</h2>
             <p className="text-white/80 leading-relaxed">
-              In the rapidly evolving intersection of finance and artificial intelligence, our team embarked on an
-              ambitious project to redefine options pricing. As part of the advanced &apos;Machine Learning & Applications&apos;
-              module, we challenged conventional methodologies by leveraging cutting-edge machine learning models to
-              predict stock market option prices with unprecedented accuracy.
+              In this project my group sought to analyse different machine learning techniques in tackling a notoriously complex task: <strong>Options Pricing</strong>. We contrasted our models&apos; performance to a traditional and widely used mathematical model.
             </p>
             <p className="text-white/80 leading-relaxed">
-              Our research focused on three powerful models: Support Vector Regression (SVR), Artificial Neural Networks
-              (ANN), and Long Short-Term Memory networks (LSTM). By comparing these advanced techniques with traditional
-              mathematical option pricing models, we aimed to uncover new insights and push the boundaries of financial
-              modeling.
+              My specific contributions to this project were sourcing the data, exploratory data analysis, and the ANN model. What I was most proud of in my ANN approach to a hybrid model that used both a classification ANN and a regression ANN. 
             </p>
             <p className="text-white/80 leading-relaxed">
-              This project not only showcases the potential of machine learning in financial markets but also demonstrates
-              our team&apos;s ability to apply theoretical knowledge to real-world challenges. The resulting paper, which
-              meticulously details our methodology, findings, and analysis, stands as a testament to the innovative spirit
-              driving the future of quantitative finance.
+              This project was undertaken as part of an SMU module, &apos;Machine Learning &amp; Applications&apos;.
             </p>
           </div>
         </div>
