@@ -10,30 +10,31 @@ import OptionsDetails from "@/components/OptionsDetails"
 import { Button } from "@/components/ui/button"
 import { Download } from "lucide-react"
 import PdfView from "@/components/PdfView"
-
+import { FaGithub } from "react-icons/fa"
+import Link from "next/link"
 const skills = {
   langlist: [
     {
       icon: <FaPython />,
       name: "Python",
-      description: "Data analysis, machine learning, and backend development."
+      description: "This was the primary language our analysis was conducted in, leveraging other libraries and frameworks to manipulate data and construct our machine learning models."
     }
   ],
   frameworklist: [
     {
       icon: <SiScikitlearn />,
       name: "ScikitLearn",
-      description: "Machine learning library for Python, with tools for data analysis and predictive modeling."
+      description: "Used to assist in model creation and conduct hyper parameter tuning on number of nodes, learning rate, batch size, and epochs. Used to construct our SVR model."
     },
     {
       icon: <SiPandas />,
       name: "Pandas",
-      description: "Python library for data manipulation and analysis."
+      description: "Python library for multipurpose data manipulation and analysis, used for our exploratory data analysis and preparing our data for use by our models."
     },
     {
       icon: <SiTensorflow />,
       name: "Tensor Flow",
-      description: `Library in Python for machine learning and deep learning.`
+      description: `Used to construct our ANN models and LSTM models. Provided a powerful, open-source resource for us to more easily build and refine our deep learning models.`
     },
   ]
 }
@@ -66,7 +67,22 @@ export default function Options() {
               <h1 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
                 Options Pricing with <span className="text-accent">Machine Learning</span>
               </h1>
-              <p className="text-accent font-medium text-lg">Aug 2024 - Dec 2024</p>
+              <div className="flex flex-row gap-3 items-center justify-between">
+                <p className="text-accent font-medium text-lg">Aug 2024 - Dec 2024</p>
+                <div>
+                  <Button variant="outline" size="lg" asChild>
+                    <Link
+                      href="https://github.com/JoelSngZhenWei/MLA_OptionsPricing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2"
+                    >
+                      <span className="font-bold text-lg">Repo</span>
+                      <FaGithub className="w-5 h-5" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
             </div>
             {/* photo */}
             <div className="relative rounded-lg shadow-xl">
@@ -88,7 +104,7 @@ export default function Options() {
               In this project my group sought to analyse different machine learning techniques in tackling a notoriously complex task: <strong>Options Pricing</strong>. We contrasted our models&apos; performance to a traditional and widely used mathematical model.
             </p>
             <p className="text-white/80 leading-relaxed">
-              My specific contributions to this project were sourcing the data, exploratory data analysis, and the ANN model. What I was most proud of in my ANN approach to a hybrid model that used both a classification ANN and a regression ANN. 
+              My specific contributions to this project were sourcing the data, exploratory data analysis, and the ANN model. What I was most proud of in my ANN approach to a hybrid model that used both a classification ANN and a regression ANN.
             </p>
             <p className="text-white/80 leading-relaxed">
               This project was undertaken as part of an SMU module, &apos;Machine Learning &amp; Applications&apos;.
@@ -101,8 +117,8 @@ export default function Options() {
           <Tabs defaultValue="details" className="flex flex-col">
             <div className="flex flex-col gap-4">
               <TabsList className="flex flex-row gap-3 lg:gap-6">
-                <TabsTrigger value='details' className="bg-secondary px-4 flex-grow xl:flex-grow-0">Project Details</TabsTrigger>
-                <TabsTrigger value='paper' className="bg-secondary px-4 flex-grow xl:flex-grow-0">View Paper</TabsTrigger>
+                <TabsTrigger value='details' className="bg-secondary px-4 flex-grow xl:flex-grow-0">Details</TabsTrigger>
+                <TabsTrigger value='paper' className="bg-secondary px-4 flex-grow xl:flex-grow-0">Report</TabsTrigger>
                 <TabsTrigger value='techstack' className="bg-secondary px-4 flex-grow xl:flex-grow-0">Tech Stack</TabsTrigger>
               </TabsList>
             </div>
@@ -116,12 +132,12 @@ export default function Options() {
               {/* tab 2, project paper */}
               <TabsContent value="paper" className="h-[60vh]">
                 <div className="flex flex-col lg:flex-row h-full">
-                  <div className="lg:w-1/3 w-full h-full flex flex-col items-center justify-center space-y-4 p-4">
-                    <h2 className="text-3xl font-semibold tracking-wide text-center">Report</h2>
+                  <div className="lg:w-1/3 w-full h-full flex flex-col items-center justify-start lg:justify-center space-y-4 pb-2">
+                    <h2 className="text-2xl font-semibold tracking-wide text-start lg:text-center">Report</h2>
                     <Button
                       onClick={handleDownload}
                       variant="outline"
-                      className="flex items-center gap-2 px-4 py-2 border rounded-full"
+                      className="flex items-center gap-2 px-4 py-2 border text-lg rounded-full"
                     >
                       <span>Download</span>
                       <Download className="h-4 w-4" />

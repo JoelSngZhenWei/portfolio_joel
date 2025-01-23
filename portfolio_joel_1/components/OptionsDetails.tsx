@@ -96,7 +96,7 @@ export default function OptionsDetails() {
             <section className="">
                 <h3 className="text-xl font-bold mb-2 border-b border-white/20 pb-2">Data Set</h3>
                 <p className="text-white/80 mb-4">
-                    We analyzed SPX and SPXW options data, consisting of 1,021,314 rows collected at 30- to 90-minute intervals over
+                    We analyzed SPX and SPXW options data, consisting of 1,021,314 rows collected at 3600 second intervals over
                     six trading days across four months (July 2024 to October 2024). Our exploratory data analysis (EDA) revealed
                     three key insights:
                 </p>
@@ -249,12 +249,12 @@ export default function OptionsDetails() {
             <section>
                 <h3 className="text-xl font-bold mb-2 border-b border-white/20 pb-2">Conclusion</h3>
                 <p className="text-white/80">
-                    Our research demonstrated that machine learning models, particularly the hybrid ANN approach, can
-                    significantly improve options pricing accuracy compared to traditional methods. By leveraging SVR, LSTM, and
-                    ANN techniques, we addressed the limitations of conventional models and captured complex market dynamics. This
-                    project not only enhanced pricing accuracy but also provided valuable insights into the intricate
-                    relationships between various market factors and option prices, paving the way for more sophisticated
-                    financial modeling and risk management strategies.
+                    The conclusions of our project were that machine learning models have significant potential to be transformative in handling options pricing. Traditional models, such as
+                    the Black-Scholes Model, while serving as a strong foundation, are ultimately limited by their reliance on assumptions which are impractical to real-life market conditions. 
+                    <br />
+                    The machine learning models we utilised: <span className="font-bold text-white">SVR</span>, <span className="font-bold text-white">ANN</span>, and <span className="font-bold text-white">LSTM</span>, have demonstrated a superior predictive power to BSM. However, despite their superior accuracy in pricing options, machine learning comes with its own set of considerations. In contrast to BSM being a ready-made formula, machine learning models require a significant time investment. Varying complexities of models
+                    and sizes of training datasets impacts the amount of time and computational power required to train and utilise the model. Machine learning models are also
+                    heavily dependent on the quality of training data, and models trained on historical data may be susceptible to overfitting, and may struggle to generalise to extreme market conditions.
                 </p>
             </section>
         </div >

@@ -17,17 +17,17 @@ interface TechStackProps {
 }
 
 const InfoColumn: React.FC<{ selectedSkill: Skill | null }> = ({ selectedSkill }) => (
-  <div className="w-full lg:w-1/3 p-4 bg-primary rounded-xl flex flex-col h-full">
-    <h2 className="text-3xl font-semibold tracking-wide mb-4 sticky top-0 bg-primary z-10">Tech Stack</h2>
-    <ScrollArea className="h-[300px]">
+  <div className="w-full lg:w-1/3 p-1 bg-primary rounded-xl flex flex-col h-full">
+    <h2 className="text-2xl font-semibold tracking-wide mb-4 sticky top-0 bg-primary z-10">Tech Stack</h2>
+    <ScrollArea className="h-[35vh]">
       {selectedSkill ? (
-        <div className="h-[300px] flex-col flex gap-1 place-items-center">
-          <h3 className="text-2xl w-full font-bold mb-4">{selectedSkill.name}</h3>
-          <div className="text-5xl lg:text-9xl mb-4 text-accent text-center">{selectedSkill.icon}</div>
+        <div className="h-[35vh] flex-col flex gap-0.1 place-items-center">
+          <h3 className="text-lg w-full text-center font-bold">{selectedSkill.name}</h3>
+          <div className="text-7xl lg:text-9xl mb-4 text-accent text-center">{selectedSkill.icon}</div>
           <p className="text-white/80">{selectedSkill.description}</p>
         </div>
       ) : (
-        <div className="h-[300px] flex place-items-center text-center">
+        <div className="h-[35vh] flex place-items-center text-center">
           <p className="text-white/80">
             Select a skill to view more information.
           </p>
@@ -73,9 +73,9 @@ export const TechStack: React.FC<TechStackProps> = ({ skills }) => {
   }
 
   return (
-    <div className="flex flex-col lg:flex-row gap-4">
+    <div className="flex flex-col lg:flex-row ">
       <InfoColumn selectedSkill={selectedSkill} />
-      <ScrollArea className="h-[300px] lg:h-[450px] w-full lg:w-2/3 bg-secondary p-4 rounded-xl">
+      <ScrollArea className="h-[350px] lg:h-[450px] w-full lg:w-2/3 bg-secondary p-3 rounded-xl">
         <div className="flex flex-col gap-2">
           <SkillList
             title="Languages"
