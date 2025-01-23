@@ -6,7 +6,6 @@ import { Textarea } from "@/components/ui/textarea";
 
 import { FaPhoneAlt, FaEnvelope } from 'react-icons/fa'
 
-import { FC } from 'react';
 import { useForm } from 'react-hook-form';
 import { sendEmail } from "@/utils/send-email";
 
