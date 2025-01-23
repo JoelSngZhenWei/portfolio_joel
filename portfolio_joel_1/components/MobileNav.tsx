@@ -22,7 +22,7 @@ const MobileNav = () => {
   }, [pathname]);
 
   return (
-    <Sheet open={isOpen} onOpenChange={setIsOpen}>
+    <Sheet open={isOpen} onOpenChange={setIsOpen} >
       <SheetTrigger className="flex justify-center items-center">
         <HiMenuAlt3 className="text-[32px] text-accent" />
       </SheetTrigger>
