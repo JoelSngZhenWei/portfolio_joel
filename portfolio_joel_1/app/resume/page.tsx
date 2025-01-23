@@ -261,7 +261,7 @@ export default function Resume() {
                 <h3 className='text-lg xl:text-4xl font-bold'>
                   {experience.title}
                 </h3>
-                <p className='max-w-2xl h-16 lg:h-20 text-sm  xl:text-base text-white/60 mx-auto xl:mx-0'>
+                <p className='max-w-2xl h-18 lg:h-20 text-sm  xl:text-base text-white/60 mx-auto xl:mx-0'>
                   {experience.description}
                 </p>
                 <ScrollArea className='h-[400px]'>
@@ -293,7 +293,7 @@ export default function Resume() {
                 <h3 className='text-lg xl:text-4xl font-bold'>
                   {education.title}
                 </h3>
-                <p className='max-w-2xl h-16 lg:h-20 text-white/60 mx-auto xl:mx-0 text-sm xl:text-base'>
+                <p className='max-w-2xl h-18 lg:h-20 text-white/60 mx-auto xl:mx-0 text-sm xl:text-base'>
                   {education.description}
                 </p>
                 <ScrollArea className='h-[400px] bg-primary'>
@@ -327,7 +327,7 @@ export default function Resume() {
                   <h3 className='text-lg xl:text-4xl font-bold'>
                     {skills.title}
                   </h3>
-                  <p className='max-w-2xl h-16 lg:h-20 text-white/60 mx-auto xl:mx-0 text-sm xl:text-base'>
+                  <p className='max-w-2xl h-18 lg:h-20 text-white/60 mx-auto xl:mx-0 text-sm xl:text-base'>
                     {skills.description}
                   </p>
                   <ScrollArea className='h-[400px] bg-secondary p-4 rounded-xl'>
@@ -415,7 +415,7 @@ export default function Resume() {
                 <h3 className='text-lg xl:text-4xl font-bold'>
                   {cca.title}
                 </h3>
-                <p className='lg:h-20 h-16 max-w-2xl text-sm xl:text-base text-white/60 mx-auto xl:mx-0'>
+                <p className='lg:h-20 h-18 max-w-2xl text-sm xl:text-base text-white/60 mx-auto xl:mx-0'>
                   {cca.description}
                 </p>
                 <ScrollArea className='h-[400px]'>
