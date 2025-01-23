@@ -6,6 +6,17 @@ import { Textarea } from "@/components/ui/textarea";
 
 import { FaPhoneAlt, FaEnvelope } from 'react-icons/fa'
 
+import { FC } from 'react';
+import { useForm } from 'react-hook-form';
+import { sendEmail } from "@/utils/send-email";
+
+export type FormData = {
+  firstname: string;
+  lastname: string;
+  email: string;
+  message: string;
+};
+
 const info = [
   {
     icon: <FaPhoneAlt />,
@@ -22,6 +33,13 @@ const info = [
 import { motion } from "framer-motion";
 
 export default function Contact() {
+
+  const { register, handleSubmit } = useForm<FormData>();
+
+  function onSubmit(data: FormData) {
+    sendEmail(data);
+  }
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -35,7 +53,7 @@ export default function Contact() {
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* form */}
           <div className="xl:h-[54%] order-2 xl:order-none">
-            <form className="flex flex-col p-10 lg:gap-2 bg-[#27272c] rounded-xl" action="">
+            <form className="flex flex-col p-10 lg:gap-2 bg-[#27272c] rounded-xl" onSubmit={(event) => handleSubmit(onSubmit)(event)}>
               <h3 className="text-lg lg:text-4xl text-accent font-semibold">
                 Let&apos;s work together
               </h3>
@@ -44,14 +62,15 @@ export default function Contact() {
               </p>
               {/* input */}
               <div className="grid grid-cols-1 pt-4 md:grid-cols-2 gap-4">
-                <Input type="firstname" placeholder="First name" />
-                <Input type="lastname" placeholder="Last name" />
-                <Input type="email" placeholder="Email address" className="lg:col-span-2"/>
+                <Input type="text" placeholder="First name" {...register('firstname', { required: true })} />
+                <Input type="text" placeholder="Last name" {...register('lastname', { required: true })} />
+                <Input type="email" placeholder="Email address" className="lg:col-span-2" {...register('email', { required: true })} />
               </div>
               {/* textarea */}
               <Textarea
                 className="h-[200px] mt-4"
                 placeholder="Type your message here."
+                {...register('message', { required: true })}
               />
               {/* button */}
               <Button className="max-w-40 mt-4">

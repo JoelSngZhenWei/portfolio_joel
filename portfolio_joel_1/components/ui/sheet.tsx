@@ -65,8 +65,8 @@ const SheetContent = React.forwardRef<
       className={cn(sheetVariants({ side }), className)}
       {...props}
     >
-      <SheetPrimitive.Close className="absolute left-8 top-8 transition-opacity outline-none ">
-        <FaChevronRight className="text-3xl accent"/>
+      <SheetPrimitive.Close className="absolute left-8 top-6 transition-opacity outline-none ">
+        <FaChevronRight className="text-2xl accent"/>
         <span className="sr-only">Close</span>
       </SheetPrimitive.Close>
       {children}
