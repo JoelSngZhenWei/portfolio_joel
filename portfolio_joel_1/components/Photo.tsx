@@ -4,7 +4,7 @@ import Image from "next/image"
 
 const Photo = () => {
   return (
-    <div className="relative w-[300px] h-[300px] xl:w-[506px] xl:h-[506px]">
+    <div className="relative w-[300px] h-[300px] lg:w-[506px] lg:h-[506px]">
       <motion.div
         className="w-full h-full"
         initial={{ opacity: 0 }}
@@ -15,7 +15,7 @@ const Photo = () => {
       >
         {/* image */}
         <motion.div
-          className="absolute inset-0 z-10"
+          className="w-[298px] h-[298px] lg:w-[498px] lg:h-[498px] absolute inset-0 z-10 mix-blend-lighten"
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
@@ -28,7 +28,7 @@ const Photo = () => {
             quality={100}
             fill
             alt="Joel Sng's portrait"
-            className="object-cover rounded-full"
+            className="object-cover rounded-full "
           />
         </motion.div>
 
@@ -43,17 +43,20 @@ const Photo = () => {
             cx="253"
             cy="253"
             r="250"
-            stroke="#078dc4"
+            stroke="#ffffff"
             strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"
             initial={{ strokeDasharray: "24 10 0 0" }}
             animate={{
-              strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"],
+              strokeDasharray: [
+                "15 120 25 25", 
+                "16 25 92 72", 
+                "4 250 22 22"],
               rotate: [120, 360],
             }}
             transition={{
-              duration: 20,
+              duration: 10,
               repeat: Number.POSITIVE_INFINITY,
               repeatType: "reverse",
             }}

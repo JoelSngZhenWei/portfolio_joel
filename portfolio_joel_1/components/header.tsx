@@ -7,7 +7,7 @@ import MobileNav from "./MobileNav"
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-primary/80 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 bg-primary/80 backdrop-blur-md">
       <div className="py-4 lg:py-6 px-4">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo */}

@@ -199,6 +199,26 @@ const skills = {
   ]
 }
 
+// cca data
+const cca = {
+  title: 'My Extracurricular Activities',
+  description: "I am passionate about community service and leadership, driving initiatives that positively impact communities and foster meaningful change. I have been recognised by Madam Halimah Yacob and spoken on CNA Radio.",
+  items: [
+    {
+      organisation: 'SMU Special Interest & Community Service Sodality',
+      position: 'President',
+      duration: 'Jan 2023 - Dec 2023',
+      details: ['1','2','3']
+    },
+    {
+      organisation: 'StarringSMU',
+      position: 'President',
+      duration: 'Jan 2022 - Dec 2022',
+      details: ['1','2','3']
+    },
+  ]
+}
+
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
@@ -218,12 +238,12 @@ export default function Resume() {
     >
       <div className='container mx-auto'>
         <Tabs defaultValue='experience' className='flex flex-col xl:flex-row gap-4'>
-          <div className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+          <div className="flex flex-col w-full lg:max-w-[380px] mx-auto xl:mx-0 gap-6">
             <TabsList className="flex flex-row justify-center xl:justify-start w-full gap-2 xl:gap-6 xl:flex-col">
               <TabsTrigger value="experience" className="bg-secondary px-4 flex-grow xl:flex-grow-0">Experience</TabsTrigger>
               <TabsTrigger value="education" className="bg-secondary px-4 flex-grow xl:flex-grow-0">Education</TabsTrigger>
               <TabsTrigger value="skills" className="bg-secondary px-4 flex-grow xl:flex-grow-0">Skills</TabsTrigger>
-              {/* <TabsTrigger value="about" className="bg-secondary px-4 flex-grow xl:flex-grow-0 hidden xl:flex">About me</TabsTrigger> */}
+              <TabsTrigger value="cca" className="bg-secondary px-4 flex-grow xl:flex-grow-0">Extra Curriculars</TabsTrigger>
             </TabsList>
             <Button variant="outline" size="lg" className="uppercase w-full xl:w-auto">
               <a href="/assets/resume_joelsng.pdf" download="resume_joelsng.pdf" className="flex text-xs xl:text-base items-center justify-center gap-2 w-full">
@@ -241,7 +261,7 @@ export default function Resume() {
                 <h3 className='text-lg xl:text-4xl font-bold'>
                   {experience.title}
                 </h3>
-                <p className='max-w-2xl h-18 text-sm  xl:text-base text-white/60 mx-auto xl:mx-0'>
+                <p className='max-w-2xl h-16 lg:h-20 text-sm  xl:text-base text-white/60 mx-auto xl:mx-0'>
                   {experience.description}
                 </p>
                 <ScrollArea className='h-[400px]'>
@@ -273,7 +293,7 @@ export default function Resume() {
                 <h3 className='text-lg xl:text-4xl font-bold'>
                   {education.title}
                 </h3>
-                <p className='max-w-2xl h-18 text-white/60 mx-auto xl:mx-0 text-sm xl:text-base'>
+                <p className='max-w-2xl h-16 lg:h-20 text-white/60 mx-auto xl:mx-0 text-sm xl:text-base'>
                   {education.description}
                 </p>
                 <ScrollArea className='h-[400px] bg-primary'>
@@ -307,7 +327,7 @@ export default function Resume() {
                   <h3 className='text-lg xl:text-4xl font-bold'>
                     {skills.title}
                   </h3>
-                  <p className='max-w-2xl h-18 text-white/60 mx-auto xl:mx-0 text-sm xl:text-base'>
+                  <p className='max-w-2xl h-16 lg:h-20 text-white/60 mx-auto xl:mx-0 text-sm xl:text-base'>
                     {skills.description}
                   </p>
                   <ScrollArea className='h-[400px] bg-secondary p-4 rounded-xl'>
@@ -389,23 +409,37 @@ export default function Resume() {
 
             </TabsContent>
 
-            {/* about */}
-            {/* <TabsContent value='about' className='w-full h-full text-center xl:text-left'>
-              <div className='flex flex-col gap-2 lg:gap-8 '>
-                <h3 className='text-4xl font-bold'>{about.title}</h3>
-                <p className='text-white/60 max-w-[600px] mx-auto xl:mx-0'>{about.description}</p>
-                <ul className='grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0'>
-                  {about.info.map((item, index) => {
-                    return (
-                      <li key={index} className='flex items-center justify-center xl:justify-start gap-4'>
-                        <span className='text-white/60'>{item.fieldName}</span>
-                        <span className='text-xl'>{item.fieldValue}</span>
-                      </li>
-                    )
-                  })}
-                </ul>
+            {/* cca */}
+            <TabsContent value='cca' className='w-full h-full'>
+              <div className='flex flex-col gap-2 lg:gap-8 text-center xl:text-left '>
+                <h3 className='text-lg xl:text-4xl font-bold'>
+                  {cca.title}
+                </h3>
+                <p className='lg:h-20 h-16 max-w-2xl text-sm xl:text-base text-white/60 mx-auto xl:mx-0'>
+                  {cca.description}
+                </p>
+                <ScrollArea className='h-[400px]'>
+                  <ul className='grid grid-cols-1 lg:grid-cols-1 gap-[15px] '>
+                    {cca.items.map((item, index) => {
+                      return (
+                        <li key={index} className='bg-secondary h-[136px] py-4 px-6 lg:h-[184px] lg:py-6 lg:px-10 rounded-xl flex flex-col justify-center items-center lg:items-start '>
+                          <span className='text-accent text-sm lg:text-base'>{item.duration}</span>
+                          <div className='flex w-full items-center max-w-[290px] min-h-[30px] lg:min-h-[60px] justify-center lg:justify-normal'>
+                            <h3 className='text-base lg:text-xl  font-bold'>{item.position}</h3>
+                          </div>
+                          <div className='flex items-center gap-3'>
+                            {/* dot */}
+                            <span className='w-[4px] h-[4px] lg:w-[6px] lg:h-[6px] rounded-full bg-accent'></span>
+                            <p className='text-white/60 text-sm lg:text-base'>{item.organisation}</p>
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </ScrollArea>
+
               </div>
-            </TabsContent> */}
+            </TabsContent>
           </div>
 
         </Tabs>

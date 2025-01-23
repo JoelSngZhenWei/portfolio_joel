@@ -91,6 +91,7 @@ body {
   .text-outline-hover {
     -webkit-text-stroke: 1px #078dc4;
   }
+  
 }
 
 @layer utilities {
@@ -109,6 +110,7 @@ body {
     animation-name: slideOutToRight;
   }
 }
+
 
 @keyframes slideInFromRight {
   from {

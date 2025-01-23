@@ -29,7 +29,7 @@ export default function Home() {
                 </a>
               </Button>
               <div className="lg:mb-0">
-                <Socials containerStyles="flex gap-6" iconStyles="w-9 h-9 lg:w-10 lg:h-10 border border-accent rounded-full flex justify-center items-center text-accent text-base lg:text-xl hover:bg-accent hover:text-primary hover:transition-all duration-500" />
+                <Socials containerStyles="flex gap-6" iconStyles="w-9 h-9 lg:w-10 lg:h-10 border border-accent rounded-full flex justify-center items-center text-accent text-base lg:text-xl hover:bg-accent hover:text-primary hover:transition-all duration-300" />
               </div>
             </div>
           </div>

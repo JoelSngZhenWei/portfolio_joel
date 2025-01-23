@@ -10,14 +10,14 @@ const projects = [
     num: '01',
     title: 'Options Pricing using Machine Learning',
     description: 'Using machine learning models including SVR, artificial neural networks, and LSTM, to price options and evaluating performance against traditional mathematical models.',
-    skills: ['Machine Learning', 'Neural Networks', 'Python'],
+    skills: ['Machine Learning', 'Neural Networks'],
     href: 'projects/options'
   },
   {
     num: '02',
     title: 'Project Management for Software Development',
     description: 'Led a software development project over 5 months as both Scrum Master and backend developer. Developed an HRMS scheduling web application.',
-    skills: ['Scrum', 'Agile Development', 'Flask', 'Python'],
+    skills: ['App Development', 'Scrum'],
     href: 'projects/spm',
     inProgress: true,
   },
