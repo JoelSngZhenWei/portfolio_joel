@@ -19,9 +19,9 @@ interface TechStackProps {
 const InfoColumn: React.FC<{ selectedSkill: Skill | null }> = ({ selectedSkill }) => (
   <div className="w-full lg:w-1/3 p-1 bg-primary rounded-xl flex flex-col h-full">
     <h2 className="text-2xl font-semibold tracking-wide mb-4 sticky top-0 bg-primary z-10">Tech Stack</h2>
-    <ScrollArea className="h-[35vh]">
+    <ScrollArea className="h-[35vh] ">
       {selectedSkill ? (
-        <div className="h-[35vh] flex-col flex gap-0.1 place-items-center">
+        <div className="h-[35vh] flex-col flex gap-0.1 place-items-center justify-center">
           <h3 className="text-lg w-full text-center font-bold">{selectedSkill.name}</h3>
           <div className="text-7xl lg:text-9xl mb-4 text-accent text-center">{selectedSkill.icon}</div>
           <p className="text-white/80">{selectedSkill.description}</p>
