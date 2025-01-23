@@ -248,9 +248,11 @@ export default function Resume() {
                   <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[30px] '>
                     {experience.items.map((item, index) => {
                       return (
-                        <li key={index} className='bg-secondary h-[136px] py-4 px-6 lg:h-[184px] lg:py-6 lg:px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'>
+                        <li key={index} className='bg-secondary h-[136px] py-4 px-6 lg:h-[184px] lg:py-6 lg:px-10 rounded-xl flex flex-col justify-center items-center lg:items-start '>
                           <span className='text-accent text-sm lg:text-base'>{item.duration}</span>
-                          <h3 className='text-base lg:text-xl max-w-[260px] min-h-[30px] lg:min-h-[60px] text-center lg:text-left'>{item.position}</h3>
+                          <div className='flex w-full items-center max-w-[290px] min-h-[30px] lg:min-h-[60px] justify-center lg:justify-normal'>
+                            <h3 className='text-base lg:text-xl  font-bold'>{item.position}</h3>
+                          </div>
                           <div className='flex items-center gap-3'>
                             {/* dot */}
                             <span className='w-[4px] h-[4px] lg:w-[6px] lg:h-[6px] rounded-full bg-accent'></span>
@@ -280,7 +282,10 @@ export default function Resume() {
                       return (
                         <li key={index} className='bg-secondary h-[136px] py-4 px-6 lg:h-[184px] lg:py-6 lg:px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'>
                           <span className='text-accent text-sm lg:text-base'>{item.duration}</span>
-                          <h3 className='text-base lg:text-xl max-w-[260px] min-h-[30px] lg:min-h-[60px] text-center lg:text-left'>{item.degree}</h3>
+                          <div className='flex w-full items-center max-w-[290px] min-h-[30px] lg:min-h-[60px] justify-center lg:justify-normal'>
+                            <h3 className='text-base lg:text-xl  font-bold'>{item.degree}</h3>
+                          </div>
+                          {/* <h3 className='text-base lg:text-xl max-w-[260px] min-h-[30px] lg:min-h-[60px] text-center lg:text-left'>{item.degree}</h3> */}
                           <div className='flex items-center gap-3'>
                             {/* dot */}
                             <span className='w-[4px] h-[4px] lg:w-[6px] lg:h-[6px] rounded-full bg-accent'></span>

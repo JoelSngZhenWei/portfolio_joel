@@ -10,8 +10,10 @@ import OptionsDetails from "@/components/OptionsDetails"
 import { Button } from "@/components/ui/button"
 import { Download } from "lucide-react"
 import PdfView from "@/components/PdfView"
+// import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa"
 import Link from "next/link"
+
 const skills = {
   langlist: [
     {
@@ -69,20 +71,21 @@ export default function Options() {
               </h1>
               <div className="flex flex-row gap-3 items-center justify-between">
                 <p className="text-accent font-medium text-lg">Aug 2024 - Dec 2024</p>
-                <div>
-                  <Button variant="outline" size="lg" asChild>
-                    <Link
-                      href="https://github.com/JoelSngZhenWei/MLA_OptionsPricing"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2"
-                    >
-                      <span className="font-bold text-lg">Repo</span>
-                      <FaGithub className="w-5 h-5" />
-                    </Link>
-                  </Button>
-                </div>
+                <Button variant="outline" asChild className="px-3 py-6 lg:px-3 lg:py-6">
+                  <Link
+                    href="https://github.com/JoelSngZhenWei/MLA_OptionsPricing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=""
+                  >
+
+                    <span className="font-bold text-lg">Repo</span>
+                    {/* <FaExternalLinkAlt className="w-5 h-5" /> */}
+                    <FaGithub className="w-7 h-7" />
+                  </Link>
+                </Button>
               </div>
+              
             </div>
             {/* photo */}
             <div className="relative rounded-lg shadow-xl">
@@ -101,10 +104,10 @@ export default function Options() {
           <div className="space-y-4">
             <h2 className="text-2xl font-semibold tracking-wide">Summary</h2>
             <p className="text-white/80 leading-relaxed">
-              In this project my group sought to analyse different machine learning techniques in tackling a notoriously complex task: <strong>Options Pricing</strong>. We contrasted our models&apos; performance to a traditional and widely used mathematical model.
+              In this project my group sought to analyse different machine learning techniques in tackling a notoriously complex task: <span className="font-bold text-white">Options Pricing</span>. We contrasted our models&apos; performance to a traditional and widely used mathematical model.
             </p>
             <p className="text-white/80 leading-relaxed">
-              My specific contributions to this project were sourcing the data, exploratory data analysis, and the ANN model. What I was most proud of in my ANN approach to a hybrid model that used both a classification ANN and a regression ANN.
+              My specific contributions to this project were sourcing the data sets, the entirety of exploratory data analysis, and constructing the ANN model. What I was most proud of in my ANN approach was developing a hybrid ANN approach that used both a classification ANN and a regression ANN, and proved to be the most successful model we employed.
             </p>
             <p className="text-white/80 leading-relaxed">
               This project was undertaken as part of an SMU module, &apos;Machine Learning &amp; Applications&apos;.
@@ -113,7 +116,7 @@ export default function Options() {
         </div>
 
 
-        <div className="container mx-auto">
+        <div className="container mx-auto ">
           <Tabs defaultValue="details" className="flex flex-col">
             <div className="flex flex-col gap-4">
               <TabsList className="flex flex-row gap-3 lg:gap-6">
@@ -123,7 +126,7 @@ export default function Options() {
               </TabsList>
             </div>
 
-            <div className="min-h-[80vh] w-full pt-8 pb-12">
+            <div className="min-h-[80vh] w-full pt-8 pb-12 ">
               {/* tab 1, project details */}
               <TabsContent value="details">
                 <h2 className="text-2xl font-semibold tracking-wide mb-4">Project Details</h2>
