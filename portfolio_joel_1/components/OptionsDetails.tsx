@@ -1,18 +1,95 @@
 import Image from "next/image"
 import Link from "next/link"
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+interface OptionData {
+    model: string
+    rmseCall: number
+    maeCall: number
+    r2Call: number
+    rmsePut: number
+    maePut: number
+    r2Put: number
+}
+const spxData: OptionData[] = [
+    { model: "BSM", rmseCall: 112.55, maeCall: 60.69, r2Call: 0.990, rmsePut: 112.55, maePut: 60.99, r2Put: 0.99 },
+    { model: "SVR", rmseCall: 17.2, maeCall: 4.55, r2Call: 0.990, rmsePut: 44.03, maePut: 4.58, r2Put: 0.991 },
+    { model: "ANN", rmseCall: 3.82, maeCall: 2.95, r2Call: 0.994, rmsePut: 20.04, maePut: 8.02, r2Put: 0.92 },
+    { model: "LSTM", rmseCall: 40.803, maeCall: 37.445, r2Call: 0.786, rmsePut: 87.273, maePut: 41.859, r2Put: 0.964 },
+]
+
+const spxwData: OptionData[] = [
+    { model: "BSM", rmseCall: 112.55, maeCall: 60.69, r2Call: 0.99, rmsePut: 112.55, maePut: 60.99, r2Put: 0.99 },
+    { model: "SVR", rmseCall: 17.06, maeCall: 6.79, r2Call: 0.991, rmsePut: 13.37, maePut: 5.29, r2Put: 0.991 },
+    { model: "ANN", rmseCall: 19.28, maeCall: 6.14, r2Call: 0.91, rmsePut: 6.14, maePut: 3.14, r2Put: 0.97 },
+    { model: "LSTM", rmseCall: 40.803, maeCall: 37.445, r2Call: 0.786, rmsePut: 87.273, maePut: 41.859, r2Put: 0.964 },
+]
+
+const OptionsTable: React.FC<{ data: OptionData[]; title: string }> = ({ data, title }) => {
+    console.log(title)
+    const getBestModel = (metric: keyof OptionData, isLower = true) => {
+        return data.reduce((best, current) =>
+            isLower ? (current[metric] < best[metric] ? current : best) : current[metric] > best[metric] ? current : best,
+        ).model
+    }
+
+    return (
+
+        <div className="overflow-x-auto">
+            <Table>
+                <TableHeader>
+                    <TableRow className="text-white">
+                        <TableHead className="w-[100px]">Models</TableHead>
+                        <TableHead>RMSE (Call)</TableHead>
+                        <TableHead>MAE (Call)</TableHead>
+                        <TableHead>R² (Call)</TableHead>
+                        <TableHead>RMSE (Put)</TableHead>
+                        <TableHead>MAE (Put)</TableHead>
+                        <TableHead>R² (Put)</TableHead>
+                    </TableRow>
+                </TableHeader>
+                <TableBody>
+                    {data.map((row) => (
+                        <TableRow key={row.model}>
+                            <TableCell className="font-medium">{row.model}</TableCell>
+                            <TableCell className={row.model === getBestModel("rmseCall") ? "bg-green-900" : ""}>
+                                {row.rmseCall.toFixed(2)}
+                            </TableCell>
+                            <TableCell className={row.model === getBestModel("maeCall") ? "bg-green-900" : ""}>
+                                {row.maeCall.toFixed(2)}
+                            </TableCell>
+                            <TableCell className={row.model === getBestModel("r2Call", false) ? "bg-green-900" : ""}>
+                                {row.r2Call.toFixed(2)}
+                            </TableCell>
+                            <TableCell className={row.model === getBestModel("rmsePut") ? "bg-green-900" : ""}>
+                                {row.rmsePut.toFixed(2)}
+                            </TableCell>
+                            <TableCell className={row.model === getBestModel("maePut") ? "bg-green-900" : ""}>
+                                {row.maePut.toFixed(2)}
+                            </TableCell>
+                            <TableCell className={row.model === getBestModel("r2Put", false) ? "bg-green-900" : ""}>
+                                {row.r2Put.toFixed(2)}
+                            </TableCell>
+                        </TableRow>
+                    ))}
+                </TableBody>
+            </Table>
+        </div>
+    )
+}
+
 
 export default function OptionsDetails() {
     return (
         <div className="space-y-10">
             <section>
                 <p className="text-white/80">
-                    Options are financial derivatives that grant buyers the right, but not the obligation, to buy or sell an asset at a predetermined price. Accurate options pricing is crucial for developing effective hedging strategies, assessing potential risks, and protecting portfolios against adverse market movements. Additionally, it creates profit opportunities by identifying mispriced options in the market. However, due to market unpredictability and the complex, non-linear relationships between features, accurately pricing options remains a significant and challenging problem.
-                </p>
-                <p className="text-white/80">
-                    The <span className="text-accent font-bold">Black-Scholes model (BSM)</span>, is a traditionally used mathematical option pricing framework, and relies on several key assumptions—constant volatility, a log-normal distribution of asset returns, and constant interest rates. These assumptions rarely hold true in real-world markets, limiting the model&apos;s ability to generalize effectively.
-                </p>
-                <p className="text-white/80">
-                    The inherent complexity of non-linear feature interactions in options pricing provides an opportunity to leverage machine learning (ML) models for better predictions. The ML models we employed include <span className="text-accent font-bold">Support Vector Regression (SVR)</span>, <span className="text-accent font-bold">Long Short-Term Memory (LSTM)</span> networks, and <span className="text-accent font-bold">Artificial Neural Networks (ANN)</span>.
+                    <Link href={"https://www.investopedia.com/terms/o/option.asp"} className="text-accent hover:text-blue-300 underline transition-colors">Options</Link> are financial derivatives that grant buyers the right, but not the obligation, to buy or sell an asset at a predetermined price. Accurate options pricing is crucial for developing effective hedging strategies, assessing potential risks, and protecting portfolios against adverse market movements. Additionally, it creates profit opportunities by identifying mispriced options in the market. However, due to market unpredictability and the complex, non-linear relationships between features, accurately pricing options remains a significant and challenging problem.
+                    <br />
+                    The <span className="text-white font-bold">Black-Scholes model (BSM)</span>, is a traditionally used mathematical option pricing framework, and relies on several key assumptions—constant volatility, a log-normal distribution of asset returns, and constant interest rates. These assumptions rarely hold true in real-world markets, limiting the model&apos;s ability to generalize effectively.
+                    <br />
+                    The inherent complexity of non-linear feature interactions in options pricing provides an opportunity to leverage machine learning (ML) models for better predictions. The ML models we employed include <span className="text-white font-bold">Support Vector Regression (SVR)</span>, <span className="text-white font-bold">Long Short-Term Memory (LSTM)</span> networks, and <span className="text-white font-bold">Artificial Neural Networks (ANN)</span>.
+                    <br />
+                    Models were developed for both puts and calls and evaluated against one another on the basis of Root Mean Squared Error (RMSE), Mean Absolute Error (MAE), and coefficient of determination (R-square).
                 </p>
             </section>
 
@@ -53,7 +130,7 @@ export default function OptionsDetails() {
             <section>
                 <h3 className="text-xl font-bold mb-2 border-white/20 pb-2 border-b">Black Scholes Model</h3>
                 <p className="text-white/80">
-                    The <span className="text-accent font-bold">Black-Scholes model (BSM)</span>, developed in 1973, prices European-style options with significant and unrealistic assumptions (Constant volatility, log-normal distribution of asset returns, and assumption of constant interest rates).  <span>Insert latex formula for BSM</span>.
+                    The <span className="text-white font-bold">Black-Scholes model (BSM)</span>, developed in 1973, prices European-style options with significant and unrealistic assumptions (Constant volatility, log-normal distribution of asset returns, and assumption of constant interest rates).  <span>Insert latex formula for BSM</span>.
                 </p>
                 <p className="text-white/80">
                     This serves as our traditional baseline for comparison to evaluate performance improvements made by ML approaches.
@@ -64,7 +141,11 @@ export default function OptionsDetails() {
             <section className="">
                 <h3 className="text-xl font-bold mb-2 border-white/20 pb-2 border-b">Support Vector Regression (SVR)</h3>
                 <p className="text-white/80">
-                    <span className="text-accent font-bold">SVR</span> is an ML approach that aims to find a function that approximates the relationship between input features and output values. Limitations our group faced were exceptionally long running times with our large dataset.
+                    <span className="text-white font-bold">SVR</span> is an ML approach that aims to find a function that approximates the relationship between input features and output values. Limitations our group faced were exceptionally long running times with our large dataset.Support Vector Regression (SVR) model is an adaptation of Support Vector
+                    Machines (SVM) for regression tasks. SVR aims to find a function that approximates the relationship between input features and a continuous target variable
+                    while minimising prediction error, rather than classifying data into categories.
+                    <br />
+                    The <span className="text-white font-bold">SVR</span> model outperformed <span className="text-white font-bold">BSM</span>.
                 </p>
             </section>
 
@@ -73,9 +154,9 @@ export default function OptionsDetails() {
                 <section className="flex flex-col md:flex-row gap-8 items-center">
                     <div className="flex-1 order-2 lg:order-1">
                         <p className="text-white/80">
-                            The <span className="font-bold text-accent">LSTM</span> model is designed to handle data that depends on time sequences, making it effective for tasks like time-series forecasting. The key difference from traditional neural networks is that LSTM includes memory cells and gate mechanisms, letting it retain information from previous states. This &apos;memory&apos; allows the model to use historical data as context, ideally improving accuracy when predicting option prices over time.
+                            The <span className="font-bold text-white">LSTM</span> model is designed to handle data that depends on time sequences, making it effective for tasks like time-series forecasting. The key difference from traditional neural networks is that LSTM includes memory cells and gate mechanisms, letting it retain information from previous states. This &apos;memory&apos; allows the model to use historical data as context, ideally improving accuracy when predicting option prices over time.
                             <br />
-                            Additionally, the structure of <span className="font-bold text-accent">LSTM</span> helps avoid issues like gradient explosion or vanishing gradients that traditional RNNs face, making it reliable for long-term sequences.
+                            Additionally, the structure of <span className="font-bold text-white">LSTM</span> helps avoid issues like gradient explosion or vanishing gradients that traditional RNNs face, making it reliable for long-term sequences.
                         </p>
                     </div>
                     <div className="flex-1 flex justify-center items-center order-1 lg:order-2">
@@ -90,27 +171,39 @@ export default function OptionsDetails() {
                 </section>
                 <section>
                     <p className="text-white/80">
-                        Our <span className="text-accent font-bold">LSTM</span> out performed our <span className="font-bold text-accent">SVR</span>, but was itself outperformed by our <span className="text-accent font-bold">ANN</span> approach below. Our group believes that our training data is a limiting factor in this situation, and with longer continuous time sequences of data performance will improve.
+                        Our <span className="text-white font-bold">LSTM</span> out performed our <span className="font-bold text-white">SVR</span>, but was itself outperformed by our <span className="text-white font-bold">ANN</span> approach below. Our group believes that our training data is a limiting factor in this situation, and with longer continuous time sequences of data performance will improve.
                     </p>
                 </section>
             </div>
 
+            {/* ANN */}
             <div>
                 <h3 className="text-xl font-bold mb-2 border-b border-white/20 pb-2">Artificial Neural Network (ANN)</h3>
                 <section>
                     <p className="text-white/80">
-                        Our final model, the <span className="font-bold text-accent">ANN</span>, is a deep learning model comprising an input layer for data features, hidden layers for processing, and an output layer for predictions. Its adaptability lies in adjusting weights and biases via back-propagation, making it ideal for tasks like option pricing and financial modeling.
-                    </p>
-                </section>
-                <section>
-                    <p className="text-white/80">
-                        Developing this model was my key contribution. Initially, a <span className="text-accent font-bold">&apos;Single-Stage ANN&apos;</span> was implemented with two hidden layers (64 and 32 nodes) and an output node for price prediction. However, this approach suffered from overfitting due to the dataset&apos;s noise, as it included numerous untraded options recorded with a closing price of zero. These zeros skewed the model and led to poor performance, necessitating a new approach.
+                        Our final model, the <span className="font-bold text-white">ANN</span>, is a deep learning model comprising an input layer for data features, hidden layers for processing, and an output layer for predictions. Its adaptability lies in adjusting weights and biases via back-propagation, making it ideal for tasks like option pricing and financial modeling.
                     </p>
                 </section>
                 <section className="flex flex-col md:flex-row gap-8 items-center ">
                     <div className="flex-1 order-2 lg:order-1">
                         <p className="text-white/80">
-                            The most effective solution I devised was the <span className="text-accent font-bold">&apos;Two-Stage ANN&apos;</span>.
+                            Developing this model was my key contribution. Initially, a <span className="text-white font-bold">&apos;Single-Stage ANN&apos;</span> was implemented with two hidden layers (64 and 32 nodes) and an output node for price prediction. However, this approach suffered from overfitting due to the dataset&apos;s noise, as it included numerous untraded options recorded with a closing price of zero. These zeros skewed the model and led to poor performance, necessitating a new approach.
+                        </p>
+                    </div>
+                    <div className="flex-1 flex justify-center items-center order-1 lg:order-2 p-1">
+                        <Image
+                            src="/assets/ANN_initial.png"
+                            alt="Hybrid ANN Model Diagram"
+                            width={300}
+                            height={300}
+                            className="rounded-lg shadow-lg hover:scale-105 transition-all duration-300"
+                        />
+                    </div>
+                </section>
+                <section className="flex flex-col md:flex-row gap-8 items-center ">
+                    <div className="flex-1 order-2 lg:order-1">
+                        <p className="text-white/80">
+                            The most effective solution I devised was the <span className="text-white font-bold">&apos;Two-Stage ANN&apos;</span>.
                             <br />
                             <span className="font-bold">Stage 1: Binary Classifier</span> - This stage predicts whether an option is buyable, filtering out irrelevant options (e.g., those with zero closing prices) to focus on tradable ones.
                             <br />
@@ -119,7 +212,7 @@ export default function OptionsDetails() {
                             By separating classification and regression, this approach improves focus, reduces overfitting, and enhances efficiency.
                         </p>
                     </div>
-                    <div className="flex-1 flex justify-center items-center order-1 lg:order-2">
+                    <div className="flex-1 flex justify-center items-center order-1 lg:order-2 p-1">
                         <Image
                             src="/assets/ANN_final.png"
                             alt="Hybrid ANN Model Diagram"
@@ -131,14 +224,28 @@ export default function OptionsDetails() {
                 </section>
 
                 <section>
-                    <h3 className="text-xl font-bold mb-2 border-b border-white/20 pb-2">Results</h3>
                     <p>
-
+                        The general structure of my models was similar with differences in node number due to hyperparameter tuning. Binary Classifier ANNs had an input layer with 14 input nodes for 14 relevant features in data, 1 hidden layer with 14 to 56 units with leaky ReLU function, and 1 output node with a sigmoid function to predict option buyability. Price Regressor ANNs had an input layer with 14 input nodes for 14 relevant features in data, a hidden layer with 14 to 56 units with leaky ReLU function, and a second hidden layer with 7 to 28 units with leaky ReLU function, and 1 output node for final price prediction.
                     </p>
                 </section>
             </div>
 
             {/* conclusions */}
+            <section>
+                <h3 className="text-xl font-bold mb-2 border-b border-white/20 pb-2">Results</h3>
+                <div className="space-y-2">
+                    <OptionsTable data={spxData} title="SPX Options" />
+                    <OptionsTable data={spxwData} title="SPXW Options" />
+                </div>
+                <p>
+                    Overall, our analysis revealed that the ANN model performs best for SPX Call
+                    options and SPXW Put options, while the SVR model shows superior performance for SPX Put options and SPXW Call options. Despite achieving high
+                    R-squared values of 0.99, the Black-Scholes Model (BSM) consistently recorded
+                    the highest RMSEs and MAEs across all categories, indicating that while it explains the variance in the data reasonably well, it struggles with accuracy in
+                    absolute error terms compared to the machine learning models
+                </p>
+
+            </section>
             <section>
                 <h3 className="text-xl font-bold mb-2 border-b border-white/20 pb-2">Conclusion</h3>
                 <p className="text-white/80">
