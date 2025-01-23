@@ -49,16 +49,23 @@ export default function Contact() {
       setDialogTitle("Success!");
       setDialogMessage(response.message || "Your email has been sent successfully.");
       reset();
-    } catch (error: any) {
-      setDialogTitle("Error");
-      setDialogMessage(error.message || "Something went wrong. Please try again later.");
+    } catch (error: unknown) {
+      // Narrow down the error type
+      if (error instanceof Error) {
+        setDialogTitle("Error");
+        setDialogMessage(error.message || "Something went wrong. Please try again later.");
+      } else {
+        setDialogTitle("Error");
+        setDialogMessage("An unexpected error occurred. Please try again later.");
+      }
     } finally {
       setIsLoading(false); // Stop loading
       setIsDialogOpen(true); // Open the modal in all cases
       console.log(isLoading);
-      console.log("End")
+      console.log("End");
     }
   }
+
 
 
   return (
