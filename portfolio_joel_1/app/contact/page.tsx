@@ -38,6 +38,7 @@ export default function Contact() {
   const { register, handleSubmit, reset } = useForm<FormData>();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [dialogMessage, setDialogMessage] = useState("");
+  const [dialogSubtitle, setDialogSubtitle] = useState("");
   const [dialogTitle, setDialogTitle] = useState("");
   const [isLoading, setIsLoading] = useState(false); // Loading state
 
@@ -46,8 +47,10 @@ export default function Contact() {
     setIsLoading(true); // Start loading
     try {
       const response = await sendEmail(data); // Now properly returns a response
-      setDialogTitle("Success!");
-      setDialogMessage(response.message || "Your email has been sent successfully.");
+      setDialogTitle("Success");
+      console.log(response)
+      setDialogMessage("Your email has been sent successfully!");
+      setDialogSubtitle("You'll hear back from me soon!");
       reset();
     } catch (error: unknown) {
       // Narrow down the error type
@@ -75,7 +78,10 @@ export default function Contact() {
         <DialogContent>
           <DialogHeader>
             <DialogTitle>{dialogTitle}</DialogTitle>
-            <DialogDescription>{dialogMessage}</DialogDescription>
+            <DialogDescription>
+              {dialogMessage}<br/>
+              {dialogSubtitle}
+            </DialogDescription>
           </DialogHeader>
           <Button onClick={() => setIsDialogOpen(false)}>Close</Button>
         </DialogContent>
@@ -92,7 +98,7 @@ export default function Contact() {
           <div className="flex flex-col xl:flex-row gap-[30px]">
             {/* form */}
             <div className="xl:h-[54%] order-2 xl:order-none">
-              <form className="flex flex-col p-10 lg:gap-2 bg-[#27272c] rounded-xl" onSubmit={(event) => handleSubmit(onSubmit)(event)}>
+              <form className="flex flex-col p-4 lg:p-10 lg:gap-2 bg-[#27272c] rounded-xl" onSubmit={(event) => handleSubmit(onSubmit)(event)}>
                 <h3 className="text-lg lg:text-4xl text-accent font-semibold">
                   Let&apos;s work together
                 </h3>

@@ -16,7 +16,11 @@ export async function sendEmail(data: FormData) {
     }
 
     return await res.json(); // Ensure we return the JSON response
-  } catch (err: any) {
-    throw new Error(err.message || "An unknown error occurred.");
+  } catch (err: unknown) {
+    if (err instanceof Error) {
+      throw new Error(err.message || "An unknown error occurred.");
+    } else {
+      throw new Error("An unexpected error occurred.");
+    }
   }
 }
