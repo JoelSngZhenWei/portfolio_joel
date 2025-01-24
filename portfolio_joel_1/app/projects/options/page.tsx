@@ -130,31 +130,31 @@ export default function Options() {
               </TabsList>
             </div>
 
-            <div className="min-h-[50vh] w-full pt-8  px-2">
+            <div className="min-h-[50vh] w-full pt-8 pb-2 px-2">
               {/* tab 1, project details */}
               <TabsContent value="details">
                 <h2 className="text-2xl font-semibold tracking-wide mb-4">Project Details</h2>
-                <ScrollAreaWithProgress className="h-[60vh] lg:h-[60vh]">
+                <ScrollAreaWithProgress className="h-[60vh] lg:h-[70vh]">
                   <OptionsDetails />
                 </ScrollAreaWithProgress>
 
               </TabsContent>
               {/* tab 2, project paper */}
-              <TabsContent value="paper" className="h-[60vh] lg:h-[70vh]">
-                <ScrollArea className="h-[60vh]">
-                  <div className="flex flex-col lg:flex-row h-full">
-                    <div className="lg:w-1/3 w-full h-full flex flex-col items-center justify-start lg:justify-center space-y-4 pb-2">
-                      <h2 className="text-2xl font-semibold tracking-wide text-start lg:text-center">Report</h2>
+              <TabsContent value="paper" className="">
+                <ScrollArea className="h-[60vh] lg:h-[75vh]">
+                  <div className="flex flex-col lg:flex-row lg:h-[70vh]">
+                    <div className="lg:w-1/3 w-full flex flex-col gap-2 place-content-center pb-12 place-items-center h-[60vh] lg:h-full">
+                      <h2 className="text-2xl font-semibold tracking-wide">Report</h2>
                       <Button
                         onClick={handleDownload}
                         variant="outline"
-                        className="flex items-center gap-2 px-4 py-2 border text-lg rounded-full"
+                        className="flex items-center gap-2 px-4 py-2 text-lg rounded-full w-48"
                       >
                         <span>Download</span>
                         <Download className="h-4 w-4" />
                       </Button>
                     </div>
-                    <div className="lg:w-2/3 w-full h-full">
+                    <div className="lg:w-2/3 hidden lg:block ">
                       <PdfView />
                     </div>
                   </div>
@@ -163,7 +163,7 @@ export default function Options() {
 
               {/* tab 3, tech stack */}
               <TabsContent value="techstack">
-                <ScrollArea className="h-[60vh] lg:h-[80vh]">
+                <ScrollArea className="h-[60vh] lg:h-[75vh]">
                   {/* Tech Stack */}
                   <div>
                     <TechStack skills={skills} />
