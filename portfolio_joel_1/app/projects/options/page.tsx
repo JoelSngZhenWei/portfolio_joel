@@ -120,7 +120,7 @@ export default function Options() {
 
         <div className="container mx-auto">
           <Tabs defaultValue="details" className="flex flex-col">
-            <div className="flex flex-col gap-4 sticky top-20 z-50">
+            <div className="flex flex-col gap-4">
               <TabsList className="flex flex-row gap-3 lg:gap-6">
                 <TabsTrigger value='details' className="bg-secondary px-4 flex-grow xl:flex-grow-0">Details</TabsTrigger>
                 <TabsTrigger value='paper' className="bg-secondary px-4 flex-grow xl:flex-grow-0">Report</TabsTrigger>
@@ -128,27 +128,27 @@ export default function Options() {
               </TabsList>
             </div>
 
-            <div className="min-h-[50vh] w-full pt-8 pb-2 px-2">
+            <div className="min-h-[80vh] w-full pt-8 pb-12 px-2">
               {/* tab 1, project details */}
               <TabsContent value="details">
                 <h2 className="text-2xl font-semibold tracking-wide mb-4">Project Details</h2>
                 <OptionsDetails />
               </TabsContent>
               {/* tab 2, project paper */}
-              <TabsContent value="paper" className="">
-                <div className="flex flex-col lg:flex-row lg:h-[80vh]">
-                  <div className="lg:w-1/3 w-full flex flex-col gap-2 place-content-center pb-12 place-items-center h-[60vh] lg:h-full">
-                    <h2 className="text-2xl font-semibold tracking-wide">Report</h2>
+              <TabsContent value="paper" className="h-[60vh]">
+                <div className="flex flex-col lg:flex-row h-full">
+                  <div className="lg:w-1/3 w-full h-full flex flex-col items-center justify-start lg:justify-center space-y-4 pb-2">
+                    <h2 className="text-2xl font-semibold tracking-wide text-start lg:text-center">Report</h2>
                     <Button
                       onClick={handleDownload}
                       variant="outline"
-                      className="flex items-center gap-2 px-4 py-2 text-lg rounded-full w-48"
+                      className="flex items-center gap-2 px-4 py-2 border text-lg rounded-full"
                     >
                       <span>Download</span>
                       <Download className="h-4 w-4" />
                     </Button>
                   </div>
-                  <div className="lg:w-2/3 hidden lg:block ">
+                  <div className="lg:w-2/3 w-full h-full">
                     <PdfView />
                   </div>
                 </div>

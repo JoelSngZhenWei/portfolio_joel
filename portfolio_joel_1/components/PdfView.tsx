@@ -13,7 +13,6 @@ pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.mjs"
 export default function PdfView() {
   const [numPages, setNumPages] = useState<number>()
   const [pageNumber, setPageNumber] = useState<number>(1)
-  // const [scale, setScale] = useState<number>(1.0)
 
   function onDocumentLoadSuccess({ numPages }: { numPages: number }): void {
     setNumPages(numPages)
@@ -41,13 +40,13 @@ export default function PdfView() {
   }
 
   return (
-    <div className="flex flex-col items-center p-3">
-      <div className="bg-secondary rounded-lg shadow-lg p-6 w-full">
-        <div className="mb-4 flex justify-between items-center">
-          <Button onClick={() => changePage(-1)} disabled={pageNumber <= 1} variant="outline">
+    <div className="flex flex-col h-full">
+      <div className="bg-secondary rounded-xl p-4 flex flex-col gap-4 h-full">
+        <div className="flex justify-between items-center">
+          <Button onClick={() => changePage(-1)} disabled={pageNumber <= 1} variant="outline" size="icon">
             <ChevronLeft className="h-4 w-4" />
           </Button>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center gap-2">
             <Input
               type="text"
               value={pageNumber}
@@ -58,28 +57,20 @@ export default function PdfView() {
             />
             <span>of {numPages}</span>
           </div>
-          <Button onClick={() => changePage(1)} disabled={pageNumber >= (numPages || 1)} variant="outline">
+          <Button onClick={() => changePage(1)} disabled={pageNumber >= (numPages || 1)} variant="outline" size="icon">
             <ChevronRight className="h-4 w-4" />
           </Button>
         </div>
-        <div className="border border-primary rounded-lg overflow-hidden h-full">
+        <div className="border border-primary rounded-xl overflow-hidden flex-grow">
           <Document
             file="/assets/MLA_Final_Report.pdf"
             onLoadSuccess={onDocumentLoadSuccess}
-            className="flex justify-center"
+            className="flex justify-center h-full"
           >
-            {/* <Page pageNumber={pageNumber} scale={scale} className="max-h-screen" /> */}
             <Page pageNumber={pageNumber} scale={0.5} className="h-full" />
           </Document>
         </div>
-        <div className="mt-4 flex justify-center items-center space-x-4">
-          {/* <Button onClick={() => setScale((scale) => Math.max(0.5, scale - 0.1))} size="icon" variant="outline">
-            <ZoomOut className="h-4 w-4" />
-          </Button>
-          <span>{Math.round(scale * 100)}%</span>
-          <Button onClick={() => setScale((scale) => Math.min(2, scale + 0.1))} size="icon" variant="outline">
-            <ZoomIn className="h-4 w-4" />
-          </Button> */}
+        <div className="flex justify-center">
           <Button onClick={handleDownload} size="icon" variant="outline">
             <Download className="h-4 w-4" />
           </Button>
