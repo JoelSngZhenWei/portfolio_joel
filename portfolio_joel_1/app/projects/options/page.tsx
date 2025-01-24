@@ -13,6 +13,8 @@ import PdfView from "@/components/PdfView"
 // import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa"
 import Link from "next/link"
+import { ScrollArea } from "@/components/ui/scroll-area"
+import { ScrollAreaWithProgress } from "@/components/ui/scroll-area-progress"
 
 const skills = {
   langlist: [
@@ -128,38 +130,45 @@ export default function Options() {
               </TabsList>
             </div>
 
-            <div className="min-h-[80vh] w-full pt-8 pb-12 px-2">
+            <div className="min-h-[50vh] w-full pt-8  px-2">
               {/* tab 1, project details */}
               <TabsContent value="details">
                 <h2 className="text-2xl font-semibold tracking-wide mb-4">Project Details</h2>
-                <OptionsDetails />
+                <ScrollAreaWithProgress className="h-[60vh] lg:h-[60vh]">
+                  <OptionsDetails />
+                </ScrollAreaWithProgress>
+
               </TabsContent>
               {/* tab 2, project paper */}
-              <TabsContent value="paper" className="h-[60vh]">
-                <div className="flex flex-col lg:flex-row h-full">
-                  <div className="lg:w-1/3 w-full h-full flex flex-col items-center justify-start lg:justify-center space-y-4 pb-2">
-                    <h2 className="text-2xl font-semibold tracking-wide text-start lg:text-center">Report</h2>
-                    <Button
-                      onClick={handleDownload}
-                      variant="outline"
-                      className="flex items-center gap-2 px-4 py-2 border text-lg rounded-full"
-                    >
-                      <span>Download</span>
-                      <Download className="h-4 w-4" />
-                    </Button>
+              <TabsContent value="paper" className="h-[60vh] lg:h-[70vh]">
+                <ScrollArea className="h-[60vh]">
+                  <div className="flex flex-col lg:flex-row h-full">
+                    <div className="lg:w-1/3 w-full h-full flex flex-col items-center justify-start lg:justify-center space-y-4 pb-2">
+                      <h2 className="text-2xl font-semibold tracking-wide text-start lg:text-center">Report</h2>
+                      <Button
+                        onClick={handleDownload}
+                        variant="outline"
+                        className="flex items-center gap-2 px-4 py-2 border text-lg rounded-full"
+                      >
+                        <span>Download</span>
+                        <Download className="h-4 w-4" />
+                      </Button>
+                    </div>
+                    <div className="lg:w-2/3 w-full h-full">
+                      <PdfView />
+                    </div>
                   </div>
-                  <div className="lg:w-2/3 w-full h-full">
-                    <PdfView />
-                  </div>
-                </div>
+                </ScrollArea>
               </TabsContent>
 
               {/* tab 3, tech stack */}
               <TabsContent value="techstack">
-                {/* Tech Stack */}
-                <div>
-                  <TechStack skills={skills} />
-                </div>
+                <ScrollArea className="h-[60vh] lg:h-[80vh]">
+                  {/* Tech Stack */}
+                  <div>
+                    <TechStack skills={skills} />
+                  </div>
+                </ScrollArea>
               </TabsContent>
             </div>
 
