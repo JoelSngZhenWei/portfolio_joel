@@ -120,7 +120,7 @@ export default function Options() {
 
         <div className="container mx-auto">
           <Tabs defaultValue="details" className="flex flex-col">
-            <div className="flex flex-col gap-4">
+            <div className="sticky top-[50px] lg:top-[68px] z-20 drop-shadow-md w-full">
               <TabsList className="flex flex-row gap-3 lg:gap-6">
                 <TabsTrigger value='details' className="bg-secondary px-4 flex-grow xl:flex-grow-0">Details</TabsTrigger>
                 <TabsTrigger value='paper' className="bg-secondary px-4 flex-grow xl:flex-grow-0">Report</TabsTrigger>

@@ -51,7 +51,7 @@ const SkillList: React.FC<{
           <TooltipProvider delayDuration={100}>
             <Tooltip>
               <TooltipTrigger
-                className={`w-full py-4 lg:py-8 bg-primary rounded-xl flex flex-col justify-center items-center group cursor-pointer ${selectedSkill === item ? "text-accent" : ""}`}
+                className={`w-full py-5 lg:py-8 bg-primary rounded-xl flex flex-col justify-center items-center group cursor-pointer ${selectedSkill === item ? "text-accent" : ""}`}
                 onClick={() => onSkillClick(item)}
               >
                 <div className="text-4xl lg:text-6xl group-hover:text-accent transition-all duration-300">{item.icon}</div>
