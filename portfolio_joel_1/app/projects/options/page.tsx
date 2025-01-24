@@ -13,8 +13,6 @@ import PdfView from "@/components/PdfView"
 // import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa"
 import Link from "next/link"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { ScrollAreaWithProgress } from "@/components/ui/scroll-area-progress"
 
 const skills = {
   langlist: [
@@ -122,7 +120,7 @@ export default function Options() {
 
         <div className="container mx-auto">
           <Tabs defaultValue="details" className="flex flex-col">
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 sticky top-20 z-50">
               <TabsList className="flex flex-row gap-3 lg:gap-6">
                 <TabsTrigger value='details' className="bg-secondary px-4 flex-grow xl:flex-grow-0">Details</TabsTrigger>
                 <TabsTrigger value='paper' className="bg-secondary px-4 flex-grow xl:flex-grow-0">Report</TabsTrigger>
@@ -134,41 +132,34 @@ export default function Options() {
               {/* tab 1, project details */}
               <TabsContent value="details">
                 <h2 className="text-2xl font-semibold tracking-wide mb-4">Project Details</h2>
-                <ScrollAreaWithProgress className="h-[60vh] lg:h-[70vh]">
-                  <OptionsDetails />
-                </ScrollAreaWithProgress>
-
+                <OptionsDetails />
               </TabsContent>
               {/* tab 2, project paper */}
               <TabsContent value="paper" className="">
-                <ScrollArea className="h-[60vh] lg:h-[75vh]">
-                  <div className="flex flex-col lg:flex-row lg:h-[70vh]">
-                    <div className="lg:w-1/3 w-full flex flex-col gap-2 place-content-center pb-12 place-items-center h-[60vh] lg:h-full">
-                      <h2 className="text-2xl font-semibold tracking-wide">Report</h2>
-                      <Button
-                        onClick={handleDownload}
-                        variant="outline"
-                        className="flex items-center gap-2 px-4 py-2 text-lg rounded-full w-48"
-                      >
-                        <span>Download</span>
-                        <Download className="h-4 w-4" />
-                      </Button>
-                    </div>
-                    <div className="lg:w-2/3 hidden lg:block ">
-                      <PdfView />
-                    </div>
+                <div className="flex flex-col lg:flex-row lg:h-[80vh]">
+                  <div className="lg:w-1/3 w-full flex flex-col gap-2 place-content-center pb-12 place-items-center h-[60vh] lg:h-full">
+                    <h2 className="text-2xl font-semibold tracking-wide">Report</h2>
+                    <Button
+                      onClick={handleDownload}
+                      variant="outline"
+                      className="flex items-center gap-2 px-4 py-2 text-lg rounded-full w-48"
+                    >
+                      <span>Download</span>
+                      <Download className="h-4 w-4" />
+                    </Button>
                   </div>
-                </ScrollArea>
+                  <div className="lg:w-2/3 hidden lg:block ">
+                    <PdfView />
+                  </div>
+                </div>
               </TabsContent>
 
               {/* tab 3, tech stack */}
               <TabsContent value="techstack">
-                <ScrollArea className="h-[60vh] lg:h-[75vh]">
-                  {/* Tech Stack */}
-                  <div>
-                    <TechStack skills={skills} />
-                  </div>
-                </ScrollArea>
+                {/* Tech Stack */}
+                <div>
+                  <TechStack skills={skills} />
+                </div>
               </TabsContent>
             </div>
 
