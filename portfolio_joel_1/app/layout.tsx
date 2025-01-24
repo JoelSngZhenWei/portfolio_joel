@@ -5,6 +5,7 @@ import { Header } from "@/components/header";
 import { PageTransition } from "@/components/PageTransition";
 import { StairTransition } from "@/components/StairTransition";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +38,8 @@ export default function RootLayout({
         <Header />
         <StairTransition />
         <PageTransition>
+          <Analytics />
+
           <div className="px-4">
             {children}
           </div>
