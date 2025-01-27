@@ -233,7 +233,7 @@ export default function OptionsDetails() {
                             />
                         </div>
                     </section>
-                    <p>
+                    <p className="text-white/80">
                         The general structure of my models was similar with differences in node number due to hyperparameter tuning. Binary Classifier ANNs had an input layer with 14 input nodes for 14 relevant features in data, 1 hidden layer with 14 to 56 units with leaky ReLU function, and 1 output node with a sigmoid function to predict option buyability. Price Regressor ANNs had an input layer with 14 input nodes for 14 relevant features in data, a hidden layer with 14 to 56 units with leaky ReLU function, and a second hidden layer with 7 to 28 units with leaky ReLU function, and 1 output node for final price prediction.
                     </p>
                 </div>
@@ -245,17 +245,13 @@ export default function OptionsDetails() {
                 <div className="space-y-4">
                     <OptionsTable data={spxData} title="SPX Options" />
                     <OptionsTable data={spxwData} title="SPXW Options" />
-                    <p>
+                    <p className="text-white/80">
                         Overall, our analysis revealed that the ANN model performs best for SPX Call
                         options and SPXW Put options, while the SVR model shows superior performance for SPX Put options and SPXW Call options. Despite achieving high
                         R-squared values of 0.99, the Black-Scholes Model (BSM) consistently recorded
                         the highest RMSEs and MAEs across all categories, indicating that while it explains the variance in the data reasonably well, it struggles with accuracy in
                         absolute error terms compared to the machine learning models
                     </p>
-
-                </div>
-                <div className="space-y-2">
-
                 </div>
 
             </section>
