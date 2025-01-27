@@ -132,7 +132,7 @@ export default function SPM() {
           </div>
         </div>
 
-        <div className="min-h-[80vh] flex items-center justify-center mb-4">
+        <div className="min-h-[80vh] flex items-center justify-center mb-2 lg:mb-4">
           <div className="container mx-auto">
             <Tabs defaultValue="details" className="flex flex-col lg:flex-row gap-4">
               <div className="flex flex-col w-full lg:max-w-[380px] mx-auto lg:mx-0 gap-6">
@@ -153,9 +153,9 @@ export default function SPM() {
               <div className="w-full min-h-[70vh] lg:min-h-[80vh] border border-red-900">
                 {/* details */}
                 <TabsContent value="details" className="w-full h-full">
-                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left border h-[80vh]">
+                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left border h-[70vh] lg:h-[80vh]">
                     <h3 className="text-2xl lg:text-3xl font-bold">Project Details</h3>
-                    <ScrollArea className="bg-primary text-left h-[80vh]">
+                    <ScrollArea className="bg-primary text-left h-[70vh] lg:h-[80vh]">
                       <OptionsDetails />
                     </ScrollArea>
                   </div>
