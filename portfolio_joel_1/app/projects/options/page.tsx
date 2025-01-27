@@ -110,7 +110,7 @@ export default function SPM() {
           </div>
         </div>
 
-        <div className="min-h-[80vh] flex items-center justify-center">
+        <div className="min-h-[70vh] flex items-center justify-center mb-4">
           <div className="container mx-auto">
             <Tabs defaultValue="details" className="flex flex-col lg:flex-row gap-4">
               <div className="flex flex-col w-full lg:max-w-[380px] mx-auto lg:mx-0 gap-6">
@@ -122,14 +122,14 @@ export default function SPM() {
               </div>
 
               {/* content */}
-              <div className="min-h-[80vh] w-full">
+              <div className="min-h-[70vh] w-full">
                 {/* details */}
                 <TabsContent value="details" className="w-full h-full">
                   <div className='flex flex-col gap-2 lg:gap-2  text-center lg:text-left'>
                     <h3 className='text-2xl lg:text-3xl font-bold'>
                       Project Details
                     </h3>
-                    <ScrollArea className='h-[70vh] bg-primary'>
+                    <ScrollArea className='h-[60vh] bg-primary'>
                       <OptionsDetails />
                     </ScrollArea>
                   </div>
@@ -163,14 +163,14 @@ export default function SPM() {
                       <ScrollArea className=' bg-secondary p-4 rounded-xl flex h-[65vh]'>
                         <div className='flex flex-col gap-2'>
                           <span className='text-accent font-bold'>Languages</span>
-                          <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]'>
+                          <ul className='grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]'>
                             {skills.langlist.map((lang, index) => {
                               return (
                                 <li key={index}>
                                   <TooltipProvider delayDuration={100}>
                                     <Tooltip>
                                       <TooltipTrigger className='w-full h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group'>
-                                        <div className='text-6xl group-hover:text-accent transition-all duration-300'>{lang.icon}</div>
+                                        <div className='text-5xl group-hover:text-accent transition-all duration-300'>{lang.icon}</div>
                                         <span className='capitalize group-hover:text-accent transition-all duration-300'>{lang.name}</span>
                                       </TooltipTrigger>
                                       <TooltipContent>
@@ -186,14 +186,14 @@ export default function SPM() {
                           </ul>
 
                           <span className='text-accent font-bold'>Libraries and Frameworks</span>
-                          <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]'>
+                          <ul className='grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]'>
                             {skills.frameworklist.map((fw, index) => {
                               return (
                                 <li key={index}>
                                   <TooltipProvider delayDuration={100}>
                                     <Tooltip>
                                       <TooltipTrigger className='w-full h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group'>
-                                        <div className='text-6xl group-hover:text-accent transition-all duration-300'>{fw.icon}</div>
+                                        <div className='text-5xl group-hover:text-accent transition-all duration-300'>{fw.icon}</div>
                                         <span className='capitalize group-hover:text-accent transition-all duration-300'>{fw.name}</span>
                                       </TooltipTrigger>
                                       <TooltipContent>
