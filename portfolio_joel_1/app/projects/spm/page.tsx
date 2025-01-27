@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { FaPython } from "react-icons/fa6"
-import { SiAmazonrds, SiFlask, SiJavascript, SiNextdotjs, SiPytest, SiPythonanywhere, SiSelenium, SiTailwindcss, SiVercel } from "react-icons/si"
+import { SiAmazonrds, SiConfluence, SiFlask, SiGithub, SiGithubactions, SiJavascript, SiJira, SiNextdotjs, SiPytest, SiPythonanywhere, SiSelenium, SiTailwindcss, SiVercel } from "react-icons/si"
 import Image from "next/image"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import OptionsDetails from "@/components/OptionsDetails"
@@ -29,26 +29,47 @@ const skills = {
       {
         icon: <FaPython />,
         name: "Python",
-        description:
-          "This was the primary language our analysis was conducted in, leveraging other libraries and frameworks to manipulate data and construct our machine learning models.",
+        description: "Primary language for analysis, data manipulation, and machine learning model development.",
       },
       {
         icon: <FaHtml5 />,
         name: "HTML",
-        description:
-          "This was the primary language our analysis was conducted in, leveraging other libraries and frameworks to manipulate data and construct our machine learning models.",
+        description: "Used to structure web content for frontend development projects.",
       },
       {
         icon: <FaCss3 />,
         name: "CSS",
-        description:
-          "This was the primary language our analysis was conducted in, leveraging other libraries and frameworks to manipulate data and construct our machine learning models.",
+        description: "Styled and designed web pages for improved user interface and experience.",
       },
       {
         icon: <SiJavascript />,
         name: "Javascript",
-        description:
-          "This was the primary language our analysis was conducted in, leveraging other libraries and frameworks to manipulate data and construct our machine learning models.",
+        description: "Implemented dynamic functionality and interactivity for web applications.",
+      },
+    ],
+  },
+  Backend: {
+    title: "Backend",
+    list: [
+      {
+        icon: <SiFlask />,
+        name: "Flask",
+        description: "Built RESTful APIs for backend services and integrated machine learning models.",
+      },
+      {
+        icon: <FaAws />,
+        name: "AWS",
+        description: "Provided cloud resources for scalable and efficient model deployment.",
+      },
+      {
+        icon: <SiPythonanywhere />,
+        name: "PythonAnywhere",
+        description: "Hosted Python applications for testing and production environments.",
+      },
+      {
+        icon: <SiAmazonrds />,
+        name: "Amazon RDS",
+        description: "Managed relational databases for storing and accessing project data.",
       },
     ],
   },
@@ -58,52 +79,22 @@ const skills = {
       {
         icon: <SiTailwindcss />,
         name: "Tailwind CSS",
-        description:
-          "Python library for multipurpose data manipulation and analysis, used for our exploratory data analysis and preparing our data for use by our models.",
+        description: "Enhanced frontend designs with a utility-first CSS framework.",
       },
       {
         icon: <SiNextdotjs />,
         name: "Next.JS",
-        description:
-          "Python library for multipurpose data manipulation and analysis, used for our exploratory data analysis and preparing our data for use by our models.",
+        description: "Developed server-side rendered web applications with enhanced performance.",
       },
       {
         icon: <FaReact />,
         name: "React.JS",
-        description: `Used to construct our ANN models and LSTM models. Provided a powerful, open-source resource for us to more easily build and refine our deep learning models.`,
+        description: "Built interactive user interfaces with reusable components.",
       },
       {
         icon: <SiVercel />,
         name: "Vercel",
-        description: `Used to construct our ANN models and LSTM models. Provided a powerful, open-source resource for us to more easily build and refine our deep learning models.`,
-      },
-    ],
-  },
-  Backend: {
-    title: "Backend",
-    list: [
-      {
-        icon: <SiFlask />,
-        name: "ScikitLearn",
-        description:
-          "Used to assist in model creation and conduct hyper parameter tuning on number of nodes, learning rate, batch size, and epochs. Used to construct our SVR model.",
-      },
-      {
-        icon: <FaAws />,
-        name: "AWS",
-        description:
-          "Used to assist in model creation and conduct hyper parameter tuning on number of nodes, learning rate, batch size, and epochs. Used to construct our SVR model.",
-      },
-      {
-        icon: <SiPythonanywhere />,
-        name: "PythonAnywhere",
-        description:
-          "Python library for multipurpose data manipulation and analysis, used for our exploratory data analysis and preparing our data for use by our models.",
-      },
-      {
-        icon: <SiAmazonrds />,
-        name: "Amazon RDS",
-        description: `Used to construct our ANN models and LSTM models. Provided a powerful, open-source resource for us to more easily build and refine our deep learning models.`,
+        description: "Deployed web applications with efficient and scalable hosting solutions.",
       },
     ],
   },
@@ -113,18 +104,42 @@ const skills = {
       {
         icon: <SiPytest />,
         name: "PyTest",
-        description:
-          "Used to assist in model creation and conduct hyper parameter tuning on number of nodes, learning rate, batch size, and epochs. Used to construct our SVR model.",
+        description: "Automated testing for Python applications and backend functionalities.",
       },
       {
         icon: <SiSelenium />,
         name: "Selenium",
-        description:
-          "Used to assist in model creation and conduct hyper parameter tuning on number of nodes, learning rate, batch size, and epochs. Used to construct our SVR model.",
+        description: "Conducted browser automation for UI testing and quality assurance.",
+      },
+      {
+        icon: <SiGithubactions />,
+        name: "GitHub Actions",
+        description: "Implemented CI/CD pipelines for automated testing and deployment.",
+      },
+    ],
+  },
+  Collaboration: {
+    title: "Collaboration",
+    list: [
+      {
+        icon: <SiGithub />,
+        name: "GitHub",
+        description: "Managed version control and collaborative development workflows.",
+      },
+      {
+        icon: <SiJira />,
+        name: "Jira",
+        description: "Organized and tracked project tasks using Agile methodologies.",
+      },
+      {
+        icon: <SiConfluence />,
+        name: "Confluence",
+        description: "Documented project plans, workflows, and shared knowledge effectively.",
       },
     ],
   },
 }
+
 
 export default function SPM() {
   const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null)
@@ -292,7 +307,7 @@ export default function SPM() {
                           ))}
 
 
-{/* 
+                          {/* 
 
                           <span className="text-accent font-bold">Languages</span>
                           <ul className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]">
