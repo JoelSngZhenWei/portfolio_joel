@@ -156,7 +156,7 @@ export default function SPM() {
                 <TabsContent value="details" className="w-full h-full">
                   <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[70vh] lg:h-[80vh]">
                     <h3 className="text-2xl lg:text-3xl font-bold">Project Details</h3>
-                    <ScrollAreaWithProgress className="bg-primary text-left h-[70vh] lg:h-[80vh]">
+                    <ScrollAreaWithProgress className="bg-primary text-left h-[70vh] lg:h-[80vh] w-full">
                       <OptionsDetails />
                     </ScrollAreaWithProgress>
                   </div>
