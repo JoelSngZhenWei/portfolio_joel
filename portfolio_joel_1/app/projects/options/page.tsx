@@ -195,10 +195,10 @@ export default function Options() {
                                   <TooltipProvider delayDuration={100}>
                                     <Tooltip>
                                       <TooltipTrigger
-                                        className="w-full h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group"
+                                        className="w-full h-[90px] lg:h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group"
                                         onClick={() => openModal(lang)}
                                       >
-                                        <div className="text-5xl group-hover:text-accent transition-all duration-300">
+                                        <div className="text-3xl group-hover:text-accent transition-all duration-300">
                                           {lang.icon}
                                         </div>
                                         <span className="capitalize text-sm lg:text-base group-hover:text-accent transition-all duration-300">
@@ -223,10 +223,10 @@ export default function Options() {
                                   <TooltipProvider delayDuration={100}>
                                     <Tooltip>
                                       <TooltipTrigger
-                                        className="w-full h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group"
+                                        className="w-full h-[90px] lg:h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group"
                                         onClick={() => openModal(fw)}
                                       >
-                                        <div className="text-5xl group-hover:text-accent transition-all duration-300">
+                                        <div className="text-3xl group-hover:text-accent transition-all duration-300">
                                           {fw.icon}
                                         </div>
                                         <span className="capitalize text-sm lg:text-base group-hover:text-accent transition-all duration-300">
