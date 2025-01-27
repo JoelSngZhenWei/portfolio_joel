@@ -150,7 +150,7 @@ export default function SPM() {
               </div>
 
               {/* content */}
-              <div className="w-full min-h-[70vh] lg:min-h-[80vh] border border-red-900">
+              <div className="w-full min-h-[70vh] lg:min-h-[80vh]">
                 {/* details */}
                 <TabsContent value="details" className="w-full h-full">
                   <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[70vh] lg:h-[80vh]">
@@ -163,7 +163,7 @@ export default function SPM() {
 
                 {/* report */}
                 <TabsContent value="report" className="w-full h-full">
-                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[70vh] lg:h-[80vh] border">
+                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[70vh] lg:h-[80vh] ">
                     <h3 className="text-lg lg:text-3xl font-bold">Report</h3>
                     <p className="h-12 max-w-2xl text-xs lg:text-base text-white/80 mx-auto lg:mx-0">
                       My group wrote a research paper-style report on our findings with extensive citations, details on
@@ -177,7 +177,7 @@ export default function SPM() {
 
                 {/* tech stack */}
                 <TabsContent value="techstack" className="w-full h-full">
-                  <div className="flex flex-col gap-[30px] h-[70vh] lg:h-[80vh] border">
+                  <div className="flex flex-col gap-[30px] h-[70vh] lg:h-[80vh]">
                     <div className="flex flex-col gap-2 lg:gap-2 text-center lg:text-left">
                       <h3 className="text-lg lg:text-3xl font-bold">Tech Stack</h3>
                       <p className="h-12 max-w-2xl text-xs lg:text-base text-white/80 mx-auto lg:mx-0">
