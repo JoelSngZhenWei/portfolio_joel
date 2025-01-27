@@ -200,7 +200,7 @@ export default function SPM() {
                                         <div className="text-5xl group-hover:text-accent transition-all duration-300">
                                           {lang.icon}
                                         </div>
-                                        <span className="capitalize group-hover:text-accent transition-all duration-300">
+                                        <span className="capitalize text-sm lg:text-base group-hover:text-accent transition-all duration-300">
                                           {lang.name}
                                         </span>
                                       </TooltipTrigger>
@@ -228,7 +228,7 @@ export default function SPM() {
                                         <div className="text-5xl group-hover:text-accent transition-all duration-300">
                                           {fw.icon}
                                         </div>
-                                        <span className="capitalize group-hover:text-accent transition-all duration-300">
+                                        <span className="capitalize text-sm lg:text-base group-hover:text-accent transition-all duration-300">
                                           {fw.name}
                                         </span>
                                       </TooltipTrigger>

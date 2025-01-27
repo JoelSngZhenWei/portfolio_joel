@@ -34,7 +34,7 @@ const OptionsTable: React.FC<{ data: OptionData[]; title: string }> = ({ data, t
 
     return (
 
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto text-sm lg:text-base">
             <Table>
                 <TableHeader>
                     <TableRow className="text-white">
