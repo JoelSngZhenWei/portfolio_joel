@@ -169,7 +169,7 @@ export default function SPM() {
                       My group wrote a research paper-style report on our findings with extensive citations, details on
                       the mathematical formulas involved in our models, and possible future work.
                     </p>
-                    <div className="h-[60vh] lg:h-[80vh]">
+                    <div className="h-[55vh] lg:h-[80vh]">
                       <PdfView />
                     </div>
                   </div>
