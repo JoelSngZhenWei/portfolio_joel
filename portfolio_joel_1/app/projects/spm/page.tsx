@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion"
 import { FaPython } from "react-icons/fa6"
-import { SiPandas, SiScikitlearn, SiTensorflow } from "react-icons/si"
+import { SiAmazonrds, SiFlask, SiJavascript, SiNextdotjs, SiPytest, SiPythonanywhere, SiSelenium, SiTailwindcss, SiVercel } from "react-icons/si"
 import Image from "next/image"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import OptionsDetails from "@/components/OptionsDetails"
 import { Button } from "@/components/ui/button"
 import PdfView from "@/components/PdfView"
-import { FaGithub } from "react-icons/fa"
+import { FaAws, FaCss3, FaGithub, FaHtml5, FaReact } from "react-icons/fa"
 import Link from "next/link"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
@@ -23,33 +23,107 @@ interface Skill {
 }
 
 const skills = {
-  langlist: [
-    {
-      icon: <FaPython />,
-      name: "Python",
-      description:
-        "This was the primary language our analysis was conducted in, leveraging other libraries and frameworks to manipulate data and construct our machine learning models.",
-    },
-  ],
-  frameworklist: [
-    {
-      icon: <SiScikitlearn />,
-      name: "ScikitLearn",
-      description:
-        "Used to assist in model creation and conduct hyper parameter tuning on number of nodes, learning rate, batch size, and epochs. Used to construct our SVR model.",
-    },
-    {
-      icon: <SiPandas />,
-      name: "Pandas",
-      description:
-        "Python library for multipurpose data manipulation and analysis, used for our exploratory data analysis and preparing our data for use by our models.",
-    },
-    {
-      icon: <SiTensorflow />,
-      name: "Tensor Flow",
-      description: `Used to construct our ANN models and LSTM models. Provided a powerful, open-source resource for us to more easily build and refine our deep learning models.`,
-    },
-  ],
+  Languages: {
+    title: "Languages",
+    list: [
+      {
+        icon: <FaPython />,
+        name: "Python",
+        description:
+          "This was the primary language our analysis was conducted in, leveraging other libraries and frameworks to manipulate data and construct our machine learning models.",
+      },
+      {
+        icon: <FaHtml5 />,
+        name: "HTML",
+        description:
+          "This was the primary language our analysis was conducted in, leveraging other libraries and frameworks to manipulate data and construct our machine learning models.",
+      },
+      {
+        icon: <FaCss3 />,
+        name: "CSS",
+        description:
+          "This was the primary language our analysis was conducted in, leveraging other libraries and frameworks to manipulate data and construct our machine learning models.",
+      },
+      {
+        icon: <SiJavascript />,
+        name: "Javascript",
+        description:
+          "This was the primary language our analysis was conducted in, leveraging other libraries and frameworks to manipulate data and construct our machine learning models.",
+      },
+    ],
+  },
+  Frontend: {
+    title: "Frontend",
+    list: [
+      {
+        icon: <SiTailwindcss />,
+        name: "Tailwind CSS",
+        description:
+          "Python library for multipurpose data manipulation and analysis, used for our exploratory data analysis and preparing our data for use by our models.",
+      },
+      {
+        icon: <SiNextdotjs />,
+        name: "Next.JS",
+        description:
+          "Python library for multipurpose data manipulation and analysis, used for our exploratory data analysis and preparing our data for use by our models.",
+      },
+      {
+        icon: <FaReact />,
+        name: "React.JS",
+        description: `Used to construct our ANN models and LSTM models. Provided a powerful, open-source resource for us to more easily build and refine our deep learning models.`,
+      },
+      {
+        icon: <SiVercel />,
+        name: "Vercel",
+        description: `Used to construct our ANN models and LSTM models. Provided a powerful, open-source resource for us to more easily build and refine our deep learning models.`,
+      },
+    ],
+  },
+  Backend: {
+    title: "Backend",
+    list: [
+      {
+        icon: <SiFlask />,
+        name: "ScikitLearn",
+        description:
+          "Used to assist in model creation and conduct hyper parameter tuning on number of nodes, learning rate, batch size, and epochs. Used to construct our SVR model.",
+      },
+      {
+        icon: <FaAws />,
+        name: "AWS",
+        description:
+          "Used to assist in model creation and conduct hyper parameter tuning on number of nodes, learning rate, batch size, and epochs. Used to construct our SVR model.",
+      },
+      {
+        icon: <SiPythonanywhere />,
+        name: "PythonAnywhere",
+        description:
+          "Python library for multipurpose data manipulation and analysis, used for our exploratory data analysis and preparing our data for use by our models.",
+      },
+      {
+        icon: <SiAmazonrds />,
+        name: "Amazon RDS",
+        description: `Used to construct our ANN models and LSTM models. Provided a powerful, open-source resource for us to more easily build and refine our deep learning models.`,
+      },
+    ],
+  },
+  Testing: {
+    title: "Testing",
+    list: [
+      {
+        icon: <SiPytest />,
+        name: "PyTest",
+        description:
+          "Used to assist in model creation and conduct hyper parameter tuning on number of nodes, learning rate, batch size, and epochs. Used to construct our SVR model.",
+      },
+      {
+        icon: <SiSelenium />,
+        name: "Selenium",
+        description:
+          "Used to assist in model creation and conduct hyper parameter tuning on number of nodes, learning rate, batch size, and epochs. Used to construct our SVR model.",
+      },
+    ],
+  },
 }
 
 export default function SPM() {
@@ -187,6 +261,39 @@ export default function SPM() {
                       </p>
                       <ScrollArea className=" bg-secondary p-4 rounded-xl flex h-[55vh] lg:h-[67.5vh]">
                         <div className="flex flex-col gap-2">
+                          {Object.entries(skills).map(([key, { title, list }]) => (
+                            <div key={key}>
+                              <span className="text-accent font-bold">{title}</span>
+                              <ul className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]">
+                                {list.map((item, index) => (
+                                  <li key={index}>
+                                    <TooltipProvider delayDuration={100}>
+                                      <Tooltip>
+                                        <TooltipTrigger
+                                          className="w-full h-[90px] lg:h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group"
+                                          onClick={() => openModal(item)}
+                                        >
+                                          <div className="text-3xl lg:text-5xl group-hover:text-accent transition-all duration-300">
+                                            {item.icon}
+                                          </div>
+                                          <span className="capitalize text-sm lg:text-base group-hover:text-accent transition-all duration-300">
+                                            {item.name}
+                                          </span>
+                                        </TooltipTrigger>
+                                        <TooltipContent>
+                                          <p>{item.description}</p>
+                                        </TooltipContent>
+                                      </Tooltip>
+                                    </TooltipProvider>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+
+
+{/* 
+
                           <span className="text-accent font-bold">Languages</span>
                           <ul className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]">
                             {skills.langlist.map((lang, index) => {
@@ -215,26 +322,26 @@ export default function SPM() {
                             })}
                           </ul>
 
-                          <span className="text-accent font-bold">Libraries and Frameworks</span>
+                          <span className="text-accent font-bold">Frontend</span>
                           <ul className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]">
-                            {skills.frameworklist.map((fw, index) => {
+                            {skills.frontendlist.map((item, index) => {
                               return (
                                 <li key={index}>
                                   <TooltipProvider delayDuration={100}>
                                     <Tooltip>
                                       <TooltipTrigger
                                         className="w-full h-[90px] lg:h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group"
-                                        onClick={() => openModal(fw)}
+                                        onClick={() => openModal(item)}
                                       >
                                         <div className="text-3xl lg:text-5xl group-hover:text-accent transition-all duration-300">
-                                          {fw.icon}
+                                          {item.icon}
                                         </div>
                                         <span className="capitalize text-sm lg:text-base group-hover:text-accent transition-all duration-300">
-                                          {fw.name}
+                                          {item.name}
                                         </span>
                                       </TooltipTrigger>
                                       <TooltipContent>
-                                        <p>{fw.description}</p>
+                                        <p>{item.description}</p>
                                       </TooltipContent>
                                     </Tooltip>
                                   </TooltipProvider>
@@ -242,6 +349,62 @@ export default function SPM() {
                               )
                             })}
                           </ul>
+
+                          <span className="text-accent font-bold">Backend</span>
+                          <ul className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]">
+                            {skills.backendlist.map((item, index) => {
+                              return (
+                                <li key={index}>
+                                  <TooltipProvider delayDuration={100}>
+                                    <Tooltip>
+                                      <TooltipTrigger
+                                        className="w-full h-[90px] lg:h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group"
+                                        onClick={() => openModal(item)}
+                                      >
+                                        <div className="text-3xl lg:text-5xl group-hover:text-accent transition-all duration-300">
+                                          {item.icon}
+                                        </div>
+                                        <span className="capitalize text-sm lg:text-base group-hover:text-accent transition-all duration-300">
+                                          {item.name}
+                                        </span>
+                                      </TooltipTrigger>
+                                      <TooltipContent>
+                                        <p>{item.description}</p>
+                                      </TooltipContent>
+                                    </Tooltip>
+                                  </TooltipProvider>
+                                </li>
+                              )
+                            })}
+                          </ul>
+
+                          <span className="text-accent font-bold">Testing</span>
+                          <ul className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]">
+                            {skills.testlist.map((item, index) => {
+                              return (
+                                <li key={index}>
+                                  <TooltipProvider delayDuration={100}>
+                                    <Tooltip>
+                                      <TooltipTrigger
+                                        className="w-full h-[90px] lg:h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group"
+                                        onClick={() => openModal(item)}
+                                      >
+                                        <div className="text-3xl lg:text-5xl group-hover:text-accent transition-all duration-300">
+                                          {item.icon}
+                                        </div>
+                                        <span className="capitalize text-sm lg:text-base group-hover:text-accent transition-all duration-300">
+                                          {item.name}
+                                        </span>
+                                      </TooltipTrigger>
+                                      <TooltipContent>
+                                        <p>{item.description}</p>
+                                      </TooltipContent>
+                                    </Tooltip>
+                                  </TooltipProvider>
+                                </li>
+                              )
+                            })}
+                          </ul> */}
                         </div>
                       </ScrollArea>
                     </div>
