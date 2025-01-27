@@ -276,7 +276,6 @@ export default function SPM() {
                     </p>
                     <div className="h-[55vh] lg:h-[80vh]">
                       <PdfView pdfPath="/assets/MLA_Final_Report.pdf" fileName="MLA_Final_Report.pdf" />
-                      h
                     </div>
                   </div>
                 </TabsContent>
