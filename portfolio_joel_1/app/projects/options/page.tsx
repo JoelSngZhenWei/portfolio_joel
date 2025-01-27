@@ -132,7 +132,7 @@ export default function SPM() {
           </div>
         </div>
 
-        <div className="min-h-[70vh] flex items-center justify-center mb-4">
+        <div className="min-h-[80vh] flex items-center justify-center mb-4">
           <div className="container mx-auto">
             <Tabs defaultValue="details" className="flex flex-col lg:flex-row gap-4">
               <div className="flex flex-col w-full lg:max-w-[380px] mx-auto lg:mx-0 gap-6">
@@ -150,12 +150,12 @@ export default function SPM() {
               </div>
 
               {/* content */}
-              <div className="min-h-[70vh] w-full">
+              <div className="w-full min-h-[80vh] border border-red-900">
                 {/* details */}
                 <TabsContent value="details" className="w-full h-full">
-                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left">
+                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left border h-[60vh] lg:h-[80vh]">
                     <h3 className="text-2xl lg:text-3xl font-bold">Project Details</h3>
-                    <ScrollArea className="h-[60vh] bg-primary text-left">
+                    <ScrollArea className="bg-primary text-left h-[60vh] lg:h-[80vh]">
                       <OptionsDetails />
                     </ScrollArea>
                   </div>
@@ -163,13 +163,13 @@ export default function SPM() {
 
                 {/* report */}
                 <TabsContent value="report" className="w-full h-full">
-                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[60vh] border">
+                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[60vh] lg:h-[80vh] border">
                     <h3 className="text-lg lg:text-3xl font-bold">Report</h3>
                     <p className="h-12 max-w-2xl text-xs lg:text-base text-white/80 mx-auto lg:mx-0">
                       My group wrote a research paper-style report on our findings with extensive citations, details on
                       the mathematical formulas involved in our models, and possible future work.
                     </p>
-                    <div className="h-[45vh]">
+                    <div className="h-[60vh] lg:h-[80vh]">
                       <PdfView />
                     </div>
                   </div>
@@ -177,14 +177,14 @@ export default function SPM() {
 
                 {/* tech stack */}
                 <TabsContent value="techstack" className="w-full h-full">
-                  <div className="flex flex-col gap-[30px] h-[80vh]">
+                  <div className="flex flex-col gap-[30px] h-[60vh] lg:h-[80vh] border">
                     <div className="flex flex-col gap-2 lg:gap-2 text-center lg:text-left">
                       <h3 className="text-lg lg:text-3xl font-bold">Tech Stack</h3>
                       <p className="h-12 max-w-2xl text-xs lg:text-base text-white/80 mx-auto lg:mx-0">
                         The languages, frameworks, and libraries my group employed in our project. Click on each icon to
                         learn more.
                       </p>
-                      <ScrollArea className=" bg-secondary p-4 rounded-xl flex h-[65vh]">
+                      <ScrollArea className=" bg-secondary p-4 rounded-xl flex h-[60vh] lg:h-[80vh]">
                         <div className="flex flex-col gap-2">
                           <span className="text-accent font-bold">Languages</span>
                           <ul className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]">
