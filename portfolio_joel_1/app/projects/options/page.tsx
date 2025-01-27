@@ -52,7 +52,7 @@ const skills = {
   ],
 }
 
-export default function SPM() {
+export default function Options() {
   const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null)
 
   const openModal = (skill: Skill) => {

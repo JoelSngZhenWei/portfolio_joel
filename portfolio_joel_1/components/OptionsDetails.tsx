@@ -34,7 +34,7 @@ const OptionsTable: React.FC<{ data: OptionData[]; title: string }> = ({ data, t
 
     return (
 
-        <div className="overflow-x-auto text-sm lg:text-base">
+        <div className="">
             <Table>
                 <TableHeader>
                     <TableRow className="text-white">
@@ -80,7 +80,7 @@ const OptionsTable: React.FC<{ data: OptionData[]; title: string }> = ({ data, t
 
 export default function OptionsDetails() {
     return (
-        <div className="space-y-10 text-sm lg:text-base pr-5 lg:px-0">
+        <div className="space-y-10 text-sm lg:text-base lg:px-0">
             <section>
                 <div className="text-white/80 space-y-4 ">
                     <p><Link href={"https://www.investopedia.com/terms/o/option.asp"} className="text-accent hover:text-blue-300 underline transition-colors">Options</Link> are financial derivatives that grant buyers the right, but not the obligation, to buy or sell an asset at a predetermined price. Accurate options pricing is crucial for developing effective hedging strategies, assessing potential risks, and protecting portfolios against adverse market movements. Additionally, it creates profit opportunities by identifying mispriced options in the market. However, due to market unpredictability and the complex, non-linear relationships between features, accurately pricing options remains a significant and challenging problem.</p>
