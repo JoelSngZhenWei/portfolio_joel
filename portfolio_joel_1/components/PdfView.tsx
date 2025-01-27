@@ -73,7 +73,7 @@ export default function PdfView({ pdfPath, fileName }: PdfViewProps) {
         </div>
         <div className="flex justify-center">
           <Button onClick={handleDownload} variant="outline">
-            Download Report
+            Download
             <Download className="h-4 w-4 ml-2" />
           </Button>
         </div>

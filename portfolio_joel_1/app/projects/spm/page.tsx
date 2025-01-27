@@ -168,8 +168,10 @@ export default function SPM() {
           <div className="flex flex-col lg:flex-row items-center justify-between lg:gap-12 py-12 lg:py-16">
             {/* Project Title and Date */}
             <div className="text-center lg:text-left mb-8 lg:mb-0">
-              <h1 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
-                <span className="text-accent">Project Management</span> for <span className="">Software Development</span>
+              <h1 className="text-3xl lg:text-4xl font-bold  mb-4">
+                HRMS Employee Scheduling
+                <br />
+                <span className="text-accent">Web Application</span>
               </h1>
               <div className="flex flex-row gap-3 items-center justify-between">
                 <p className="text-accent font-medium text-lg">Aug 2024 - Dec 2024</p>
@@ -204,19 +206,13 @@ export default function SPM() {
             <h2 className="text-2xl font-semibold tracking-wide">Summary</h2>
             <div className="space-y-4">
               <p className="text-white/80 leading-relaxed">
-                In this project my group sought to analyse different machine learning techniques in tackling a
-                notoriously complex task: <span className="font-bold text-white">Options Pricing</span>. We contrasted
-                our models&apos; performance to a traditional and widely used mathematical model.
+                In this project my group sought to develop an HRMS application while documenting our project processes, particularly how we facilitated Scrum during this project and leveraged CI/CD practices in our development. Our backend was developed in Flask, and our frontend was developed in Next.JS.
               </p>
               <p className="text-white/80 leading-relaxed">
-                My specific contributions to this project were sourcing the data sets, the entirety of exploratory data
-                analysis, and constructing the ANN model. What I was most proud of in my ANN approach was developing a
-                hybrid ANN approach that used both a classification ANN and a regression ANN, and proved to be the most
-                successful model we employed.
+                My specific contributions to this project wereacting as the Scrum master for this project, and as a backend developer. As Scrum master, I maintained the Jira and Confluence platforms we used to track progress. As a backend developer, I was in charge of developing the Flask application and integrating it with the frontend my team had developed.
               </p>
               <p className="text-white/80 leading-relaxed">
-                This project was undertaken as part of an SMU module, &apos;IS460 Machine Learning &amp;
-                Applications&apos;. My group received an A+ for this project.
+                This project was undertaken as part of an SMU module, &apos;IS212 Software Project Management&apos;. I received a distinction for my part in this project and for this module overall.
               </p>
             </div>
           </div>
@@ -261,8 +257,8 @@ export default function SPM() {
                     <p className="h-12 max-w-2xl text-xs lg:text-base text-white/80 mx-auto lg:mx-0">
                       Here is a video demonstration of the use of our application to conduct scheduling and management of employee scheduling.
                     </p>
-                    <div className="h-[55vh] lg:h-[80vh]">
-                      <PdfView pdfPath="/assets/MLA_Final_Report.pdf" fileName="MLA_Final_Report.pdf" />
+                    <div className="h-[55vh] lg:h-[80vh] border">
+                      Video
                     </div>
                   </div>
                 </TabsContent>
@@ -270,12 +266,12 @@ export default function SPM() {
                 {/* slides */}
                 <TabsContent value="slides" className="w-full h-full">
                   <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[70vh] lg:h-[80vh] ">
-                    <h3 className="text-lg lg:text-3xl font-bold">Video Demo</h3>
+                    <h3 className="text-lg lg:text-3xl font-bold">Slides Summary</h3>
                     <p className="h-12 max-w-2xl text-xs lg:text-base text-white/80 mx-auto lg:mx-0">
-                      Here is a video demonstration of the use of our application to conduct scheduling and management of employee scheduling.
+                      A short slide deck detailing and summarising our project, Scrum practices we utilised, and CI/CD measures we implemented.
                     </p>
                     <div className="h-[55vh] lg:h-[80vh]">
-                      <PdfView pdfPath="/assets/MLA_Final_Report.pdf" fileName="MLA_Final_Report.pdf" />
+                      <PdfView pdfPath="/assets/spm_slides.pdf" fileName="spm_slides.pdf" />
                     </div>
                   </div>
                 </TabsContent>

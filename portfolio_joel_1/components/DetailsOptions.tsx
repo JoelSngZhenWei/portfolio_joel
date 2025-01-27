@@ -134,7 +134,7 @@ export default function OptionsDetails() {
                 <h3 className="text-xl font-bold mb-2 border-white/20 pb-2 border-b">Black Scholes Model</h3>
                 <div className="space-y-4">
                     <p className="text-white/80">
-                        The <span className="text-white font-bold">Black-Scholes model (BSM)</span>, developed in 1973, prices European-style options with significant and unrealistic assumptions (Constant volatility, log-normal distribution of asset returns, and assumption of constant interest rates).  <span>Insert latex formula for BSM</span>.
+                        The <span className="text-white font-bold">Black-Scholes model (BSM)</span>, developed in 1973, prices European-style options with significant and unrealistic assumptions (Constant volatility, log-normal distribution of asset returns, and assumption of constant interest rates). 
                     </p>
                     <p className="text-white/80">
                         This serves as our traditional baseline for comparison to evaluate performance improvements made by ML approaches.

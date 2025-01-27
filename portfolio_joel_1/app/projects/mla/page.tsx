@@ -78,7 +78,7 @@ export default function MLA() {
           {/* title section */}
           <div className="flex flex-col lg:flex-row items-center justify-between lg:gap-12 py-12 lg:py-16">
             {/* Project Title and Date */}
-            <div className="text-center lg:text-left mb-8 lg:mb-0">
+            <div className="text-center lg:text-left mb-8 lg:mb-0 ">
               <h1 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
                 Options Pricing with <span className="text-accent">Machine Learning</span>
               </h1>
