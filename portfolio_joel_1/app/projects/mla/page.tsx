@@ -52,7 +52,7 @@ const skills = {
   ],
 }
 
-export default function Options() {
+export default function MLA() {
   const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null)
 
   const openModal = (skill: Skill) => {
@@ -198,7 +198,7 @@ export default function Options() {
                                         className="w-full h-[90px] lg:h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group"
                                         onClick={() => openModal(lang)}
                                       >
-                                        <div className="text-3xl group-hover:text-accent transition-all duration-300">
+                                        <div className="text-3xl lg:text-5xl group-hover:text-accent transition-all duration-300">
                                           {lang.icon}
                                         </div>
                                         <span className="capitalize text-sm lg:text-base group-hover:text-accent transition-all duration-300">
@@ -226,7 +226,7 @@ export default function Options() {
                                         className="w-full h-[90px] lg:h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group"
                                         onClick={() => openModal(fw)}
                                       >
-                                        <div className="text-3xl group-hover:text-accent transition-all duration-300">
+                                        <div className="text-3xl lg:text-5xl group-hover:text-accent transition-all duration-300">
                                           {fw.icon}
                                         </div>
                                         <span className="capitalize text-sm lg:text-base group-hover:text-accent transition-all duration-300">
