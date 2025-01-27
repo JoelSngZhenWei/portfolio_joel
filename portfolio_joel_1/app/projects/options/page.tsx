@@ -177,14 +177,14 @@ export default function SPM() {
 
                 {/* tech stack */}
                 <TabsContent value="techstack" className="w-full h-full">
-                  <div className="flex flex-col gap-[30px] h-[60vh] lg:h-[80vh] border">
+                  <div className="flex flex-col gap-[30px] h-[70vh] lg:h-[80vh] border">
                     <div className="flex flex-col gap-2 lg:gap-2 text-center lg:text-left">
                       <h3 className="text-lg lg:text-3xl font-bold">Tech Stack</h3>
                       <p className="h-12 max-w-2xl text-xs lg:text-base text-white/80 mx-auto lg:mx-0">
                         The languages, frameworks, and libraries my group employed in our project. Click on each icon to
                         learn more.
                       </p>
-                      <ScrollArea className=" bg-secondary p-4 rounded-xl flex h-[60vh] lg:h-[80vh]">
+                      <ScrollArea className=" bg-secondary p-4 rounded-xl flex h-[55vh] lg:h-[67.5vh]">
                         <div className="flex flex-col gap-2">
                           <span className="text-accent font-bold">Languages</span>
                           <ul className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]">
