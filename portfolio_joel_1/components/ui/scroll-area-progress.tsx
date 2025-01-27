@@ -36,7 +36,7 @@ const ScrollAreaWithProgress = React.forwardRef<
       <ScrollAreaPrimitive.Corner />
       <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent/20" aria-hidden="true">
         <div
-          className="h-full bg-accent transition-all duration-150 ease-out"
+          className="h-full bg-accent transition-all duration-150 ease-linear"
           style={{ width: `${scrollProgress}%` }}
         />
       </div>

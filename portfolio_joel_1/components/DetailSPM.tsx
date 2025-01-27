@@ -1,4 +1,4 @@
-import Image from "next/image"
+// import Image from "next/image"
 
 
 export default function SPMDetails() {
@@ -274,7 +274,7 @@ export default function SPMDetails() {
                                 ))}
                             </ul>
                         </div>
-                        <div className="flex-1 flex justify-center items-center order-1 lg:order-2 p-1">
+                        {/* <div className="flex-1 flex justify-center items-center order-1 lg:order-2 p-1">
                             <Image
                                 src="/assets/ANN_final.png"
                                 alt="Hybrid ANN Model Diagram"
@@ -282,7 +282,7 @@ export default function SPMDetails() {
                                 height={300}
                                 className="rounded-lg shadow-lg hover:scale-105 transition-all duration-300"
                             />
-                        </div>
+                        </div> */}
                     </section>
                     <p className="text-white/80">
                         Burndown charts from Jira were useful in helping our team document our velocity throughout our sprints, understanding our pace of work and our capability to deliver product features each sprint.

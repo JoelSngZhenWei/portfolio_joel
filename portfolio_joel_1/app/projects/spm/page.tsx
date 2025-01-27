@@ -209,7 +209,7 @@ export default function SPM() {
                 In this project my group sought to develop an HRMS application while documenting our project processes, particularly how we facilitated Scrum during this project and leveraged CI/CD practices in our development. Our backend was developed in Flask, and our frontend was developed in Next.JS.
               </p>
               <p className="text-white/80 leading-relaxed">
-                My specific contributions to this project was acting as the Scrum master for this project, and as a backend developer. As Scrum master, I maintained the Jira and Confluence platforms we used to track progress. As a backend developer, I was in charge of developing the Flask application and integrating it with the frontend my team had developed. Beyond these, I believe my most substantial contributions were developing the CI/CD pipeline for automated testing, integration, and deployment for our web application. 
+                My specific contributions to this project was acting as the Scrum master for this project, and as a backend developer. As Scrum master, I maintained the Jira and Confluence platforms we used to track progress. As a backend developer, I was in charge of developing the Flask application and integrating it with the frontend my team had developed. Beyond these, I believe my most substantial contributions were developing the entire CI/CD pipeline for automated testing, integration, and deployment for our web application. 
               </p>
               <p className="text-white/80 leading-relaxed">
                 This project was undertaken as part of an SMU module, &apos;IS212 Software Project Management&apos;. I received a distinction for my part in this project and for this module overall.
@@ -226,9 +226,9 @@ export default function SPM() {
                   <TabsTrigger value="details" className="bg-secondary px-4 flex-grow lg:flex-grow-0">
                     Details
                   </TabsTrigger>
-                  <TabsTrigger value="video" className="bg-secondary px-4 flex-grow lg:flex-grow-0">
+                  {/* <TabsTrigger value="video" className="bg-secondary px-4 flex-grow lg:flex-grow-0">
                     Video Demo
-                  </TabsTrigger>
+                  </TabsTrigger> */}
                   <TabsTrigger value="slides" className="bg-secondary px-4 flex-grow lg:flex-grow-0">
                     Slides
                   </TabsTrigger>
