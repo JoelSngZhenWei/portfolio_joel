@@ -150,7 +150,7 @@ export default function SPM() {
               </div>
 
               {/* content */}
-              <div className="w-full min-h-[60vh] lg:min-h-[80vh] border border-red-900">
+              <div className="w-full min-h-[80vh] border border-red-900">
                 {/* details */}
                 <TabsContent value="details" className="w-full h-full">
                   <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left border h-[60vh] lg:h-[80vh]">
