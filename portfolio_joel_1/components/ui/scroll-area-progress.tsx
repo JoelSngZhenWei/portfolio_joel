@@ -24,7 +24,7 @@ const ScrollAreaWithProgress = React.forwardRef<
   }
 
   return (
-    <ScrollAreaPrimitive.Root ref={ref} className={cn("relative overflow-hidden", className)} {...props}>
+    <ScrollAreaPrimitive.Root ref={ref} className={cn("relative overflow-auto", className)} {...props}>
       <ScrollAreaPrimitive.Viewport
         className="h-full w-full rounded-[inherit]"
         ref={viewportRef}

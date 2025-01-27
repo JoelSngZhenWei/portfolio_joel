@@ -14,6 +14,7 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { SkillModal } from "@/components/SkillModal"
 import { useState } from "react"
+import { ScrollAreaWithProgress } from "@/components/ui/scroll-area-progress"
 
 interface Skill {
   icon: React.ReactElement
@@ -155,9 +156,9 @@ export default function SPM() {
                 <TabsContent value="details" className="w-full h-full">
                   <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[70vh] lg:h-[80vh]">
                     <h3 className="text-2xl lg:text-3xl font-bold">Project Details</h3>
-                    <ScrollArea className="bg-primary text-left h-[70vh] lg:h-[80vh]">
+                    <ScrollAreaWithProgress className="bg-primary text-left h-[70vh] lg:h-[80vh]">
                       <OptionsDetails />
-                    </ScrollArea>
+                    </ScrollAreaWithProgress>
                   </div>
                 </TabsContent>
 
