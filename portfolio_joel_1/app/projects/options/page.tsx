@@ -5,14 +5,15 @@ import { FaPython } from "react-icons/fa6"
 import { SiPandas, SiScikitlearn, SiTensorflow } from "react-icons/si"
 import Image from "next/image"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { TechStack } from "@/components/TechStack"
+// import { TechStack } from "@/components/TechStack"
 import OptionsDetails from "@/components/OptionsDetails"
 import { Button } from "@/components/ui/button"
-import { Download } from "lucide-react"
 import PdfView from "@/components/PdfView"
 // import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa"
 import Link from "next/link"
+import { ScrollArea } from "@/components/ui/scroll-area"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 
 const skills = {
   langlist: [
@@ -40,18 +41,10 @@ const skills = {
     },
   ]
 }
-const handleDownload = () => {
-  const link = document.createElement("a")
-  link.href = "/assets/MLA_Final_Report.pdf"
-  link.download = "MLA_Final_Report.pdf"
-  document.body.appendChild(link)
-  link.click()
-  document.body.removeChild(link)
-}
 
-export default function Options() {
+export default function SPM() {
   return (
-    <section className="container mx-auto  py-2 lg:py-6">
+    <section className="container mx-auto  py-3 lg:py-0">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{
@@ -117,55 +110,125 @@ export default function Options() {
           </div>
         </div>
 
+        <div className="min-h-[80vh] flex items-center justify-center">
+          <div className="container mx-auto">
+            <Tabs defaultValue="details" className="flex flex-col lg:flex-row gap-4">
+              <div className="flex flex-col w-full lg:max-w-[380px] mx-auto lg:mx-0 gap-6">
+                <TabsList className="flex flex-row justify-center lg:justify-start w-full gap-2 lg:gap-6 lg:flex-col">
+                  <TabsTrigger value="details" className="bg-secondary px-4 flex-grow lg:flex-grow-0">Details</TabsTrigger>
+                  <TabsTrigger value="report" className="bg-secondary px-4 flex-grow lg:flex-grow-0">Report</TabsTrigger>
+                  <TabsTrigger value="techstack" className="bg-secondary px-4 flex-grow lg:flex-grow-0">Tech Stack</TabsTrigger>
+                </TabsList>
+              </div>
 
-        <div className="container mx-auto">
-          <Tabs defaultValue="details" className="flex flex-col">
-            <div className="sticky top-[50px] lg:top-[68px] z-20 drop-shadow-md w-full">
-              <TabsList className="flex flex-row gap-3 lg:gap-6">
-                <TabsTrigger value='details' className="bg-secondary px-4 flex-grow xl:flex-grow-0">Details</TabsTrigger>
-                <TabsTrigger value='paper' className="bg-secondary px-4 flex-grow xl:flex-grow-0">Report</TabsTrigger>
-                <TabsTrigger value='techstack' className="bg-secondary px-4 flex-grow xl:flex-grow-0">Tech Stack</TabsTrigger>
-              </TabsList>
-            </div>
-
-            <div className="min-h-[80vh] w-full pt-8 pb-12 px-2">
-              {/* tab 1, project details */}
-              <TabsContent value="details">
-                <h2 className="text-2xl font-semibold tracking-wide mb-4">Project Details</h2>
-                <OptionsDetails />
-              </TabsContent>
-              {/* tab 2, project paper */}
-              <TabsContent value="paper" className="h-[60vh]">
-                <div className="flex flex-col lg:flex-row h-full">
-                  <div className="lg:w-1/3 w-full h-full flex flex-col items-center justify-start lg:justify-center space-y-4 pb-2">
-                    <h2 className="text-2xl font-semibold tracking-wide text-start lg:text-center">Report</h2>
-                    <Button
-                      onClick={handleDownload}
-                      variant="outline"
-                      className="flex items-center gap-2 px-4 py-2 border text-lg rounded-full"
-                    >
-                      <span>Download</span>
-                      <Download className="h-4 w-4" />
-                    </Button>
+              {/* content */}
+              <div className="min-h-[80vh] w-full">
+                {/* details */}
+                <TabsContent value="details" className="w-full h-full">
+                  <div className='flex flex-col gap-2 lg:gap-2  text-center lg:text-left'>
+                    <h3 className='text-2xl lg:text-3xl font-bold'>
+                      Project Details
+                    </h3>
+                    <ScrollArea className='h-[70vh] bg-primary'>
+                      <OptionsDetails />
+                    </ScrollArea>
                   </div>
-                  <div className="lg:w-2/3 w-full h-full">
-                    <PdfView />
+                </TabsContent>
+
+                {/* report */}
+                <TabsContent value="report" className="w-full h-full">
+                  <div className='flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[80vh]'>
+                    <h3 className='text-lg lg:text-3xl font-bold'>
+                      Report
+                    </h3>
+                    <p className='h-12 max-w-2xl text-xs lg:text-base text-white/80 mx-auto lg:mx-0'>
+                      My group wrote a research paper-style report on our findings with extensive citations, details on the mathematical formulas involved in our models, and possible future work.
+                    </p>
+                    <div className="h-[65vh]">
+                      <PdfView />
+                    </div>
                   </div>
-                </div>
-              </TabsContent>
+                </TabsContent>
 
-              {/* tab 3, tech stack */}
-              <TabsContent value="techstack">
-                {/* Tech Stack */}
-                <div>
-                  <TechStack skills={skills} />
-                </div>
-              </TabsContent>
-            </div>
+                {/* tech stack */}
+                <TabsContent value="techstack" className="w-full h-full">
+                  <div className="flex flex-col gap-[30px] h-[80vh]">
+                    <div className='flex flex-col gap-2 lg:gap-2 text-center lg:text-left'>
+                      <h3 className='text-lg lg:text-3xl font-bold'>
+                        Tech Stack
+                      </h3>
+                      <p className='h-12 max-w-2xl text-xs lg:text-base text-white/80 mx-auto lg:mx-0'>
+                        The languages, frameworks, and libraries my group employed in our project. Click on each icon to learn more. 
+                      </p>
+                      <ScrollArea className=' bg-secondary p-4 rounded-xl flex h-[65vh]'>
+                        <div className='flex flex-col gap-2'>
+                          <span className='text-accent font-bold'>Languages</span>
+                          <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]'>
+                            {skills.langlist.map((lang, index) => {
+                              return (
+                                <li key={index}>
+                                  <TooltipProvider delayDuration={100}>
+                                    <Tooltip>
+                                      <TooltipTrigger className='w-full h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group'>
+                                        <div className='text-6xl group-hover:text-accent transition-all duration-300'>{lang.icon}</div>
+                                        <span className='capitalize group-hover:text-accent transition-all duration-300'>{lang.name}</span>
+                                      </TooltipTrigger>
+                                      <TooltipContent>
+                                        <p>
+                                          {lang.description}
+                                        </p>
+                                      </TooltipContent>
+                                    </Tooltip>
+                                  </TooltipProvider>
+                                </li>
+                              )
+                            })}
+                          </ul>
+
+                          <span className='text-accent font-bold'>Libraries and Frameworks</span>
+                          <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]'>
+                            {skills.frameworklist.map((fw, index) => {
+                              return (
+                                <li key={index}>
+                                  <TooltipProvider delayDuration={100}>
+                                    <Tooltip>
+                                      <TooltipTrigger className='w-full h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group'>
+                                        <div className='text-6xl group-hover:text-accent transition-all duration-300'>{fw.icon}</div>
+                                        <span className='capitalize group-hover:text-accent transition-all duration-300'>{fw.name}</span>
+                                      </TooltipTrigger>
+                                      <TooltipContent>
+                                        <p>
+                                          {fw.description}
+                                        </p>
+                                      </TooltipContent>
+                                    </Tooltip>
+                                  </TooltipProvider>
+                                </li>
+                              )
+                            })}
+                          </ul>
+                        </div>
+                      </ScrollArea>
+
+                    </div>
+
+                  </div>
+                </TabsContent>
+              </div>
 
 
-          </Tabs>
+
+
+
+
+
+
+            </Tabs>
+          </div>
         </div>
+
+
+
       </motion.div>
     </section>
   )

@@ -234,19 +234,19 @@ export default function Resume() {
         opacity: 1,
         transition: { delay: 2, duration: 0.4, ease: "easeIn" }
       }}
-      className='min-h-[80vh] flex items-center justify-center py-3 xl:py-0'
+      className='min-h-[80vh] flex items-center justify-center py-3 lg:py-0'
     >
       <div className='container mx-auto'>
-        <Tabs defaultValue='experience' className='flex flex-col xl:flex-row gap-4'>
-          <div className="flex flex-col w-full lg:max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsList className="flex flex-row justify-center xl:justify-start w-full gap-2 xl:gap-6 xl:flex-col">
-              <TabsTrigger value="experience" className="bg-secondary px-4 flex-grow xl:flex-grow-0">Experience</TabsTrigger>
-              <TabsTrigger value="education" className="bg-secondary px-4 flex-grow xl:flex-grow-0">Education</TabsTrigger>
-              <TabsTrigger value="skills" className="bg-secondary px-4 flex-grow xl:flex-grow-0">Skills</TabsTrigger>
-              <TabsTrigger value="cca" className="bg-secondary px-4 flex-grow xl:flex-grow-0">CCA</TabsTrigger>
+        <Tabs defaultValue='experience' className='flex flex-col lg:flex-row gap-4'>
+          <div className="flex flex-col w-full lg:max-w-[380px] mx-auto lg:mx-0 gap-6">
+            <TabsList className="flex flex-row justify-center lg:justify-start w-full gap-2 lg:gap-6 lg:flex-col">
+              <TabsTrigger value="experience" className="bg-secondary px-4 flex-grow lg:flex-grow-0">Experience</TabsTrigger>
+              <TabsTrigger value="education" className="bg-secondary px-4 flex-grow lg:flex-grow-0">Education</TabsTrigger>
+              <TabsTrigger value="skills" className="bg-secondary px-4 flex-grow lg:flex-grow-0">Skills</TabsTrigger>
+              <TabsTrigger value="cca" className="bg-secondary px-4 flex-grow lg:flex-grow-0">CCA</TabsTrigger>
             </TabsList>
-            <Button variant="outline" size="lg" className="uppercase w-full xl:w-auto">
-              <a href="/assets/resume_joelsng.pdf" download="resume_joelsng.pdf" className="flex text-xs xl:text-base items-center justify-center gap-2 w-full">
+            <Button variant="outline" size="lg" className="uppercase w-full lg:w-auto">
+              <a href="/assets/resume_joelsng.pdf" download="resume_joelsng.pdf" className="flex text-xs lg:text-base items-center justify-center gap-2 w-full">
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
               </a>
@@ -257,11 +257,11 @@ export default function Resume() {
           <div className='min-h-[70vh] w-full'>
             {/* experience */}
             <TabsContent value='experience' className='w-full h-full'>
-              <div className='flex flex-col gap-2 lg:gap-8 text-center xl:text-left '>
-                <h3 className='text-lg xl:text-4xl font-bold'>
+              <div className='flex flex-col gap-2 lg:gap-8 text-center lg:text-left '>
+                <h3 className='text-lg lg:text-4xl font-bold'>
                   {experience.title}
                 </h3>
-                <p className='max-w-2xl h-18 lg:h-20 text-sm  xl:text-base text-white/60 mx-auto xl:mx-0'>
+                <p className='max-w-2xl h-18 lg:h-20 text-sm  lg:text-base text-white/60 mx-auto lg:mx-0'>
                   {experience.description}
                 </p>
                 <ScrollArea className='h-[400px]'>
@@ -289,11 +289,11 @@ export default function Resume() {
 
             {/* education */}
             <TabsContent value='education' className='w-full h-full'>
-              <div className='flex flex-col gap-2 lg:gap-8  text-center xl:text-left'>
-                <h3 className='text-lg xl:text-4xl font-bold'>
+              <div className='flex flex-col gap-2 lg:gap-8  text-center lg:text-left'>
+                <h3 className='text-lg lg:text-4xl font-bold'>
                   {education.title}
                 </h3>
-                <p className='max-w-2xl h-18 lg:h-20 text-white/60 mx-auto xl:mx-0 text-sm xl:text-base'>
+                <p className='max-w-2xl h-18 lg:h-20 text-white/60 mx-auto lg:mx-0 text-sm lg:text-base'>
                   {education.description}
                 </p>
                 <ScrollArea className='h-[400px] bg-primary'>
@@ -323,17 +323,17 @@ export default function Resume() {
             {/* skill */}
             <TabsContent value='skills' className='w-full'>
               <div className="flex flex-col gap-[30px]">
-                <div className='flex flex-col gap-2 lg:gap-8 text-center xl:text-left'>
-                  <h3 className='text-lg xl:text-4xl font-bold'>
+                <div className='flex flex-col gap-2 lg:gap-8 text-center lg:text-left'>
+                  <h3 className='text-lg lg:text-4xl font-bold'>
                     {skills.title}
                   </h3>
-                  <p className='max-w-2xl h-18 lg:h-20 text-white/60 mx-auto xl:mx-0 text-sm xl:text-base'>
+                  <p className='max-w-2xl h-18 lg:h-20 text-white/60 mx-auto lg:mx-0 text-sm lg:text-base'>
                     {skills.description}
                   </p>
                   <ScrollArea className='h-[400px] bg-secondary p-4 rounded-xl'>
                     <div className='flex flex-col gap-2'>
                       <span className='text-accent font-bold'>Languages</span>
-                      <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]'>
+                      <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]'>
                         {skills.langlist.map((lang, index) => {
                           return (
                             <li key={index}>
@@ -356,7 +356,7 @@ export default function Resume() {
                       </ul>
 
                       <span className='text-accent font-bold'>Libraries and Frameworks</span>
-                      <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]'>
+                      <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]'>
                         {skills.frameworklist.map((fw, index) => {
                           return (
                             <li key={index}>
@@ -379,7 +379,7 @@ export default function Resume() {
                       </ul>
 
                       <span className='text-accent font-bold'>Software</span>
-                      <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]'>
+                      <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]'>
                         {skills.softwarelist.map((sw, index) => {
                           return (
                             <li key={index}>
@@ -411,11 +411,11 @@ export default function Resume() {
 
             {/* cca */}
             <TabsContent value='cca' className='w-full h-full'>
-              <div className='flex flex-col gap-2 lg:gap-8 text-center xl:text-left '>
-                <h3 className='text-lg xl:text-4xl font-bold'>
+              <div className='flex flex-col gap-2 lg:gap-8 text-center lg:text-left '>
+                <h3 className='text-lg lg:text-4xl font-bold'>
                   {cca.title}
                 </h3>
-                <p className='lg:h-20 h-18 max-w-2xl text-sm xl:text-base text-white/60 mx-auto xl:mx-0'>
+                <p className='lg:h-20 h-18 max-w-2xl text-sm lg:text-base text-white/60 mx-auto lg:mx-0'>
                   {cca.description}
                 </p>
                 <ScrollArea className='h-[400px]'>

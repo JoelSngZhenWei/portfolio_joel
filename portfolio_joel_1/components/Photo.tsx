@@ -15,7 +15,7 @@ const Photo = () => {
       >
         {/* image */}
         <motion.div
-          className="w-[298px] h-[298px] lg:w-[498px] lg:h-[498px] absolute inset-0 z-10 mix-blend-lighten"
+          className="w-[298px] h-[298px] lg:w-[498px] lg:h-[498px] absolute inset-0 z-10"
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
