@@ -11,7 +11,7 @@ const projects = [
     title: 'Options Pricing using Machine Learning',
     description: 'Using machine learning models including SVR, artificial neural networks, and LSTM, to price options and evaluating performance against traditional mathematical models.',
     skills: ['Machine Learning', 'Neural Networks'],
-    href: 'projects/options'
+    href: 'projects/mla'
   },
   {
     num: '02',

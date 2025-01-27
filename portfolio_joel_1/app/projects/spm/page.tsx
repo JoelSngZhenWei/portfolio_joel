@@ -5,7 +5,7 @@ import { FaPython } from "react-icons/fa6"
 import { SiAmazonrds, SiConfluence, SiFlask, SiGithub, SiGithubactions, SiJavascript, SiJira, SiNextdotjs, SiPytest, SiPythonanywhere, SiSelenium, SiTailwindcss, SiVercel } from "react-icons/si"
 import Image from "next/image"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import OptionsDetails from "@/components/OptionsDetails"
+import SPMDetails from "@/components/DetailSPM"
 import { Button } from "@/components/ui/button"
 import PdfView from "@/components/PdfView"
 import { FaAws, FaCss3, FaGithub, FaHtml5, FaReact } from "react-icons/fa"
@@ -29,22 +29,22 @@ const skills = {
       {
         icon: <FaPython />,
         name: "Python",
-        description: "Primary language for analysis, data manipulation, and machine learning model development.",
+        description: "Backend app development, logic, and processing.",
       },
       {
         icon: <FaHtml5 />,
         name: "HTML",
-        description: "Used to structure web content for frontend development projects.",
+        description: "Used to structure web content for frontend development.",
       },
       {
         icon: <FaCss3 />,
         name: "CSS",
-        description: "Styled and designed web pages for improved user interface and experience.",
+        description: "Used to improve design and UI/UX for frontend development.",
       },
       {
         icon: <SiJavascript />,
         name: "Javascript",
-        description: "Implemented dynamic functionality and interactivity for web applications.",
+        description: "Implemented dynamic functionality, interactivity, and animations for frontend development.",
       },
     ],
   },
@@ -54,7 +54,12 @@ const skills = {
       {
         icon: <SiFlask />,
         name: "Flask",
-        description: "Built RESTful APIs for backend services and integrated machine learning models.",
+        description: "Development of RESTful APIs in Python for backend microservices.",
+      },
+      {
+        icon: <SiPythonanywhere />,
+        name: "PythonAnywhere",
+        description: "Hosted Python Flask application for testing and production environments.",
       },
       {
         icon: <FaAws />,
@@ -62,14 +67,9 @@ const skills = {
         description: "Provided cloud resources for scalable and efficient model deployment.",
       },
       {
-        icon: <SiPythonanywhere />,
-        name: "PythonAnywhere",
-        description: "Hosted Python applications for testing and production environments.",
-      },
-      {
         icon: <SiAmazonrds />,
         name: "Amazon RDS",
-        description: "Managed relational databases for storing and accessing project data.",
+        description: "Managed relational databases for storing and accessing project employee data.",
       },
     ],
   },
@@ -77,24 +77,24 @@ const skills = {
     title: "Frontend",
     list: [
       {
-        icon: <SiTailwindcss />,
-        name: "Tailwind CSS",
-        description: "Enhanced frontend designs with a utility-first CSS framework.",
-      },
-      {
-        icon: <SiNextdotjs />,
-        name: "Next.JS",
-        description: "Developed server-side rendered web applications with enhanced performance.",
-      },
-      {
         icon: <FaReact />,
         name: "React.JS",
         description: "Built interactive user interfaces with reusable components.",
       },
       {
+        icon: <SiNextdotjs />,
+        name: "Next.JS",
+        description: "ReactJS wrapper that allows for development of server-side rendered web applications with enhanced performance.",
+      },
+      {
         icon: <SiVercel />,
         name: "Vercel",
-        description: "Deployed web applications with efficient and scalable hosting solutions.",
+        description: "Deployment and monitoring platform for web application frontend.",
+      },
+      {
+        icon: <SiTailwindcss />,
+        name: "Tailwind CSS",
+        description: "Framework for enhancing ease and efficiency of frontend designing process.",
       },
     ],
   },
@@ -104,17 +104,17 @@ const skills = {
       {
         icon: <SiPytest />,
         name: "PyTest",
-        description: "Automated testing for Python applications and backend functionalities.",
+        description: "Automated backend testing for Python Flask application and RESTful API routes.",
       },
       {
         icon: <SiSelenium />,
         name: "Selenium",
-        description: "Conducted browser automation for UI testing and quality assurance.",
+        description: "Automated frontend testing using browser automation for UI testing and quality assurance.",
       },
       {
         icon: <SiGithubactions />,
         name: "GitHub Actions",
-        description: "Implemented CI/CD pipelines for automated testing and deployment.",
+        description: "Implemented CI/CD pipelines for automating testing workflows on git push.",
       },
     ],
   },
@@ -129,12 +129,12 @@ const skills = {
       {
         icon: <SiJira />,
         name: "Jira",
-        description: "Organized and tracked project tasks using Agile methodologies.",
+        description: "Organized and tracking of project tasks during fortnightly sprints.",
       },
       {
         icon: <SiConfluence />,
         name: "Confluence",
-        description: "Documented project plans, workflows, and shared knowledge effectively.",
+        description: "Documenting of project plans, meeting notes, and shared information.",
       },
     ],
   },
@@ -169,13 +169,13 @@ export default function SPM() {
             {/* Project Title and Date */}
             <div className="text-center lg:text-left mb-8 lg:mb-0">
               <h1 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4">
-                Options Pricing with <span className="text-accent">Machine Learning</span>
+                <span className="text-accent">Project Management</span> for <span className="">Software Development</span>
               </h1>
               <div className="flex flex-row gap-3 items-center justify-between">
                 <p className="text-accent font-medium text-lg">Aug 2024 - Dec 2024</p>
                 <Button variant="outline" asChild className="px-3 py-6 lg:px-3 lg:py-6">
                   <Link
-                    href="https://github.com/JoelSngZhenWei/MLA_OptionsPricing"
+                    href="https://github.com/yaokiet/all-in-one-fullstack"
                     target="_blank"
                     rel="noopener noreferrer"
                     className=""
@@ -230,8 +230,11 @@ export default function SPM() {
                   <TabsTrigger value="details" className="bg-secondary px-4 flex-grow lg:flex-grow-0">
                     Details
                   </TabsTrigger>
-                  <TabsTrigger value="report" className="bg-secondary px-4 flex-grow lg:flex-grow-0">
-                    Report
+                  <TabsTrigger value="video" className="bg-secondary px-4 flex-grow lg:flex-grow-0">
+                    Video Demo
+                  </TabsTrigger>
+                  <TabsTrigger value="slides" className="bg-secondary px-4 flex-grow lg:flex-grow-0">
+                    Slides
                   </TabsTrigger>
                   <TabsTrigger value="techstack" className="bg-secondary px-4 flex-grow lg:flex-grow-0">
                     Tech Stack
@@ -246,21 +249,33 @@ export default function SPM() {
                   <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[70vh] lg:h-[80vh]">
                     <h3 className="text-2xl lg:text-3xl font-bold">Project Details</h3>
                     <ScrollAreaWithProgress className="bg-primary text-left h-[70vh] lg:h-[80vh] w-full">
-                      <OptionsDetails />
+                      <SPMDetails />
                     </ScrollAreaWithProgress>
                   </div>
                 </TabsContent>
 
-                {/* report */}
-                <TabsContent value="report" className="w-full h-full">
+                {/* video demo */}
+                <TabsContent value="video" className="w-full h-full">
                   <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[70vh] lg:h-[80vh] ">
-                    <h3 className="text-lg lg:text-3xl font-bold">Report</h3>
+                    <h3 className="text-lg lg:text-3xl font-bold">Video Demo</h3>
                     <p className="h-12 max-w-2xl text-xs lg:text-base text-white/80 mx-auto lg:mx-0">
-                      My group wrote a research paper-style report on our findings with extensive citations, details on
-                      the mathematical formulas involved in our models, and possible future work.
+                      Here is a video demonstration of the use of our application to conduct scheduling and management of employee scheduling.
                     </p>
                     <div className="h-[55vh] lg:h-[80vh]">
-                      <PdfView />
+                      <PdfView pdfPath="/assets/MLA_Final_Report.pdf" fileName="MLA_Final_Report.pdf" />
+                    </div>
+                  </div>
+                </TabsContent>
+
+                {/* slides */}
+                <TabsContent value="slides" className="w-full h-full">
+                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[70vh] lg:h-[80vh] ">
+                    <h3 className="text-lg lg:text-3xl font-bold">Video Demo</h3>
+                    <p className="h-12 max-w-2xl text-xs lg:text-base text-white/80 mx-auto lg:mx-0">
+                      Here is a video demonstration of the use of our application to conduct scheduling and management of employee scheduling.
+                    </p>
+                    <div className="h-[55vh] lg:h-[80vh]">
+                      <PdfView pdfPath="/assets/MLA_Final_Report.pdf" fileName="MLA_Final_Report.pdf" />
                     </div>
                   </div>
                 </TabsContent>
@@ -271,7 +286,7 @@ export default function SPM() {
                     <div className="flex flex-col gap-2 lg:gap-2 text-center lg:text-left">
                       <h3 className="text-lg lg:text-3xl font-bold">Tech Stack</h3>
                       <p className="h-12 max-w-2xl text-xs lg:text-base text-white/80 mx-auto lg:mx-0">
-                        The languages, frameworks, and libraries my group employed in our project. Click on each icon to
+                        The languages, frameworks, libraries, and software platforms my group employed in our project. Click on each icon to
                         learn more.
                       </p>
                       <ScrollArea className=" bg-secondary p-4 rounded-xl flex h-[55vh] lg:h-[67.5vh]">
@@ -305,121 +320,6 @@ export default function SPM() {
                               </ul>
                             </div>
                           ))}
-
-
-                          {/* 
-
-                          <span className="text-accent font-bold">Languages</span>
-                          <ul className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]">
-                            {skills.langlist.map((lang, index) => {
-                              return (
-                                <li key={index}>
-                                  <TooltipProvider delayDuration={100}>
-                                    <Tooltip>
-                                      <TooltipTrigger
-                                        className="w-full h-[90px] lg:h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group"
-                                        onClick={() => openModal(lang)}
-                                      >
-                                        <div className="text-3xl lg:text-5xl group-hover:text-accent transition-all duration-300">
-                                          {lang.icon}
-                                        </div>
-                                        <span className="capitalize text-sm lg:text-base group-hover:text-accent transition-all duration-300">
-                                          {lang.name}
-                                        </span>
-                                      </TooltipTrigger>
-                                      <TooltipContent>
-                                        <p>{lang.description}</p>
-                                      </TooltipContent>
-                                    </Tooltip>
-                                  </TooltipProvider>
-                                </li>
-                              )
-                            })}
-                          </ul>
-
-                          <span className="text-accent font-bold">Frontend</span>
-                          <ul className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]">
-                            {skills.frontendlist.map((item, index) => {
-                              return (
-                                <li key={index}>
-                                  <TooltipProvider delayDuration={100}>
-                                    <Tooltip>
-                                      <TooltipTrigger
-                                        className="w-full h-[90px] lg:h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group"
-                                        onClick={() => openModal(item)}
-                                      >
-                                        <div className="text-3xl lg:text-5xl group-hover:text-accent transition-all duration-300">
-                                          {item.icon}
-                                        </div>
-                                        <span className="capitalize text-sm lg:text-base group-hover:text-accent transition-all duration-300">
-                                          {item.name}
-                                        </span>
-                                      </TooltipTrigger>
-                                      <TooltipContent>
-                                        <p>{item.description}</p>
-                                      </TooltipContent>
-                                    </Tooltip>
-                                  </TooltipProvider>
-                                </li>
-                              )
-                            })}
-                          </ul>
-
-                          <span className="text-accent font-bold">Backend</span>
-                          <ul className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]">
-                            {skills.backendlist.map((item, index) => {
-                              return (
-                                <li key={index}>
-                                  <TooltipProvider delayDuration={100}>
-                                    <Tooltip>
-                                      <TooltipTrigger
-                                        className="w-full h-[90px] lg:h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group"
-                                        onClick={() => openModal(item)}
-                                      >
-                                        <div className="text-3xl lg:text-5xl group-hover:text-accent transition-all duration-300">
-                                          {item.icon}
-                                        </div>
-                                        <span className="capitalize text-sm lg:text-base group-hover:text-accent transition-all duration-300">
-                                          {item.name}
-                                        </span>
-                                      </TooltipTrigger>
-                                      <TooltipContent>
-                                        <p>{item.description}</p>
-                                      </TooltipContent>
-                                    </Tooltip>
-                                  </TooltipProvider>
-                                </li>
-                              )
-                            })}
-                          </ul>
-
-                          <span className="text-accent font-bold">Testing</span>
-                          <ul className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]">
-                            {skills.testlist.map((item, index) => {
-                              return (
-                                <li key={index}>
-                                  <TooltipProvider delayDuration={100}>
-                                    <Tooltip>
-                                      <TooltipTrigger
-                                        className="w-full h-[90px] lg:h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group"
-                                        onClick={() => openModal(item)}
-                                      >
-                                        <div className="text-3xl lg:text-5xl group-hover:text-accent transition-all duration-300">
-                                          {item.icon}
-                                        </div>
-                                        <span className="capitalize text-sm lg:text-base group-hover:text-accent transition-all duration-300">
-                                          {item.name}
-                                        </span>
-                                      </TooltipTrigger>
-                                      <TooltipContent>
-                                        <p>{item.description}</p>
-                                      </TooltipContent>
-                                    </Tooltip>
-                                  </TooltipProvider>
-                                </li>
-                              )
-                            })}
-                          </ul> */}
                         </div>
                       </ScrollArea>
                     </div>

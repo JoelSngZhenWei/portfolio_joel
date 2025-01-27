@@ -10,7 +10,12 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css"
 
 pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.mjs"
 
-export default function PdfView() {
+interface PdfViewProps {
+  pdfPath: string
+  fileName?: string
+}
+
+export default function PdfView({ pdfPath, fileName }: PdfViewProps) {
   const [numPages, setNumPages] = useState<number>()
   const [pageNumber, setPageNumber] = useState<number>(1)
 
@@ -32,8 +37,8 @@ export default function PdfView() {
 
   const handleDownload = () => {
     const link = document.createElement("a")
-    link.href = "/assets/MLA_Final_Report.pdf"
-    link.download = "MLA_Final_Report.pdf"
+    link.href = pdfPath
+    link.download = fileName || "document.pdf"
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -62,18 +67,14 @@ export default function PdfView() {
           </Button>
         </div>
         <div className="border border-primary rounded-xl overflow-hidden flex-grow">
-          <Document
-            file="/assets/MLA_Final_Report.pdf"
-            onLoadSuccess={onDocumentLoadSuccess}
-            className="flex justify-center h-full"
-          >
+          <Document file={pdfPath} onLoadSuccess={onDocumentLoadSuccess} className="flex justify-center h-full">
             <Page pageNumber={pageNumber} scale={0.5} className="h-full" />
           </Document>
         </div>
         <div className="flex justify-center">
-          <Button onClick={handleDownload}  variant="outline">
+          <Button onClick={handleDownload} variant="outline">
             Download Report
-            <Download className="h-4 w-4" />
+            <Download className="h-4 w-4 ml-2" />
           </Button>
         </div>
       </div>

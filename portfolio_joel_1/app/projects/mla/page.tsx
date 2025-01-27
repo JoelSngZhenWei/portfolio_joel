@@ -5,7 +5,7 @@ import { FaPython } from "react-icons/fa6"
 import { SiPandas, SiScikitlearn, SiTensorflow } from "react-icons/si"
 import Image from "next/image"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import OptionsDetails from "@/components/OptionsDetails"
+import OptionsDetails from "@/components/DetailsOptions"
 import { Button } from "@/components/ui/button"
 import PdfView from "@/components/PdfView"
 import { FaGithub } from "react-icons/fa"
@@ -171,7 +171,7 @@ export default function MLA() {
                       the mathematical formulas involved in our models, and possible future work.
                     </p>
                     <div className="h-[55vh] lg:h-[80vh]">
-                      <PdfView />
+                      <PdfView pdfPath="/assets/MLA_Final_Report.pdf" fileName="MLA_Final_Report.pdf" />
                     </div>
                   </div>
                 </TabsContent>
