@@ -70,10 +70,10 @@ export default function SPM() {
           opacity: 1,
           transition: { delay: 2, duration: 0.4, ease: "easeIn" },
         }}
-        className=""
+        className="gap-8 flex flex-col"
       >
         {/* top section */}
-        <div className="pb-8">
+        <div className="">
           {/* title section */}
           <div className="flex flex-col lg:flex-row items-center justify-between lg:gap-12 py-12 lg:py-16">
             {/* Project Title and Date */}
@@ -163,13 +163,13 @@ export default function SPM() {
 
                 {/* report */}
                 <TabsContent value="report" className="w-full h-full">
-                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[80vh]">
+                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[60vh] border">
                     <h3 className="text-lg lg:text-3xl font-bold">Report</h3>
                     <p className="h-12 max-w-2xl text-xs lg:text-base text-white/80 mx-auto lg:mx-0">
                       My group wrote a research paper-style report on our findings with extensive citations, details on
                       the mathematical formulas involved in our models, and possible future work.
                     </p>
-                    <div className="h-[65vh]">
+                    <div className="h-[45vh]">
                       <PdfView />
                     </div>
                   </div>
