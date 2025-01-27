@@ -153,7 +153,7 @@ export default function SPM() {
               <div className="w-full min-h-[70vh] lg:min-h-[80vh] border border-red-900">
                 {/* details */}
                 <TabsContent value="details" className="w-full h-full">
-                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left border h-[70vh] lg:h-[80vh]">
+                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[70vh] lg:h-[80vh]">
                     <h3 className="text-2xl lg:text-3xl font-bold">Project Details</h3>
                     <ScrollArea className="bg-primary text-left h-[70vh] lg:h-[80vh]">
                       <OptionsDetails />
@@ -163,13 +163,13 @@ export default function SPM() {
 
                 {/* report */}
                 <TabsContent value="report" className="w-full h-full">
-                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[60vh] lg:h-[80vh] border">
+                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[50vh] lg:h-[80vh] border">
                     <h3 className="text-lg lg:text-3xl font-bold">Report</h3>
                     <p className="h-12 max-w-2xl text-xs lg:text-base text-white/80 mx-auto lg:mx-0">
                       My group wrote a research paper-style report on our findings with extensive citations, details on
                       the mathematical formulas involved in our models, and possible future work.
                     </p>
-                    <div className="h-[60vh] lg:h-[80vh]">
+                    <div className="h-[50vh] lg:h-[80vh]">
                       <PdfView />
                     </div>
                   </div>
