@@ -324,7 +324,7 @@ export default function Resume() {
                             <li key={index}>
                               <TooltipProvider delayDuration={100}>
                                 <Tooltip>
-                                  <TooltipTrigger className='w-full h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group'>
+                                  <TooltipTrigger className='w-full h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group' onClick={() => openModal(lang)}>
                                     <div className='text-6xl group-hover:text-accent transition-all duration-300'>{lang.icon}</div>
                                     <span className='capitalize group-hover:text-accent transition-all duration-300'>{lang.name}</span>
                                   </TooltipTrigger>
@@ -347,7 +347,7 @@ export default function Resume() {
                             <li key={index}>
                               <TooltipProvider delayDuration={100}>
                                 <Tooltip>
-                                  <TooltipTrigger className='w-full h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group'>
+                                  <TooltipTrigger className='w-full h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group' onClick={() => openModal(fw)}>
                                     <div className='text-6xl group-hover:text-accent transition-all duration-300'>{fw.icon}</div>
                                     <span className='capitalize group-hover:text-accent transition-all duration-300'>{fw.name}</span>
                                   </TooltipTrigger>
