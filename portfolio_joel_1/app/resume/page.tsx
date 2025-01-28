@@ -182,13 +182,13 @@ const cca = {
       organisation: 'SMU Special Interest & Community Service Sodality',
       position: 'President',
       duration: 'Jan 2023 - Dec 2023',
-      details: ['1','2','3']
+      details: ['1', '2', '3']
     },
     {
       organisation: 'StarringSMU',
       position: 'President',
       duration: 'Jan 2022 - Dec 2022',
-      details: ['1','2','3']
+      details: ['1', '2', '3']
     },
   ]
 }
@@ -202,15 +202,15 @@ import { motion } from "framer-motion";
 
 
 export default function Resume() {
-    const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null)
-  
-    const openModal = (skill: Skill) => {
-      setSelectedSkill(skill)
-    }
-  
-    const closeModal = () => {
-      setSelectedSkill(null)
-    }
+  const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null)
+
+  const openModal = (skill: Skill) => {
+    setSelectedSkill(skill)
+  }
+
+  const closeModal = () => {
+    setSelectedSkill(null)
+  }
 
   return (
     <motion.div
@@ -324,9 +324,9 @@ export default function Resume() {
                             <li key={index}>
                               <TooltipProvider delayDuration={100}>
                                 <Tooltip>
-                                  <TooltipTrigger className='w-full h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group shadow-md' onClick={() => openModal(lang)}>
-                                    <div className='text-6xl group-hover:text-accent transition-all duration-300'>{lang.icon}</div>
-                                    <span className='capitalize group-hover:text-accent transition-all duration-300'>{lang.name}</span>
+                                  <TooltipTrigger className='w-full h-[90px] lg:h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group shadow-md' onClick={() => openModal(lang)}>
+                                    <div className='text-3xl lg:text-5xl group-hover:text-accent transition-all duration-300'>{lang.icon}</div>
+                                    <span className='capitalize text-sm lg:text-base group-hover:text-accent transition-all duration-300'>{lang.name}</span>
                                   </TooltipTrigger>
                                   <TooltipContent>
                                     <p>
@@ -347,9 +347,9 @@ export default function Resume() {
                             <li key={index}>
                               <TooltipProvider delayDuration={100}>
                                 <Tooltip>
-                                  <TooltipTrigger className='w-full h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group shadow-md' onClick={() => openModal(fw)}>
-                                    <div className='text-6xl group-hover:text-accent transition-all duration-300'>{fw.icon}</div>
-                                    <span className='capitalize group-hover:text-accent transition-all duration-300'>{fw.name}</span>
+                                  <TooltipTrigger className='w-full h-[90px] lg:h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group shadow-md' onClick={() => openModal(fw)}>
+                                    <div className='text-3xl lg:text-5xl group-hover:text-accent transition-all duration-300'>{fw.icon}</div>
+                                    <span className='capitalize text-sm lg:text-base group-hover:text-accent transition-all duration-300'>{fw.name}</span>
                                   </TooltipTrigger>
                                   <TooltipContent>
                                     <p>
@@ -370,10 +370,10 @@ export default function Resume() {
                             <li key={index}>
                               <TooltipProvider delayDuration={100}>
                                 <Tooltip>
-                                  <TooltipTrigger className='w-full h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group '                                           onClick={() => openModal(sw)}
+                                  <TooltipTrigger className='w-full h-[90px] lg:h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group' onClick={() => openModal(sw)}
                                   >
-                                    <div className='text-6xl group-hover:text-accent transition-all duration-300'>{sw.icon}</div>
-                                    <span className='capitalize group-hover:text-accent transition-all duration-300'>{sw.name}</span>
+                                    <div className='text-3xl lg:text-5xl group-hover:text-accent transition-all duration-300'>{sw.icon}</div>
+                                    <span className='capitalize text-sm lg:text-base group-hover:text-accent transition-all duration-300'>{sw.name}</span>
                                   </TooltipTrigger>
                                   <TooltipContent>
                                     <p>
