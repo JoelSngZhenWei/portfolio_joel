@@ -1,6 +1,8 @@
 "use client";
 import { Button } from '@/components/ui/button';
 import { FiDownload } from 'react-icons/fi'
+import { SkillModal } from "@/components/SkillModal"
+import { useState } from "react"
 
 
 import {
@@ -19,40 +21,6 @@ import { TbSql } from "react-icons/tb";
 import { SiScikitlearn, SiPandas, SiTensorflow, SiSelenium, SiUipath, SiTableau, SiFlask } from "react-icons/si";
 import { VscAzure } from "react-icons/vsc";
 import { BsBarChartFill } from "react-icons/bs";
-
-
-// about data
-// const about = {
-//   title: 'About me',
-//   description: 'I am a highly motivated individual with a strong background in data science, analytics, and digital transformation. With over 2 years of experience, I specialize in leveraging machine learning, NLP, and cloud technologies to deliver innovative solutions.',
-
-//   info: [
-//     {
-//       fieldName: 'Name',
-//       fieldValue: 'Joel Sng'
-//     },
-//     {
-//       fieldName: 'Phone',
-//       fieldValue: '+65 8499 2823'
-//     },
-//     {
-//       fieldName: 'Email',
-//       fieldValue: 'joelsngzw@gmail.com'
-//     },
-//     {
-//       fieldName: 'Experience',
-//       fieldValue: '2+ years'
-//     },
-//     {
-//       fieldName: 'Nationality',
-//       fieldValue: 'Singaporean'
-//     },
-//     {
-//       fieldName: 'LinkedIn',
-//       fieldValue: 'https://www.linkedin.com/in/joelsngzw'
-//     },
-//   ]
-// }
 
 // experience data
 const experience = {
@@ -226,7 +194,18 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { motion } from "framer-motion";
 
 
+
 export default function Resume() {
+    const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null)
+  
+    const openModal = (skill: Skill) => {
+      setSelectedSkill(skill)
+    }
+  
+    const closeModal = () => {
+      setSelectedSkill(null)
+    }
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -385,7 +364,8 @@ export default function Resume() {
                             <li key={index}>
                               <TooltipProvider delayDuration={100}>
                                 <Tooltip>
-                                  <TooltipTrigger className='w-full h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group '>
+                                  <TooltipTrigger className='w-full h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group '                                           onClick={() => openModal(sw)}
+                                  >
                                     <div className='text-6xl group-hover:text-accent transition-all duration-300'>{sw.icon}</div>
                                     <span className='capitalize group-hover:text-accent transition-all duration-300'>{sw.name}</span>
                                   </TooltipTrigger>
@@ -444,6 +424,7 @@ export default function Resume() {
 
         </Tabs>
       </div >
+      {selectedSkill && <SkillModal isOpen={!!selectedSkill} onClose={closeModal} skill={selectedSkill} />}
     </motion.div >
   );
 }

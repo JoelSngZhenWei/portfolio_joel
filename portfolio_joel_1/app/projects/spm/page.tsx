@@ -89,7 +89,7 @@ const skills = {
     ],
   },
   Deployment: {
-    title: "Frontend",
+    title: "Deployment",
     list: [
       {
         icon: <SiPythonanywhere />,
