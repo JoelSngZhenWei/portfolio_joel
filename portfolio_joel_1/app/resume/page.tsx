@@ -22,6 +22,12 @@ import { SiScikitlearn, SiPandas, SiTensorflow, SiSelenium, SiUipath, SiTableau,
 import { VscAzure } from "react-icons/vsc";
 import { BsBarChartFill } from "react-icons/bs";
 
+interface Skill {
+  icon: React.ReactElement
+  name: string
+  description: string
+}
+
 // experience data
 const experience = {
   icon: '',
