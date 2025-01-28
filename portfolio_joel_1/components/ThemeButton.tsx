@@ -1,8 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Moon, Sun } from 'lucide-react'
-import { FaMoon, FaSun } from 'react-icons/fa'
+import { Sun } from 'lucide-react'
+import { FaMoon } from 'react-icons/fa'
 import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
 
