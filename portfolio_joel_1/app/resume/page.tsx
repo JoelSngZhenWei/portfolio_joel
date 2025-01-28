@@ -318,7 +318,7 @@ export default function Resume() {
                   <ScrollArea className='h-[400px] bg-secondary p-4 rounded-xl shadow-md'>
                     <div className='flex flex-col gap-2'>
                       <span className='text-accent font-bold'>Languages</span>
-                      <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]'>
+                      <ul className='grid grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]'>
                         {skills.langlist.map((lang, index) => {
                           return (
                             <li key={index}>
@@ -341,7 +341,7 @@ export default function Resume() {
                       </ul>
 
                       <span className='text-accent font-bold'>Libraries and Frameworks</span>
-                      <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]'>
+                      <ul className='grid grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]'>
                         {skills.frameworklist.map((fw, index) => {
                           return (
                             <li key={index}>
@@ -364,7 +364,7 @@ export default function Resume() {
                       </ul>
 
                       <span className='text-accent font-bold'>Software</span>
-                      <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]'>
+                      <ul className='grid grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]'>
                         {skills.softwarelist.map((sw, index) => {
                           return (
                             <li key={index}>
