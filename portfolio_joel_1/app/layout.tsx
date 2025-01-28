@@ -6,6 +6,7 @@ import { PageTransition } from "@/components/PageTransition";
 import { StairTransition } from "@/components/StairTransition";
 import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react"
+import { ThemeToggleButton } from "@/components/ThemeButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,7 +43,9 @@ export default function RootLayout({
 
           <div className="px-4">
             {children}
+
           </div>
+          <ThemeToggleButton />
 
         </PageTransition>
       </body>
