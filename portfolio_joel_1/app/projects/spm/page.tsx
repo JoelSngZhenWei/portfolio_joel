@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { FaPython } from "react-icons/fa6"
-import { SiAmazonrds, SiConfluence, SiFlask, SiGithub, SiGithubactions, SiJavascript, SiJira, SiNextdotjs, SiPytest, SiPythonanywhere, SiSelenium, SiTailwindcss, SiVercel } from "react-icons/si"
+import { SiConfluence, SiFlask, SiGithub, SiGithubactions, SiJavascript, SiJira, SiNextdotjs, SiPytest, SiPythonanywhere, SiSelenium, SiTailwindcss, SiVercel } from "react-icons/si"
 import Image from "next/image"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import SPMDetails from "@/components/DetailSPM"
@@ -57,18 +57,8 @@ const skills = {
         description: "Development of RESTful APIs in Python for backend microservices.",
       },
       {
-        icon: <SiPythonanywhere />,
-        name: "PythonAnywhere",
-        description: "Hosted Python Flask application for testing and production environments.",
-      },
-      {
         icon: <FaAws />,
-        name: "AWS",
-        description: "Provided cloud resources for scalable and efficient model deployment.",
-      },
-      {
-        icon: <SiAmazonrds />,
-        name: "Amazon RDS",
+        name: "AWS RDS",
         description: "Managed relational databases for storing and accessing project employee data.",
       },
     ],
@@ -95,6 +85,21 @@ const skills = {
         icon: <SiTailwindcss />,
         name: "Tailwind CSS",
         description: "Framework for enhancing ease and efficiency of frontend designing process.",
+      },
+    ],
+  },
+  Deployment: {
+    title: "Frontend",
+    list: [
+      {
+        icon: <SiPythonanywhere />,
+        name: "PythonAnywhere",
+        description: "Hosted Python Flask application for testing and production environments.",
+      },
+      {
+        icon: <SiVercel />,
+        name: "Vercel",
+        description: "Deployment and monitoring platform for web application frontend.",
       },
     ],
   },
