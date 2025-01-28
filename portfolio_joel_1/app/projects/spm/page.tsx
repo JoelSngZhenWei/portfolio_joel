@@ -158,7 +158,7 @@ export default function SPM() {
   }
 
   return (
-    <section className="container mx-auto  py-3 lg:py-0">
+    <section className="container mx-auto  py-3 lg:py-0 text-primary-foreground">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{
@@ -210,13 +210,13 @@ export default function SPM() {
           <div className="px-2">
             <h2 className="text-2xl font-semibold tracking-wide">Summary</h2>
             <div className="space-y-4">
-              <p className="text-white/80 leading-relaxed">
+              <p className="text-primary-foreground/80 leading-relaxed">
                 In this project my group sought to develop an HRMS application while documenting our project processes, particularly how we facilitated Scrum during this project and leveraged CI/CD practices in our development. Our backend was developed in Flask, and our frontend was developed in Next.JS.
               </p>
-              <p className="text-white/80 leading-relaxed">
+              <p className="text-primary-foreground/80 leading-relaxed">
                 My specific contributions to this project was acting as the Scrum master for this project, and as a backend developer. As Scrum master, I maintained the Jira and Confluence platforms we used to track progress. As a backend developer, I was in charge of developing the Flask application and integrating it with the frontend my team had developed. Beyond these, I believe my most substantial contributions were developing the entire CI/CD pipeline for automated testing, integration, and deployment for our web application. 
               </p>
-              <p className="text-white/80 leading-relaxed">
+              <p className="text-primary-foreground/80 leading-relaxed">
                 This project was undertaken as part of an SMU module, &apos;IS212 Software Project Management&apos;. I received a distinction for my part in this project and for this module overall.
               </p>
             </div>
@@ -259,7 +259,7 @@ export default function SPM() {
                 <TabsContent value="video" className="w-full h-full">
                   <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[70vh] lg:h-[80vh] ">
                     <h3 className="text-lg lg:text-3xl font-bold">Video Demo</h3>
-                    <p className="h-12 max-w-2xl text-xs lg:text-base text-white/80 mx-auto lg:mx-0">
+                    <p className="h-12 max-w-2xl text-xs lg:text-base text-primary-foreground/80 mx-auto lg:mx-0">
                       Here is a video demonstration of the use of our application to conduct scheduling and management of employee scheduling.
                     </p>
                     <div className="h-[55vh] lg:h-[80vh] border">
@@ -272,7 +272,7 @@ export default function SPM() {
                 <TabsContent value="slides" className="w-full h-full">
                   <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[70vh] lg:h-[80vh] ">
                     <h3 className="text-lg lg:text-3xl font-bold">Slides Summary</h3>
-                    <p className="h-12 max-w-2xl text-xs lg:text-base text-white/80 mx-auto lg:mx-0">
+                    <p className="h-12 max-w-2xl text-xs lg:text-base text-primary-foreground/80 mx-auto lg:mx-0">
                       A short slide deck detailing and summarising our project, Scrum practices we utilised, and CI/CD measures we implemented.
                     </p>
                     <div className="h-[55vh] lg:h-[80vh]">
@@ -286,7 +286,7 @@ export default function SPM() {
                   <div className="flex flex-col gap-[30px] h-[70vh] lg:h-[80vh]">
                     <div className="flex flex-col gap-2 lg:gap-2 text-center lg:text-left">
                       <h3 className="text-lg lg:text-3xl font-bold">Tech Stack</h3>
-                      <p className="h-12 max-w-2xl text-xs lg:text-base text-white/80 mx-auto lg:mx-0">
+                      <p className="h-12 max-w-2xl text-xs lg:text-base text-primary-foreground/80 mx-auto lg:mx-0">
                         The languages, frameworks, libraries, and software platforms my group employed in our project. Click on each icon to
                         learn more.
                       </p>
@@ -301,7 +301,7 @@ export default function SPM() {
                                     <TooltipProvider delayDuration={100}>
                                       <Tooltip>
                                         <TooltipTrigger
-                                          className="w-full h-[90px] lg:h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group"
+                                          className="w-full h-[90px] lg:h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group shadow-md"
                                           onClick={() => openModal(item)}
                                         >
                                           <div className="text-3xl lg:text-5xl group-hover:text-accent transition-all duration-300">

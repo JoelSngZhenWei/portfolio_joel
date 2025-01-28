@@ -7,6 +7,7 @@ import { StairTransition } from "@/components/StairTransition";
 import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react"
 import { ThemeToggleButton } from "@/components/ThemeButton";
+import { ThemeProvider } from "next-themes"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,25 +30,32 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <Head>
         <link rel="icon" href="/favicon.ico" />
+
       </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        <StairTransition />
-        <PageTransition>
-          <Analytics />
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <Header />
+          <StairTransition />
+          <PageTransition>
+            <Analytics />
 
-          <div className="px-4">
-            {children}
+            <div className="px-4">
+              {children}
 
-          </div>
-          <ThemeToggleButton />
+            </div>
+            <div className="fixed bottom-12 right-12 hidden lg:block">
+              <ThemeToggleButton />
+            </div>
 
-        </PageTransition>
+
+          </PageTransition>
+        </ThemeProvider>
+
       </body>
     </html>
   );

@@ -17,7 +17,7 @@ export default function Home() {
             <h1 className="h2 lg:h1 mb-2 lg:mb-2">
               <span className="text-accent tracking-wide">Joel Sng</span>
             </h1>
-            <p className="max-w-[500px] mb-4 lg:mb-9 text-white/80">
+            <p className="max-w-[500px] mb-4 lg:mb-9 text-primary-foreground/80">
               I am a first class honours double degree undergraduate specialising in machine learning, automation, and software development. Expected graduation in <span className="text-accent font-semibold tracking-wide">May 2026</span>.
             </p>
             {/* btn and socials */}

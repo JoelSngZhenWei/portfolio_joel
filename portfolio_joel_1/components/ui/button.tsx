@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-accent text-white hover:bg-accent/80",
+          "bg-accent text-primary hover:bg-accent/80",
         outline:
           "border border-accent text-accent bg-transparent hover:bg-accent hover:text-primary focus-visible:ring-2 focus-visible:ring-accent/50",
       },

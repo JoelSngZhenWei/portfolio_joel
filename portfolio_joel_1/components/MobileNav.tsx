@@ -5,6 +5,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/s
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { HiMenuAlt3 } from "react-icons/hi";
+import { ThemeToggleButton } from "./ThemeButton";
 
 const links = [
   { name: "home", path: "/" },
@@ -27,7 +28,7 @@ const MobileNav = () => {
         <HiMenuAlt3 className="text-[32px] text-accent" />
       </SheetTrigger>
       <SheetTitle></SheetTitle>
-      <SheetContent className="flex flex-col text-white">
+      <SheetContent className="flex flex-col text-primary-foreground h-full">
         {/* Logo */}
         <div className="mt-28 mb-20 text-center text-2xl">
           <Link href="/" onClick={() => setIsOpen(false)}>
@@ -48,16 +49,20 @@ const MobileNav = () => {
               <Link
                 href={link.path}
                 key={index}
-                className={`${
-                  isActive ? "text-accent border-b-2 border-accent" : ""
-                } text-xl capitalize hover:text-accent transition-all duration-300 font-medium tracking-wide`}
+                className={`${isActive ? "text-accent border-b-2 border-accent" : ""
+                  } text-xl capitalize hover:text-accent transition-all duration-300 font-medium tracking-wide`}
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
               </Link>
             );
           })}
+          {/* Theme Toggle Button */}
+          <div className="justify-center">
+            <ThemeToggleButton />
+          </div>
         </nav>
+
       </SheetContent>
     </Sheet>
   );

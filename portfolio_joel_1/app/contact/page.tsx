@@ -97,12 +97,12 @@ export default function Contact() {
         <div className="container mx-auto">
           <div className="flex flex-col xl:flex-row gap-[30px]">
             {/* form */}
-            <div className="xl:h-[54%] order-2 xl:order-none">
-              <form className="flex flex-col p-4 lg:p-10 lg:gap-2 bg-[#27272c] rounded-xl" onSubmit={(event) => handleSubmit(onSubmit)(event)}>
+            <div className="xl:h-[54%] order-2 xl:order-none ">
+              <form className="flex flex-col p-4 lg:p-10 lg:gap-2 bg-secondary rounded-xl shadow-md" onSubmit={(event) => handleSubmit(onSubmit)(event)}>
                 <h3 className="text-lg lg:text-4xl text-accent font-semibold">
                   Let&apos;s work together
                 </h3>
-                <p className="text-white/60 text-sm lg:text-base">
+                <p className="text-primary-foreground/60 text-sm lg:text-base">
                   Whether you&apos;re an employer seeking a passionate data scientist or developer, a collaborator with an exciting project, or simply looking to connect, I would love to hear from you! Feel free to send me an email or leave a message, and I&apos;ll get back to you as soon as possible.
                 </p>
                 {/* input */}
@@ -122,7 +122,7 @@ export default function Contact() {
                 <Button className="max-w-40 mt-4 flex items-center justify-center" disabled={isLoading}>
                   {isLoading ? (
                     <svg
-                      className="animate-spin h-5 w-5 text-white"
+                      className="animate-spin h-5 w-5 text-primary-foreground"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -154,11 +154,11 @@ export default function Contact() {
                 {info.map((item, index) => {
                   return (
                     <li key={index} className="flex items-center gap-3 xl:gap-6">
-                      <div className="w-[40px] h-[40px] lg:w-[72px] lg:h-[72px] bg-[#27272c] text-accent rounded-md flex items-center justify-center">
+                      <div className="w-[40px] h-[40px] lg:w-[72px] lg:h-[72px] bg-secondary text-accent rounded-md flex items-center justify-center shadow-md">
                         <div className="text-[20px] lg:text-[28px]">{item.icon}</div>
                       </div>
                       <div className="flex-1">
-                        <p className="text-white/60 text-sm lg:text-base tracking-wide">{item.title}</p>
+                        <p className="text-primary-foreground/60 text-sm lg:text-base tracking-wide">{item.title}</p>
                         <h3 className="text-base xl:text-xl tracking-wide">{item.description}</h3>
                       </div>
                     </li>

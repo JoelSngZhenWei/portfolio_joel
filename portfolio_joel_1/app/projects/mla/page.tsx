@@ -114,18 +114,18 @@ export default function MLA() {
           <div className="px-2">
             <h2 className="text-2xl font-semibold tracking-wide">Summary</h2>
             <div className="space-y-4">
-              <p className="text-white/80 leading-relaxed">
+              <p className="text-primary-foreground/80 leading-relaxed">
                 In this project my group sought to analyse different machine learning techniques in tackling a
-                notoriously complex task: <span className="font-bold text-white">Options Pricing</span>. We contrasted
+                notoriously complex task: <span className="font-bold text-primary-foreground">Options Pricing</span>. We contrasted
                 our models&apos; performance to a traditional and widely used mathematical model.
               </p>
-              <p className="text-white/80 leading-relaxed">
+              <p className="text-primary-foreground/80 leading-relaxed">
                 My specific contributions to this project were sourcing the data sets, the entirety of exploratory data
                 analysis, and constructing the ANN model. What I was most proud of in my ANN approach was developing a
                 hybrid ANN approach that used both a classification ANN and a regression ANN, and proved to be the most
                 successful model we employed.
               </p>
-              <p className="text-white/80 leading-relaxed">
+              <p className="text-primary-foreground/80 leading-relaxed">
                 This project was undertaken as part of an SMU module, &apos;IS460 Machine Learning &amp;
                 Applications&apos;. My group received an A+ for this project.
               </p>
@@ -166,7 +166,7 @@ export default function MLA() {
                 <TabsContent value="report" className="w-full h-full">
                   <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[70vh] lg:h-[80vh] ">
                     <h3 className="text-lg lg:text-3xl font-bold">Report</h3>
-                    <p className="h-12 max-w-2xl text-xs lg:text-base text-white/80 mx-auto lg:mx-0">
+                    <p className="h-12 max-w-2xl text-xs lg:text-base text-primary-foreground/80 mx-auto lg:mx-0">
                       My group wrote a research paper-style report on our findings with extensive citations, details on
                       the mathematical formulas involved in our models, and possible future work.
                     </p>
@@ -181,7 +181,7 @@ export default function MLA() {
                   <div className="flex flex-col gap-[30px] h-[70vh] lg:h-[80vh]">
                     <div className="flex flex-col gap-2 lg:gap-2 text-center lg:text-left">
                       <h3 className="text-lg lg:text-3xl font-bold">Tech Stack</h3>
-                      <p className="h-12 max-w-2xl text-xs lg:text-base text-white/80 mx-auto lg:mx-0">
+                      <p className="h-12 max-w-2xl text-xs lg:text-base text-primary-foreground/80 mx-auto lg:mx-0">
                         The languages, frameworks, and libraries my group employed in our project. Click on each icon to
                         learn more.
                       </p>
@@ -195,7 +195,7 @@ export default function MLA() {
                                   <TooltipProvider delayDuration={100}>
                                     <Tooltip>
                                       <TooltipTrigger
-                                        className="w-full h-[90px] lg:h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group"
+                                        className="w-full h-[90px] lg:h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group shadow-md"
                                         onClick={() => openModal(lang)}
                                       >
                                         <div className="text-3xl lg:text-5xl group-hover:text-accent transition-all duration-300">

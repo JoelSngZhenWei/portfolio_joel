@@ -23,14 +23,14 @@ const Stats = () => {
                 <div className="flex flex-wrap gap-6 max-w-[80vw] mx-auto xl:max-w-none" >
                     {stats.map((item, index) => {
                         return (
-                            <div key={index} className="flex-1 flex gap-3 items-center justify-center xl:justify-start bg-secondary rounded-xl p-4 lg:p-6">
+                            <div key={index} className="flex-1 flex gap-3 items-center justify-center xl:justify-start bg-secondary rounded-xl p-4 lg:p-6 drop-shadow-sm">
                                 <CountUp
                                     end={item.num}
                                     duration={5}
                                     delay={2}
                                     className="text-4xl lg:text-5xl font-extrabold"
                                 />
-                                <p className='text-sm lg:text-base leading-snug text-white/80'>
+                                <p className='text-sm lg:text-base leading-snug text-primary-foreground/80'>
                                     {item.text}</p>
                             </div>
                         )

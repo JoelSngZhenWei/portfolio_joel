@@ -246,14 +246,14 @@ export default function Resume() {
                 <h3 className='text-lg lg:text-4xl font-bold'>
                   {experience.title}
                 </h3>
-                <p className='max-w-2xl h-18 lg:h-20 text-sm  lg:text-base text-white/60 mx-auto lg:mx-0'>
+                <p className='max-w-2xl h-18 lg:h-20 text-sm  lg:text-base text-primary-foreground/60 mx-auto lg:mx-0'>
                   {experience.description}
                 </p>
                 <ScrollArea className='h-[400px]'>
                   <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[30px] '>
                     {experience.items.map((item, index) => {
                       return (
-                        <li key={index} className='bg-secondary h-[136px] py-4 px-6 lg:h-[184px] lg:py-6 lg:px-10 rounded-xl flex flex-col justify-center items-center lg:items-start '>
+                        <li key={index} className='bg-secondary h-[136px] py-4 px-6 lg:h-[184px] lg:py-6 lg:px-10 rounded-xl flex flex-col justify-center items-center lg:items-start shadow-md'>
                           <span className='text-accent text-sm lg:text-base'>{item.duration}</span>
                           <div className='flex w-full items-center max-w-[290px] min-h-[30px] lg:min-h-[60px] justify-center lg:justify-normal'>
                             <h3 className='text-base lg:text-xl  font-bold'>{item.position}</h3>
@@ -261,7 +261,7 @@ export default function Resume() {
                           <div className='flex items-center gap-3'>
                             {/* dot */}
                             <span className='w-[4px] h-[4px] lg:w-[6px] lg:h-[6px] rounded-full bg-accent'></span>
-                            <p className='text-white/60 text-sm lg:text-base'>{item.company}</p>
+                            <p className='text-primary-foreground/60 text-sm lg:text-base'>{item.company}</p>
                           </div>
                         </li>
                       );
@@ -278,14 +278,14 @@ export default function Resume() {
                 <h3 className='text-lg lg:text-4xl font-bold'>
                   {education.title}
                 </h3>
-                <p className='max-w-2xl h-18 lg:h-20 text-white/60 mx-auto lg:mx-0 text-sm lg:text-base'>
+                <p className='max-w-2xl h-18 lg:h-20 text-primary-foreground/60 mx-auto lg:mx-0 text-sm lg:text-base'>
                   {education.description}
                 </p>
                 <ScrollArea className='h-[400px] bg-primary'>
                   <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[30px] '>
                     {education.items.map((item, index) => {
                       return (
-                        <li key={index} className='bg-secondary h-[136px] py-4 px-6 lg:h-[184px] lg:py-6 lg:px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1'>
+                        <li key={index} className='bg-secondary h-[136px] py-4 px-6 lg:h-[184px] lg:py-6 lg:px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 shadow-md'>
                           <span className='text-accent text-sm lg:text-base'>{item.duration}</span>
                           <div className='flex w-full items-center max-w-[290px] min-h-[30px] lg:min-h-[60px] justify-center lg:justify-normal'>
                             <h3 className='text-base lg:text-xl  font-bold'>{item.degree}</h3>
@@ -294,7 +294,7 @@ export default function Resume() {
                           <div className='flex items-center gap-3'>
                             {/* dot */}
                             <span className='w-[4px] h-[4px] lg:w-[6px] lg:h-[6px] rounded-full bg-accent'></span>
-                            <p className='text-white/60 text-sm lg:text-base'>{item.instituition}</p>
+                            <p className='text-primary-foreground/60 text-sm lg:text-base'>{item.instituition}</p>
                           </div>
                         </li>
                       );
@@ -312,10 +312,10 @@ export default function Resume() {
                   <h3 className='text-lg lg:text-4xl font-bold'>
                     {skills.title}
                   </h3>
-                  <p className='max-w-2xl h-18 lg:h-20 text-white/60 mx-auto lg:mx-0 text-sm lg:text-base'>
+                  <p className='max-w-2xl h-18 lg:h-20 text-primary-foreground/60 mx-auto lg:mx-0 text-sm lg:text-base'>
                     {skills.description}
                   </p>
-                  <ScrollArea className='h-[400px] bg-secondary p-4 rounded-xl'>
+                  <ScrollArea className='h-[400px] bg-secondary p-4 rounded-xl shadow-md'>
                     <div className='flex flex-col gap-2'>
                       <span className='text-accent font-bold'>Languages</span>
                       <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]'>
@@ -324,7 +324,7 @@ export default function Resume() {
                             <li key={index}>
                               <TooltipProvider delayDuration={100}>
                                 <Tooltip>
-                                  <TooltipTrigger className='w-full h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group' onClick={() => openModal(lang)}>
+                                  <TooltipTrigger className='w-full h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group shadow-md' onClick={() => openModal(lang)}>
                                     <div className='text-6xl group-hover:text-accent transition-all duration-300'>{lang.icon}</div>
                                     <span className='capitalize group-hover:text-accent transition-all duration-300'>{lang.name}</span>
                                   </TooltipTrigger>
@@ -347,7 +347,7 @@ export default function Resume() {
                             <li key={index}>
                               <TooltipProvider delayDuration={100}>
                                 <Tooltip>
-                                  <TooltipTrigger className='w-full h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group' onClick={() => openModal(fw)}>
+                                  <TooltipTrigger className='w-full h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group shadow-md' onClick={() => openModal(fw)}>
                                     <div className='text-6xl group-hover:text-accent transition-all duration-300'>{fw.icon}</div>
                                     <span className='capitalize group-hover:text-accent transition-all duration-300'>{fw.name}</span>
                                   </TooltipTrigger>
@@ -401,7 +401,7 @@ export default function Resume() {
                 <h3 className='text-lg lg:text-4xl font-bold'>
                   {cca.title}
                 </h3>
-                <p className='lg:h-20 h-18 max-w-2xl text-sm lg:text-base text-white/60 mx-auto lg:mx-0'>
+                <p className='lg:h-20 h-18 max-w-2xl text-sm lg:text-base text-primary-foreground/60 mx-auto lg:mx-0'>
                   {cca.description}
                 </p>
                 <ScrollArea className='h-[400px]'>
@@ -416,7 +416,7 @@ export default function Resume() {
                           <div className='flex items-center gap-3'>
                             {/* dot */}
                             <span className='w-[4px] h-[4px] lg:w-[6px] lg:h-[6px] rounded-full bg-accent'></span>
-                            <p className='text-white/60 text-sm lg:text-base'>{item.organisation}</p>
+                            <p className='text-primary-foreground/60 text-sm lg:text-base'>{item.organisation}</p>
                           </div>
                         </li>
                       );
