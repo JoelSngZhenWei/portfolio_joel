@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { IoMenu } from "react-icons/io5";
-import { ThemeToggleButton } from "./ThemeButton";
 import {
     Drawer,
     DrawerClose,
