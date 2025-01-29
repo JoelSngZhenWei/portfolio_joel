@@ -40,16 +40,16 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Header />
-          <StairTransition />
-          <PageTransition>
-            <Analytics />
-            <div className="px-4">
-              {children}
-            </div>
-            <div className="fixed bottom-12 right-12 hidden lg:block">
-              <ThemeToggleButton />
-            </div>
-          </PageTransition>
+          <StairTransition/>
+            <PageTransition>
+              <Analytics />
+              <div className="px-4">
+                {children}
+              </div>
+              <div className="fixed bottom-20 right-20 hidden lg:block">
+                <ThemeToggleButton />
+              </div>
+            </PageTransition>
         </ThemeProvider>
       </body>
     </html>

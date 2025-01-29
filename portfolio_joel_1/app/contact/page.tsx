@@ -79,7 +79,7 @@ export default function Contact() {
           <DialogHeader>
             <DialogTitle>{dialogTitle}</DialogTitle>
             <DialogDescription>
-              {dialogMessage}<br/>
+              {dialogMessage}<br />
               {dialogSubtitle}
             </DialogDescription>
           </DialogHeader>
@@ -95,7 +95,7 @@ export default function Contact() {
         className="py-6"
       >
         <div className="container mx-auto">
-          <div className="flex flex-col xl:flex-row gap-[30px]">
+          <div className="flex flex-col xl:flex-row gap-1 lg:gap-[30px]">
             {/* form */}
             <div className="xl:h-[54%] order-2 xl:order-none ">
               <form className="flex flex-col p-4 lg:p-10 lg:gap-2 bg-secondary rounded-xl shadow-md" onSubmit={(event) => handleSubmit(onSubmit)(event)}>
@@ -117,7 +117,6 @@ export default function Contact() {
                   placeholder="Type your message here."
                   {...register('message', { required: true })}
                 />
-                {/* button */}
                 {/* Submit Button with Spinner */}
                 <Button className="max-w-40 mt-4 flex items-center justify-center" disabled={isLoading}>
                   {isLoading ? (
@@ -150,7 +149,7 @@ export default function Contact() {
 
             {/* info */}
             <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-4 xl:mb-0">
-              <ul className="flex flex-col gap-10">
+              <ul className="flex flex-row lg:flex-col gap-5 lg:gap-10">
                 {info.map((item, index) => {
                   return (
                     <li key={index} className="flex items-center gap-3 xl:gap-6">
@@ -158,8 +157,8 @@ export default function Contact() {
                         <div className="text-[20px] lg:text-[28px]">{item.icon}</div>
                       </div>
                       <div className="flex-1">
-                        <p className="text-primary-foreground/60 text-sm lg:text-base tracking-wide">{item.title}</p>
-                        <h3 className="text-base xl:text-xl tracking-wide">{item.description}</h3>
+                        <p className="text-primary-foreground/60 text-xs lg:text-base tracking-wide">{item.title}</p>
+                        <h3 className="text-sm xl:text-xl tracking-wide">{item.description}</h3>
                       </div>
                     </li>
                   )

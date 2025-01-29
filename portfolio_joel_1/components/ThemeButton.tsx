@@ -21,26 +21,34 @@ export function ThemeToggleButton() {
   }
 
   return (
-    <Button
-      variant="themechange"
-      className="lg:shadow-lg overflow-hidden h-7 w-7"
-      onClick={toggleTheme}
-      aria-label="Toggle theme"
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 2, duration: 0.4, ease: "easeIn" }
+      }}
     >
-      <motion.div
-        initial={false}
-        animate={{ rotate: lightMode ? 0 : 360 }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
-        className="w-full h-full flex items-center justify-center"
+      <Button
+        variant="themechange"
+        className="lg:shadow-lg overflow-hidden h-7 w-7"
+        onClick={toggleTheme}
+        aria-label="Toggle theme"
       >
-        <Sun
-          className={`h-[18px] w-[18px] absolute ${lightMode ? "scale-100" : "scale-0"} transition-transform duration-500`}
-        />
-        <Moon
-          className={`h-[18px] w-[18px] absolute ${lightMode ? "scale-0" : "scale-100"} transition-transform duration-500`}
-        />
-      </motion.div>
-    </Button>
+        <motion.div
+          initial={false}
+          animate={{ rotate: lightMode ? 0 : 360 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          className="w-full h-full flex items-center justify-center"
+        >
+          <Sun
+            className={`h-[18px] w-[18px] absolute ${lightMode ? "scale-100" : "scale-0"} transition-transform duration-500`}
+          />
+          <Moon
+            className={`h-[18px] w-[18px] absolute ${lightMode ? "scale-0" : "scale-100"} transition-transform duration-500`}
+          />
+        </motion.div>
+      </Button>
+    </motion.div>
   )
 }
 
