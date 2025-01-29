@@ -4,6 +4,7 @@ import * as React from "react"
 import Link from "next/link"
 import { Nav } from "./nav"
 import MobileNav from "./MobileNav"
+import MobileNav2 from "./MobileNav2"
 
 export function Header() {
   return (
@@ -23,6 +24,10 @@ export function Header() {
           {/* mobile nav */}
           <div className="lg:hidden">
             <MobileNav />
+          </div>
+
+          <div>
+            <MobileNav2 />
           </div>
         </div>
       </div>
