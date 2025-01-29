@@ -23,7 +23,8 @@ export function ThemeToggleButton() {
   return (
     <Button
       variant="themechange"
-      className="lg:shadow-lg overflow-hidden "
+      size='icon'
+      className="lg:shadow-lg overflow-hidden"
       onClick={toggleTheme}
       aria-label="Toggle theme"
     >
@@ -34,10 +35,10 @@ export function ThemeToggleButton() {
         className="w-full h-full flex items-center justify-center"
       >
         <Sun
-          className={`h-[1.2rem] w-[1.2rem] absolute ${lightMode ? "scale-100" : "scale-0"} transition-transform duration-500`}
+          className={`h-[18px] w-[18px] absolute ${lightMode ? "scale-100" : "scale-0"} transition-transform duration-500`}
         />
         <Moon
-          className={`h-[1.2rem] w-[1.2rem] absolute ${lightMode ? "scale-0" : "scale-100"} transition-transform duration-500`}
+          className={`h-[18px] w-[18px] absolute ${lightMode ? "scale-0" : "scale-100"} transition-transform duration-500`}
         />
       </motion.div>
     </Button>

@@ -17,18 +17,13 @@ export function Header() {
 
           {/* Logo */}
           <Link href="/" className="transition-all duration-300 hover:text-accent text-primary-foreground">
-            <h1 className="text-xl lg:text-3xl font-semibold tracking-wide">Joel Sng</h1>
+            <h1 className="text-lg lg:text-3xl font-semibold tracking-wide">Joel Sng</h1>
           </Link>
 
           {/* windows nav */}
           <div className="hidden lg:flex items-center gap-8">
             <Nav />
           </div>
-
-          {/* mobile nav */}
-          {/* <div className="lg:hidden">
-            <MobileNav />
-          </div> */}
 
           {/* Theme Toggle Button */}
           <div className="justify-center lg:hidden">

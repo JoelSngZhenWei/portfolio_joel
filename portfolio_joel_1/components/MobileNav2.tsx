@@ -33,7 +33,7 @@ const MobileNav2 = () => {
     return (
         <Drawer open={isOpen} onOpenChange={setIsOpen}>
             <DrawerTrigger className="flex justify-center items-center">
-                <IoMenu className="text-[28px] text-accent" />
+                <IoMenu className="text-[24px] text-accent" />
             </DrawerTrigger>
             <DrawerContent className="mx-3">
                 <DrawerHeader>
