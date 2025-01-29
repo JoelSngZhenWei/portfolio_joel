@@ -23,8 +23,7 @@ export function ThemeToggleButton() {
   return (
     <Button
       variant="themechange"
-      size='icon'
-      className="lg:shadow-lg overflow-hidden"
+      className="lg:shadow-lg overflow-hidden h-7 w-7"
       onClick={toggleTheme}
       aria-label="Toggle theme"
     >

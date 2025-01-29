@@ -6,7 +6,7 @@ import Stats from "@/components/Stats";
 
 export default function Home() {
   return (
-    <section className="h-full xl:px-16">
+    <section className="h-full mt-2 lg:mt-0 lg:px-16">
       <div className="container mx-auto h-full lg:-mb-10">
         <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-20 lg:pt-9 lg:pb-24">
           {/* text */}
@@ -22,7 +22,7 @@ export default function Home() {
             </p>
             {/* btn and socials */}
             <div className="flex flex-row justify-center items-center gap-6">
-              <Button variant="outline" size="lg" className="uppercase lg:text-lg">
+              <Button variant="outline" className="uppercase lg:text-lg h-9 lg:h-10 px-6">
                 <a href="/assets/resume_joelsng.pdf" download="resume_joelsng.pdf" className='flex items-center gap-2'>
                   <span>Download CV</span>
                   <FiDownload className="text-xl" />

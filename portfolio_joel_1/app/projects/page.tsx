@@ -78,7 +78,10 @@ export default function Projects() {
                 </div>
                 {/* title */}
                 <h2 className="text-[30px] xl:text-[42px] font-bold leading-none text-primary-foreground group-hover:text-accent transition-all duration-500">
-                  {project.title}
+                  <Link href={project.href}
+                  >
+                    {project.title}
+                  </Link>
                 </h2>
                 {/* description */}
                 <p className="text-primary-foreground/60 text-sm">{project.description}</p>

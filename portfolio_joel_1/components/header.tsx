@@ -8,8 +8,8 @@ import { ThemeToggleButton } from "./ThemeButton";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-primary/80 backdrop-blur-sm">
-      <div className=" lg:py-4 px-4">
+    <header className="sticky top-0 z-50 bg-primary/80 backdrop-blur-sm border-b border-secondary">
+      <div className="py-1 lg:py-2 px-4">
         <div className="container mx-auto flex justify-between items-center">
           <div className="lg:hidden">
             <MobileNav2 />

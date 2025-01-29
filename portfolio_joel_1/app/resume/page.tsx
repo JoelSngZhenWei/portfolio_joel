@@ -223,14 +223,14 @@ export default function Resume() {
     >
       <div className='container mx-auto'>
         <Tabs defaultValue='experience' className='flex flex-col lg:flex-row gap-4'>
-          <div className="flex flex-col w-full lg:max-w-[380px] mx-auto lg:mx-0 gap-6">
+          <div className="flex flex-col w-full lg:max-w-[380px] mx-auto lg:mx-0 gap-2">
             <TabsList className="flex flex-row justify-center lg:justify-start w-full gap-2 lg:gap-6 lg:flex-col">
               <TabsTrigger value="experience" className="bg-secondary px-4 flex-grow lg:flex-grow-0">Experience</TabsTrigger>
               <TabsTrigger value="education" className="bg-secondary px-4 flex-grow lg:flex-grow-0">Education</TabsTrigger>
               <TabsTrigger value="skills" className="bg-secondary px-4 flex-grow lg:flex-grow-0">Skills</TabsTrigger>
               <TabsTrigger value="cca" className="bg-secondary px-4 flex-grow lg:flex-grow-0">CCA</TabsTrigger>
             </TabsList>
-            <Button variant="outline" size="lg" className="uppercase w-full lg:w-auto">
+            <Button variant="outline" className="uppercase w-full lg:w-auto h-9">
               <a href="/assets/resume_joelsng.pdf" download="resume_joelsng.pdf" className="flex text-xs lg:text-base items-center justify-center gap-2 w-full">
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
@@ -253,7 +253,7 @@ export default function Resume() {
                   <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[30px] '>
                     {experience.items.map((item, index) => {
                       return (
-                        <li key={index} className='bg-secondary h-[136px] py-4 px-6 lg:h-[184px] lg:py-6 lg:px-10 rounded-xl flex flex-col justify-center items-center lg:items-start shadow-md'>
+                        <li key={index} className='bg-secondary h-[120px] py-4 px-6 lg:h-[184px] lg:py-6 lg:px-10 rounded-xl flex flex-col justify-center items-center lg:items-start shadow-md'>
                           <span className='text-accent text-sm lg:text-base'>{item.duration}</span>
                           <div className='flex w-full items-center max-w-[290px] min-h-[30px] lg:min-h-[60px] justify-center lg:justify-normal'>
                             <h3 className='text-base lg:text-xl  font-bold'>{item.position}</h3>
@@ -285,7 +285,7 @@ export default function Resume() {
                   <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[30px] '>
                     {education.items.map((item, index) => {
                       return (
-                        <li key={index} className='bg-secondary h-[136px] py-4 px-6 lg:h-[184px] lg:py-6 lg:px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 shadow-md'>
+                        <li key={index} className='bg-secondary h-[120px] py-4 px-6 lg:h-[184px] lg:py-6 lg:px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 shadow-md'>
                           <span className='text-accent text-sm lg:text-base'>{item.duration}</span>
                           <div className='flex w-full items-center max-w-[290px] min-h-[30px] lg:min-h-[60px] justify-center lg:justify-normal'>
                             <h3 className='text-base lg:text-xl  font-bold'>{item.degree}</h3>
@@ -408,7 +408,7 @@ export default function Resume() {
                   <ul className='grid grid-cols-1 lg:grid-cols-1 gap-[15px] '>
                     {cca.items.map((item, index) => {
                       return (
-                        <li key={index} className='bg-secondary h-[136px] py-4 px-6 lg:h-[184px] lg:py-6 lg:px-10 rounded-xl flex flex-col justify-center items-center lg:items-start '>
+                        <li key={index} className='bg-secondary h-[120px] py-4 px-6 lg:h-[184px] lg:py-6 lg:px-10 rounded-xl flex flex-col justify-center items-center lg:items-start '>
                           <span className='text-accent text-sm lg:text-base'>{item.duration}</span>
                           <div className='flex w-full items-center max-w-[290px] min-h-[30px] lg:min-h-[60px] justify-center lg:justify-normal'>
                             <h3 className='text-base lg:text-xl  font-bold'>{item.position}</h3>
