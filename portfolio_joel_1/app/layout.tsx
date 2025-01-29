@@ -46,7 +46,7 @@ export default function RootLayout({
               <div className="px-4">
                 {children}
               </div>
-              <div className="fixed bottom-20 right-20 hidden lg:block">
+              <div className="fixed bottom-10 right-12 hidden lg:block">
                 <ThemeToggleButton />
               </div>
             </PageTransition>

@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 const stats = [
     {
-        num: 2,
+        num: 1,
         text: "Years of experience",
     },
     {
@@ -12,7 +12,7 @@ const stats = [
         text: "Projects",
     },
     {
-        num: 800,
+        num: 818,
         text: "Code commits"
     }
 ]
@@ -36,7 +36,7 @@ const Stats = () => {
                                         end={item.num}
                                         duration={5}
                                         delay={2}
-                                        className="text-4xl lg:text-5xl font-extrabold"
+                                        className="text-3xl lg:text-5xl font-extrabold"
                                     />
                                     <p className='text-sm lg:text-base leading-snug text-primary-foreground/80'>
                                         {item.text}</p>

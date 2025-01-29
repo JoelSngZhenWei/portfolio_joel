@@ -153,8 +153,8 @@ export default function Contact() {
                 {info.map((item, index) => {
                   return (
                     <li key={index} className="flex items-center gap-3 xl:gap-6">
-                      <div className="w-[40px] h-[40px] lg:w-[72px] lg:h-[72px] bg-secondary text-accent rounded-md flex items-center justify-center shadow-md">
-                        <div className="text-[20px] lg:text-[28px]">{item.icon}</div>
+                      <div className="w-[30px] h-[30px] lg:w-[72px] lg:h-[72px] bg-secondary text-accent rounded-md flex items-center justify-center shadow-md">
+                        <div className="text-[15px] lg:text-[28px]">{item.icon}</div>
                       </div>
                       <div className="flex-1">
                         <p className="text-primary-foreground/60 text-xs lg:text-base tracking-wide">{item.title}</p>
