@@ -250,7 +250,7 @@ export default function Resume() {
                   {experience.description}
                 </p>
                 <ScrollArea className='h-[400px]'>
-                  <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[30px] '>
+                  <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[10px] lg:gap-[30px]'>
                     {experience.items.map((item, index) => {
                       return (
                         <li key={index} className='bg-secondary h-[120px] py-4 px-6 lg:h-[184px] lg:py-6 lg:px-10 rounded-xl flex flex-col justify-center items-center lg:items-start shadow-md'>
@@ -282,7 +282,7 @@ export default function Resume() {
                   {education.description}
                 </p>
                 <ScrollArea className='h-[400px] bg-primary'>
-                  <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[30px] '>
+                  <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[10px] lg:gap-[30px]'>
                     {education.items.map((item, index) => {
                       return (
                         <li key={index} className='bg-secondary h-[120px] py-4 px-6 lg:h-[184px] lg:py-6 lg:px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 shadow-md'>
@@ -318,7 +318,7 @@ export default function Resume() {
                   <ScrollArea className='h-[400px] bg-secondary p-4 rounded-xl shadow-md'>
                     <div className='flex flex-col gap-2'>
                       <span className='text-accent font-bold'>Languages</span>
-                      <ul className='grid grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]'>
+                      <ul className='grid grid-cols-3 md:grid-cols-4 gap-[10px] lg:gap-[30px]'>
                         {skills.langlist.map((lang, index) => {
                           return (
                             <li key={index}>
@@ -341,7 +341,7 @@ export default function Resume() {
                       </ul>
 
                       <span className='text-accent font-bold'>Libraries and Frameworks</span>
-                      <ul className='grid grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]'>
+                      <ul className='grid grid-cols-3 md:grid-cols-4 gap-[10px] lg:gap-[30px]'>
                         {skills.frameworklist.map((fw, index) => {
                           return (
                             <li key={index}>
@@ -364,7 +364,7 @@ export default function Resume() {
                       </ul>
 
                       <span className='text-accent font-bold'>Software</span>
-                      <ul className='grid grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]'>
+                      <ul className='grid grid-cols-3 md:grid-cols-4 gap-[10px] lg:gap-[30px]'>
                         {skills.softwarelist.map((sw, index) => {
                           return (
                             <li key={index}>
@@ -405,7 +405,7 @@ export default function Resume() {
                   {cca.description}
                 </p>
                 <ScrollArea className='h-[400px]'>
-                  <ul className='grid grid-cols-1 lg:grid-cols-1 gap-[15px] '>
+                  <ul className='grid grid-cols-1 lg:grid-cols-1 gap-[10px] lg:gap-[30px] '>
                     {cca.items.map((item, index) => {
                       return (
                         <li key={index} className='bg-secondary h-[120px] py-4 px-6 lg:h-[184px] lg:py-6 lg:px-10 rounded-xl flex flex-col justify-center items-center lg:items-start '>
