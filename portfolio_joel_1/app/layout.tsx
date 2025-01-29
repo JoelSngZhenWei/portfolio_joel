@@ -33,23 +33,34 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-
+        <link
+          rel="apple-touch-icon"
+          href="/apple-touch-icon.png"
+          type="image/png"
+          sizes="32x32"
+        />
+        <link
+          rel="icon"
+          href="/favicon-32x32.png"
+          type="image/png"
+          sizes="32x32"
+        />
       </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Header />
-          <StairTransition/>
-            <PageTransition>
-              <Analytics />
-              <div className="px-4">
-                {children}
-              </div>
-              <div className="fixed bottom-10 right-12 hidden lg:block">
-                <ThemeToggleButton />
-              </div>
-            </PageTransition>
+          <StairTransition />
+          <PageTransition>
+            <Analytics />
+            <div className="px-4">
+              {children}
+            </div>
+            <div className="fixed bottom-10 right-12 hidden lg:block">
+              <ThemeToggleButton />
+            </div>
+          </PageTransition>
         </ThemeProvider>
       </body>
     </html>
