@@ -4,7 +4,7 @@ import Image from "next/image"
 
 const Photo = () => {
   return (
-    <div className="relative w-[300px] h-[300px] lg:w-[506px] lg:h-[506px]">
+    <div className="relative w-[230px] h-[230px] lg:w-[506px] lg:h-[506px]">
       <motion.div
         className="w-full h-full"
         initial={{ opacity: 0 }}
@@ -15,7 +15,7 @@ const Photo = () => {
       >
         {/* image */}
         <motion.div
-          className="w-[298px] h-[298px] lg:w-[498px] lg:h-[498px] absolute inset-0 z-10"
+          className="w-[230px] h-[230px] lg:w-[498px] lg:h-[498px] absolute inset-0 z-10"
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
@@ -44,8 +44,8 @@ const Photo = () => {
             cy="253"
             r="250"
             // stroke="#ffffff"
-            className="stroke-primary-foreground"
-            strokeWidth="4"
+            className="stroke-secondary"
+            strokeWidth="5"
             strokeLinecap="round"
             strokeLinejoin="round"
             initial={{ strokeDasharray: "24 10 0 0" }}
