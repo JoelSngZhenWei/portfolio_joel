@@ -33,20 +33,20 @@ const MobileNav2 = () => {
     return (
         <Drawer open={isOpen} onOpenChange={setIsOpen}>
             <DrawerTrigger className="flex justify-center items-center">
-                <IoMenu className="text-[32px] text-accent" />
+                <IoMenu className="text-[28px] text-accent" />
             </DrawerTrigger>
-            <DrawerContent>
+            <DrawerContent className="mx-3">
                 <DrawerHeader>
                     <DrawerTitle>
                         <Link href="/" onClick={() => setIsOpen(false)}>
-                            <h1 className="text- font-semibold tracking-wide hover:text-accent transition-all duration-300">
+                            <h1 className="text-lg font-bold tracking-wide hover:text-accent transition-all duration-300">
                                 Joel Sng
                             </h1>
                         </Link>
                     </DrawerTitle>
                     <DrawerDescription></DrawerDescription>
                     {/* Navigation */}
-                    <nav className="flex flex-col justify-center items-center gap-8">
+                    <nav className="flex flex-col justify-start items-start gap-4">
                         {links.map((link, index) => {
                             const isActive =
                                 link.path === "/"
@@ -57,7 +57,7 @@ const MobileNav2 = () => {
                                 <Link
                                     href={link.path}
                                     key={index}
-                                    className={`${isActive ? "text-accent border-b-2 border-accent" : ""
+                                    className={`${isActive ? "text-accent border-b border-accent" : ""
                                         } capitalize hover:text-accent transition-all duration-300 font-medium tracking-wide`}
                                     onClick={() => setIsOpen(false)}
                                 >
