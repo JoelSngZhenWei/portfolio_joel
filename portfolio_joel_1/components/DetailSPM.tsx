@@ -66,9 +66,9 @@ export default function SPMDetails() {
                         </div>
                         <div className="flex-1 flex justify-center items-center order-1 lg:order-2">
                             <PictureCarousel images={[
-                                { src: '/spm/schedule_personal.png', alt: "Personal schedule view." }, 
-                                { src: '/spm/teamview.png', alt: 'Team schedule view.' }, 
-                                { src: '/spm/makerequest.png', alt: 'Request arrangement.' }, 
+                                { src: '/spm/schedule_personal.png', alt: "Personal schedule view." },
+                                { src: '/spm/teamview.png', alt: 'Team schedule view.' },
+                                { src: '/spm/makerequest.png', alt: 'Request arrangement.' },
                                 { src: '/spm/withdraw.png', alt: 'Withdraw arrangement.' },
 
                             ]} />
@@ -283,6 +283,26 @@ export default function SPMDetails() {
                     <p className="text-primary-foreground/80">
                         Burndown charts from Jira were useful in helping our team document our velocity throughout our sprints, understanding our pace of work and our capability to deliver product features each sprint.
                     </p>
+
+                    {/* Final closing remarks */}
+                    <section>
+                        <h3 className="text-xl font-bold mb-2 border-b border-white/20 pb-2">And...</h3>
+                        <div className="space-y-4">
+                            <section className="flex flex-col md:flex-row gap-3 lg:gap-8 items-center ">
+                                <div className="flex-1 order-2 lg:order-1 space-y-4">
+                                    <p className="text-primary-foreground/80">
+                                        I made the logo too! AIO stands for our app name: All in One. 
+                                    </p>
+                                </div>
+                                <div className="flex-1 flex justify-center items-center order-1 lg:order-2">
+                                    <PictureCarousel images={[
+                                        { src: '/spm/logo.png', alt: "Logo." },
+                                        { src: '/spm/login.png', alt: "Login page using the logo." },
+                                    ]} />
+                                </div>
+                            </section>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div >

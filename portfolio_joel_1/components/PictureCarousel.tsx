@@ -53,7 +53,7 @@ const PictureCarousel: React.FC<PictureCarouselProps> = ({ images }) => {
                                 alt={images[openIndex].alt}
                                 width={1000}
                                 height={1000}
-                                className="w-full h-full object-contain rounded-lg"
+                                className="object-contain rounded-lg"
                             />
                             <div className="absolute bottom-0 left-0 w-full bg-secondary/50 text-center p-2 rounded-b-lg">
                                 <p className="text-sm">{images[openIndex].alt}</p>
