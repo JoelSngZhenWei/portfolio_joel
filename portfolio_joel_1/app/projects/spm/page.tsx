@@ -214,7 +214,7 @@ export default function SPM() {
                 In this project my group sought to develop an HRMS application while documenting our project processes, particularly how we facilitated Scrum during this project and leveraged CI/CD practices in our development. Our backend was developed in Flask, and our frontend was developed in Next.JS.
               </p>
               <p className="text-primary-foreground/80 leading-relaxed">
-                My specific contributions to this project was acting as the Scrum master for this project, and as a backend developer. As Scrum master, I maintained the Jira and Confluence platforms we used to track progress. As a backend developer, I was in charge of developing the Flask application and integrating it with the frontend my team had developed. Beyond these, I believe my most substantial contributions were developing the entire CI/CD pipeline for automated testing, integration, and deployment for our web application.
+                My specific contributions to this project was acting as the Scrum master for this project, and as a backend developer. As Scrum master, I maintained the Jira and Confluence platforms we used to track progress. As a backend developer, I was in charge of developing the Flask application and integrating it with the frontend my team had developed. Beyond these, I believe my most substantial contributions were developing the entire CI/CD pipeline for automated testing, integration, and deployment for our web application. 
               </p>
               <p className="text-primary-foreground/80 leading-relaxed">
                 This project was undertaken as part of an SMU module, &apos;IS212 Software Project Management&apos;. I received a distinction for my part in this project and for this module overall.
@@ -244,12 +244,12 @@ export default function SPM() {
               </div>
 
               {/* content */}
-              <div className="w-full min-h-[80vh] lg:min-h-[80vh]">
+              <div className="w-full min-h-[70vh] lg:min-h-[80vh]">
                 {/* details */}
                 <TabsContent value="details" className="w-full h-full">
-                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[80vh] lg:h-[80vh]">
+                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[70vh] lg:h-[80vh]">
                     <h3 className="text-2xl lg:text-3xl font-bold">Project Details</h3>
-                    <ScrollAreaWithProgress className="bg-primary text-left h-[80vh] lg:h-[80vh] w-full">
+                    <ScrollAreaWithProgress className="bg-primary text-left h-[70vh] lg:h-[80vh] w-full">
                       <SPMDetails />
                     </ScrollAreaWithProgress>
                   </div>
@@ -257,7 +257,7 @@ export default function SPM() {
 
                 {/* video demo */}
                 <TabsContent value="video" className="w-full h-full">
-                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[80vh] lg:h-[80vh] ">
+                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[70vh] lg:h-[80vh] ">
                     <h3 className="text-lg lg:text-3xl font-bold">Video Demo</h3>
                     <p className="h-12 max-w-2xl text-xs lg:text-base text-primary-foreground/80 mx-auto lg:mx-0">
                       Here is a video demonstration of the use of our application to conduct scheduling and management of employee scheduling.
@@ -270,7 +270,7 @@ export default function SPM() {
 
                 {/* slides */}
                 <TabsContent value="slides" className="w-full h-full">
-                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[80vh] lg:h-[80vh] ">
+                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[70vh] lg:h-[80vh] ">
                     <h3 className="text-lg lg:text-3xl font-bold">Slides Summary</h3>
                     <p className="h-12 max-w-2xl text-xs lg:text-base text-primary-foreground/80 mx-auto lg:mx-0">
                       A short slide deck detailing and summarising our project, Scrum practices we utilised, and CI/CD measures we implemented.
@@ -283,7 +283,7 @@ export default function SPM() {
 
                 {/* tech stack */}
                 <TabsContent value="techstack" className="w-full h-full">
-                  <div className="flex flex-col gap-[30px] h-[80vh] lg:h-[80vh]">
+                  <div className="flex flex-col gap-[30px] h-[70vh] lg:h-[80vh]">
                     <div className="flex flex-col gap-2 lg:gap-2 text-center lg:text-left">
                       <h3 className="text-lg lg:text-3xl font-bold">Tech Stack</h3>
                       <p className="h-12 max-w-2xl text-xs lg:text-base text-primary-foreground/80 mx-auto lg:mx-0">
