@@ -4,7 +4,7 @@ import * as React from "react"
 import Link from "next/link"
 import MobileNav2 from "./MobileNav2"
 import { ThemeToggleButton } from "./ThemeButton";
-import { Nav } from "./Nav";
+import { Nav } from "./nav";
 
 export function Header() {
   return (

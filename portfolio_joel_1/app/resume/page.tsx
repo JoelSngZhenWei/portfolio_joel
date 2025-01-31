@@ -37,41 +37,17 @@ const experience = {
     {
       company: 'Zurich Insurance',
       position: 'Data Science Intern',
-      duration: 'Jan 2025 - Present',
-      details:
-        <ul>
-          <li>Supported the APAC Data Science team in developing advanced data-driven solutions for business challenges.</li>
-          <li>Optimized search engine performance using Large Language Models (LLMs) and API integrations to enhance content visibility and engagement.</li>
-          <li>Conducted data analysis and processing for improving SEO strategies and optimizing digital assets.</li>
-          <li>Developed an automation tool in Python using Selenium to conduct SEO in both English and traditional Chinese.</li>
-          <li>Built and implemented automated report generation workflows in Azure leveraging Databricks and Logic Functions.</li>
-          <li>Tools: Python, Azure, LLMs.</li>
-        </ul>
+      duration: 'Jan 2025 - Present'
     },
     {
       company: 'Housing & Development Board',
       position: 'Data Analyst Intern',
-      duration: 'Jan 2024 - Aug 2024',
-      details:
-        <ul>
-          <li>Built and deployed Random Forest machine learning model to detect anomalies in transaction data and identify suspicious activities.</li>
-          <li>Accelerated data processing by implementing RPA workflows with UiPath and OCR, reducing processing time from 4 mins to 30s.</li>
-          <li>Applied natural language processing (NLP) for topic modeling, clustering, and categorization of unstructured customer correspondence data.</li>
-          <li>Designed automated data pipelines for extracting and cleaning unstructured data using SAS to improve operational efficiency.</li>
-          <li>Developed interactive dashboards in SAS and Tableau to visualize structured transaction data for rental and transfer activities.</li>
-          <li>Extracted and analyzed large datasets from data warehouses using SAS and SQL to provide actionable insights for e-services teams.</li>
-          <li>Tools: SAS, UiPath, PowerBI, SQL, R, Tableau, Python.</li>
-        </ul>
+      duration: 'Jan 2024 - Aug 2024'
     },
     {
       company: 'PwC',
       position: 'Digital Transformation Consulting Intern',
-      duration: 'May 2023 - Aug 2023',
-      details:
-        < ul >
-          <li>Contributed to digital transformation engagement for one of Asia&apos;s largest real estate investor / developer / manager. </li>
-          <li>Conducted data analysis on business partner data to produce actionable insights for Digital Transformation team.</li>
-        </ul >
+      duration: 'May 2023 - Aug 2023'
     }
   ]
 }
@@ -210,7 +186,7 @@ const skills = {
 
 // cca data
 const cca = {
-  title: 'Extracurricular Activities \& Volunteering',
+  title: 'My Extracurricular Activities',
   description: "I am passionate about community service and leadership, driving initiatives that positively impact communities and foster meaningful change. I have been recognised by Madam Halimah Yacob and led SMU\'s 2 largest community service organisations.",
   items: [
     {
