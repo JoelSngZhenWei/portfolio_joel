@@ -20,6 +20,7 @@ const links = [
     { name: "projects", path: "/projects" },
     { name: "resume", path: "/resume" },
     { name: "contact", path: "/contact" },
+    { name: "settings", path: "/settings" },
 ];
 
 const MobileNav2 = () => {

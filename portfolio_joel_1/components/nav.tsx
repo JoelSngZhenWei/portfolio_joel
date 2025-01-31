@@ -4,18 +4,18 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { motion } from "framer-motion"
 
+
 const links = [
   { name: "home", path: "/" },
   { name: "projects", path: "/projects" },
   { name: "resume", path: "/resume" },
   { name: "contact", path: "/contact" },
 ]
-
 export function Nav() {
   const pathname = usePathname()
 
   return (
-    <nav className="flex gap-8">
+    <nav className="flex gap-6">
       {links.map((link, index) => {
         const isActive =
           link.path === "/"

@@ -54,10 +54,10 @@ export default function RootLayout({
           <StairTransition />
           <PageTransition>
             <Analytics />
-            <div className="px-4">
+            <div className="p-4">
               {children}
             </div>
-            <div className="fixed bottom-10 right-12 hidden lg:block">
+            <div className="fixed bottom-8 right-8 hidden lg:block">
               <ThemeToggleButton />
             </div>
           </PageTransition>

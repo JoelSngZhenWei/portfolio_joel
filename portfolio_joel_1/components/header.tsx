@@ -2,9 +2,9 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { Nav } from "./nav"
 import MobileNav2 from "./MobileNav2"
 import { ThemeToggleButton } from "./ThemeButton";
+import { Nav } from "./Nav";
 
 export function Header() {
   return (
@@ -29,7 +29,6 @@ export function Header() {
           <div className="justify-center lg:hidden">
             <ThemeToggleButton />
           </div>
-
 
         </div>
       </div>

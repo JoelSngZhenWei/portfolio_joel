@@ -37,17 +37,41 @@ const experience = {
     {
       company: 'Zurich Insurance',
       position: 'Data Science Intern',
-      duration: 'Jan 2025 - Present'
+      duration: 'Jan 2025 - Present',
+      details:
+        <ul>
+          <li>Supported the APAC Data Science team in developing advanced data-driven solutions for business challenges.</li>
+          <li>Optimized search engine performance using Large Language Models (LLMs) and API integrations to enhance content visibility and engagement.</li>
+          <li>Conducted data analysis and processing for improving SEO strategies and optimizing digital assets.</li>
+          <li>Developed an automation tool in Python using Selenium to conduct SEO in both English and traditional Chinese.</li>
+          <li>Built and implemented automated report generation workflows in Azure leveraging Databricks and Logic Functions.</li>
+          <li>Tools: Python, Azure, LLMs.</li>
+        </ul>
     },
     {
       company: 'Housing & Development Board',
       position: 'Data Analyst Intern',
-      duration: 'Jan 2024 - Aug 2024'
+      duration: 'Jan 2024 - Aug 2024',
+      details:
+        <ul>
+          <li>Built and deployed Random Forest machine learning model to detect anomalies in transaction data and identify suspicious activities.</li>
+          <li>Accelerated data processing by implementing RPA workflows with UiPath and OCR, reducing processing time from 4 mins to 30s.</li>
+          <li>Applied natural language processing (NLP) for topic modeling, clustering, and categorization of unstructured customer correspondence data.</li>
+          <li>Designed automated data pipelines for extracting and cleaning unstructured data using SAS to improve operational efficiency.</li>
+          <li>Developed interactive dashboards in SAS and Tableau to visualize structured transaction data for rental and transfer activities.</li>
+          <li>Extracted and analyzed large datasets from data warehouses using SAS and SQL to provide actionable insights for e-services teams.</li>
+          <li>Tools: SAS, UiPath, PowerBI, SQL, R, Tableau, Python.</li>
+        </ul>
     },
     {
       company: 'PwC',
       position: 'Digital Transformation Consulting Intern',
-      duration: 'May 2023 - Aug 2023'
+      duration: 'May 2023 - Aug 2023',
+      details:
+        < ul >
+          <li>Contributed to digital transformation engagement for one of Asia&apos;s largest real estate investor / developer / manager. </li>
+          <li>Conducted data analysis on business partner data to produce actionable insights for Digital Transformation team.</li>
+        </ul >
     }
   ]
 }
@@ -79,103 +103,114 @@ const education = {
 const skills = {
   title: "My Skills",
   description: "I have extensive experience and expertise in machine learning, automation, data manipulation, and software development.",
-  langlist: [
-    {
-      icon: <FaPython />,
-      name: "Python",
-      description: "Data analysis, machine learning, and backend development."
+  details: {
+    Languages: {
+      title: "Languages",
+      list: [
+        {
+          icon: <FaPython />,
+          name: "Python",
+          description: "Data analysis, machine learning, and backend development."
+        },
+        {
+          icon: <FaHtml5 />,
+          name: "html5",
+          description: "Web development."
+        },
+        {
+          icon: <FaJs />,
+          name: "javascript",
+          description: "Adding interactivity and dynamic functionality to web applications."
+        },
+        {
+          icon: <TbSql />,
+          name: "SQL",
+          description: "Managing and querying relational databases efficiently."
+        }
+      ],
     },
-    {
-      icon: <FaHtml5 />,
-      name: "html5",
-      description: "Web development."
+    Frameworks: {
+      title: "Frameworks",
+      list: [
+        {
+          icon: <SiSelenium />,
+          name: "Selenium",
+          description: "Automating web browsers to perform testing, data collection, and scraping tasks."
+        },
+        {
+          icon: <SiScikitlearn />,
+          name: "ScikitLearn",
+          description: "Machine learning library for Python, with tools for data analysis and predictive modeling."
+        },
+        {
+          icon: <SiPandas />,
+          name: "Pandas",
+          description: "Python library for data manipulation and analysis."
+        },
+        {
+          icon: <SiTensorflow />,
+          name: "Tensor Flow",
+          description: "Library in Python for machine learning and deep learning."
+        },
+        {
+          icon: <SiFlask />,
+          name: "Flask",
+          description: "Python library for application backend development."
+        },
+        {
+          icon: <SiNextdotjs />,
+          name: "next.js",
+          description: "Modern, react based framework for efficient web development."
+        },
+        {
+          icon: <FaNodeJs />,
+          name: "node.js",
+          description: "For building fast and scalable server-side applications."
+        },
+        {
+          icon: <FaReact />,
+          name: "React.js",
+          description: "Building component-based user interfaces."
+        },
+      ]
     },
-    {
-      icon: <FaJs />,
-      name: "javascript",
-      description: "Adding interactivity and dynamic functionality to web applications."
-    },
-    {
-      icon: <TbSql />,
-      name: "SQL",
-      description: "Managing and querying relational databases efficiently."
-    }
-  ],
-  frameworklist: [
-    {
-      icon: <SiSelenium />,
-      name: "Selenium",
-      description: "Automating web browsers to perform testing, data collection, and scraping tasks."
-    },
-    {
-      icon: <SiScikitlearn />,
-      name: "ScikitLearn",
-      description: "Machine learning library for Python, with tools for data analysis and predictive modeling."
-    },
-    {
-      icon: <SiPandas />,
-      name: "Pandas",
-      description: "Python library for data manipulation and analysis."
-    },
-    {
-      icon: <SiTensorflow />,
-      name: "Tensor Flow",
-      description: "Library in Python for machine learning and deep learning."
-    },
-    {
-      icon: <SiFlask />,
-      name: "Flask",
-      description: "Python library for application backend development."
-    },
-    {
-      icon: <SiNextdotjs />,
-      name: "next.js",
-      description: "Modern, react based framework for efficient web development."
-    },
-    {
-      icon: <FaNodeJs />,
-      name: "node.js",
-      description: "For building fast and scalable server-side applications."
-    },
-    {
-      icon: <FaReact />,
-      name: "React.js",
-      description: "Building component-based user interfaces."
-    },
-  ],
-  softwarelist: [
-    {
-      icon: <VscAzure />,
-      name: "Azure",
-      description: "Deploying, hosting, and monitoring cloud applications for company usage."
-    },
-    {
-      icon: <FaAws />,
-      name: "AWS",
-      description: "Deploying and managing backend applications and databases."
-    },
-    {
-      icon: <SiUipath />,
-      name: "UiPath",
-      description: "Low-code robotic process automation to automate repetitive tasks."
-    },
-    {
-      icon: <SiTableau />,
-      name: "Tableau",
-      description: "Data visualization tool for creating interactive dashboards and reports."
-    },
-    {
-      icon: <BsBarChartFill />,
-      name: "PowerBI",
-      description: "Visualizing data for business analytics."
-    },
+    Software: {
+      title: "Software",
+      list: [
+        {
+          icon: <VscAzure />,
+          name: "Azure",
+          description: "Deploying, hosting, and monitoring cloud applications for company usage."
+        },
+        {
+          icon: <FaAws />,
+          name: "AWS",
+          description: "Deploying and managing backend applications and databases."
+        },
+        {
+          icon: <SiUipath />,
+          name: "UiPath",
+          description: "Low-code robotic process automation to automate repetitive tasks."
+        },
+        {
+          icon: <SiTableau />,
+          name: "Tableau",
+          description: "Data visualization tool for creating interactive dashboards and reports."
+        },
+        {
+          icon: <BsBarChartFill />,
+          name: "PowerBI",
+          description: "Visualizing data for business analytics."
+        },
 
-  ]
+      ]
+    }
+  }
 }
 
 // cca data
 const cca = {
-  title: 'My Extracurricular Activities',
+  title: 'Extracurricular Activities \& Volunteering',
   description: "I am passionate about community service and leadership, driving initiatives that positively impact communities and foster meaningful change. I have been recognised by Madam Halimah Yacob and led SMU\'s 2 largest community service organisations.",
   items: [
     {
@@ -316,83 +351,40 @@ export default function Resume() {
                     {skills.description}
                   </p>
                   <ScrollArea className='h-[400px] bg-secondary p-4 rounded-xl shadow-md'>
-                    <div className='flex flex-col gap-2'>
-                      <span className='text-accent font-bold'>Languages</span>
-                      <ul className='grid grid-cols-3 md:grid-cols-4 gap-[10px] lg:gap-[30px]'>
-                        {skills.langlist.map((lang, index) => {
-                          return (
-                            <li key={index}>
-                              <TooltipProvider delayDuration={100}>
-                                <Tooltip>
-                                  <TooltipTrigger className='w-full h-[90px] lg:h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group shadow-md' onClick={() => openModal(lang)}>
-                                    <div className='text-3xl lg:text-5xl group-hover:text-accent transition-all duration-300'>{lang.icon}</div>
-                                    <span className='capitalize text-sm lg:text-base group-hover:text-accent transition-all duration-300'>{lang.name}</span>
-                                  </TooltipTrigger>
-                                  <TooltipContent>
-                                    <p>
-                                      {lang.description}
-                                    </p>
-                                  </TooltipContent>
-                                </Tooltip>
-                              </TooltipProvider>
-                            </li>
-                          )
-                        })}
-                      </ul>
-
-                      <span className='text-accent font-bold'>Libraries and Frameworks</span>
-                      <ul className='grid grid-cols-3 md:grid-cols-4 gap-[10px] lg:gap-[30px]'>
-                        {skills.frameworklist.map((fw, index) => {
-                          return (
-                            <li key={index}>
-                              <TooltipProvider delayDuration={100}>
-                                <Tooltip>
-                                  <TooltipTrigger className='w-full h-[90px] lg:h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group shadow-md' onClick={() => openModal(fw)}>
-                                    <div className='text-3xl lg:text-5xl group-hover:text-accent transition-all duration-300'>{fw.icon}</div>
-                                    <span className='capitalize text-sm lg:text-base group-hover:text-accent transition-all duration-300'>{fw.name}</span>
-                                  </TooltipTrigger>
-                                  <TooltipContent>
-                                    <p>
-                                      {fw.description}
-                                    </p>
-                                  </TooltipContent>
-                                </Tooltip>
-                              </TooltipProvider>
-                            </li>
-                          )
-                        })}
-                      </ul>
-
-                      <span className='text-accent font-bold'>Software</span>
-                      <ul className='grid grid-cols-3 md:grid-cols-4 gap-[10px] lg:gap-[30px]'>
-                        {skills.softwarelist.map((sw, index) => {
-                          return (
-                            <li key={index}>
-                              <TooltipProvider delayDuration={100}>
-                                <Tooltip>
-                                  <TooltipTrigger className='w-full h-[90px] lg:h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group' onClick={() => openModal(sw)}
-                                  >
-                                    <div className='text-3xl lg:text-5xl group-hover:text-accent transition-all duration-300'>{sw.icon}</div>
-                                    <span className='capitalize text-sm lg:text-base group-hover:text-accent transition-all duration-300'>{sw.name}</span>
-                                  </TooltipTrigger>
-                                  <TooltipContent>
-                                    <p>
-                                      {sw.description}
-                                    </p>
-                                  </TooltipContent>
-                                </Tooltip>
-                              </TooltipProvider>
-                            </li>
-                          )
-                        })}
-                      </ul>
+                    <div className="flex flex-col gap-2">
+                      {Object.entries(skills.details).map(([key, { title, list }]) => (
+                        <div key={key}>
+                          <span className="text-accent font-bold">{title}</span>
+                          <ul className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]">
+                            {list.map((item, index) => (
+                              <li key={index}>
+                                <TooltipProvider delayDuration={100}>
+                                  <Tooltip>
+                                    <TooltipTrigger
+                                      className="w-full h-[90px] lg:h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group shadow-md"
+                                      onClick={() => openModal(item)}
+                                    >
+                                      <div className="text-3xl lg:text-5xl group-hover:text-accent transition-all duration-300">
+                                        {item.icon}
+                                      </div>
+                                      <span className="capitalize text-sm lg:text-base group-hover:text-accent transition-all duration-300">
+                                        {item.name}
+                                      </span>
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                      <p>{item.description}</p>
+                                    </TooltipContent>
+                                  </Tooltip>
+                                </TooltipProvider>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
                     </div>
                   </ScrollArea>
-
                 </div>
-
               </div>
-
             </TabsContent>
 
             {/* cca */}
