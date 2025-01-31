@@ -1,4 +1,4 @@
-// import Image from "next/image"
+import PictureCarousel from "./PictureCarousel"
 
 
 export default function SPMDetails() {
@@ -45,19 +45,17 @@ export default function SPMDetails() {
             <section>
                 <h3 className="text-xl font-bold mb-2 border-b border-white/20 pb-2">Staff</h3>
                 <div className="space-y-4">
-                    <section className="flex flex-col md:flex-row gap-8 items-center ">
+                    <section className="flex flex-col md:flex-row gap-3 lg:gap-8 items-center ">
                         <div className="flex-1 order-2 lg:order-1 space-y-4">
                             <p className="text-primary-foreground/80">
                                 Staff are able to:
                             </p>
                             <ul className="text-primary-foreground/80 space-y-3 mb-4 pl-5">
                                 {[
-                                    "View their team members\' schedules.",
                                     "View their own schedule.",
+                                    "View their team members\' schedules.",
                                     "Apply for a working arrangement on a certain day.",
-                                    "Apply for a working arrangement on a certain day.",
-                                    "Change a selected working arrangement.",
-                                    "Withdraw a selected working arrangement.",
+                                    "Change/Withdraw a selected working arrangement.",
                                 ].map((item, index) => (
                                     <li key={index} className="flex items-start">
                                         <span className="inline-block w-1 h-1 mr-2 mt-2 bg-accent rounded-full flex-shrink-0" />
@@ -66,15 +64,15 @@ export default function SPMDetails() {
                                 ))}
                             </ul>
                         </div>
-                        {/* <div className="flex-1 flex justify-center items-center order-1 lg:order-2">
-                            <Image
-                                src="/assets/LSTM.png"
-                                alt="LSTM Model Architecture"
-                                width={400}
-                                height={300}
-                                className="rounded-lg shadow-lg hover:scale-105 transition-all duration-300"
-                            />
-                        </div> */}
+                        <div className="flex-1 flex justify-center items-center order-1 lg:order-2">
+                            <PictureCarousel images={[
+                                { src: '/spm/schedule_personal.png', alt: "Personal schedule view." }, 
+                                { src: '/spm/teamview.png', alt: 'Team schedule view.' }, 
+                                { src: '/spm/makerequest.png', alt: 'Request arrangement.' }, 
+                                { src: '/spm/withdraw.png', alt: 'Withdraw arrangement.' },
+
+                            ]} />
+                        </div>
                     </section>
                 </div>
             </section>
@@ -83,15 +81,15 @@ export default function SPMDetails() {
             <section>
                 <h3 className="text-xl font-bold mb-2 border-b border-white/20 pb-2">Managers &amp; Directors</h3>
                 <div className="space-y-4">
-                    <section className="flex flex-col md:flex-row gap-8 items-center ">
+                    <section className="flex flex-col md:flex-row gap-3 lg:gap-8 items-center ">
                         <div className="flex-1 order-2 lg:order-1 space-y-4">
                             <p className="text-primary-foreground/80">
-                                Managers &amp; Directors are given additional capabilities:
+                                Managers &amp; Directors are given additional capabilities to manage teams under them:
                             </p>
                             <ul className="text-primary-foreground/80 space-y-3 mb-4 pl-5">
                                 {[
                                     "Approve and reject arrangements from team members.",
-                                    "Withdraw arrangements of team members.",
+                                    "View approved and rejected arrangements from team members."
                                 ].map((item, index) => (
                                     <li key={index} className="flex items-start">
                                         <span className="inline-block w-1 h-1 mr-2 mt-2 bg-accent rounded-full flex-shrink-0" />
@@ -100,15 +98,13 @@ export default function SPMDetails() {
                                 ))}
                             </ul>
                         </div>
-                        {/* <div className="flex-1 flex justify-center items-center order-1 lg:order-2">
-                            <Image
-                                src="/assets/LSTM.png"
-                                alt="LSTM Model Architecture"
-                                width={400}
-                                height={300}
-                                className="rounded-lg shadow-lg hover:scale-105 transition-all duration-300"
-                            />
-                        </div> */}
+                        <div className="flex-1 flex justify-center items-center order-1 lg:order-2">
+                            <PictureCarousel images={[
+                                { src: '/spm/managerequest.png', alt: "Approve and reject arrangements view." },
+                                { src: '/spm/viewpastrequest.png', alt: 'View past approved arrangements.' },
+
+                            ]} />
+                        </div>
                     </section>
                 </div>
             </section>
@@ -117,14 +113,16 @@ export default function SPMDetails() {
             <section>
                 <h3 className="text-xl font-bold mb-2 border-b border-white/20 pb-2">Humans Resources (HR) &amp; Senior Management</h3>
                 <div className="space-y-4">
-                    <section className="flex flex-col md:flex-row gap-8 items-center ">
+                    <section className="flex flex-col md:flex-row gap-3 lg:gap-8 items-center ">
                         <div className="flex-1 order-2 lg:order-1 space-y-4">
                             <p className="text-primary-foreground/80">
-                                HR &amp; Senior Managers are given additional capabilities:
+                                HR &amp; Senior Managers are given additional capabilities to manage departments and teams:
                             </p>
                             <ul className="text-primary-foreground/80 space-y-3 mb-4 pl-5">
                                 {[
-                                    "View schedules of selected teams.",
+                                    "View all departments in organisation.",
+                                    "View all teams in each department.",
+                                    "View schedule of any chosen team.",
                                 ].map((item, index) => (
                                     <li key={index} className="flex items-start">
                                         <span className="inline-block w-1 h-1 mr-2 mt-2 bg-accent rounded-full flex-shrink-0" />
@@ -133,15 +131,13 @@ export default function SPMDetails() {
                                 ))}
                             </ul>
                         </div>
-                        {/* <div className="flex-1 flex justify-center items-center order-1 lg:order-2">
-                            <Image
-                                src="/assets/LSTM.png"
-                                alt="LSTM Model Architecture"
-                                width={400}
-                                height={300}
-                                className="rounded-lg shadow-lg hover:scale-105 transition-all duration-300"
-                            />
-                        </div> */}
+                        <div className="flex-1 flex justify-center items-center order-1 lg:order-2">
+                            <PictureCarousel images={[
+                                { src: '/spm/deptview.png', alt: "All departments view." },
+                                { src: '/spm/seniormanagerteamview.png', alt: "All teams under chosen department view." },
+                                { src: '/spm/seniormanagersmallteamview.png', alt: "Schedule of a single team in chosen department." }
+                            ]} />
+                        </div>
                     </section>
                 </div>
             </section>
@@ -150,7 +146,7 @@ export default function SPMDetails() {
             <div>
                 <h3 className="text-xl font-bold mb-2 border-b border-white/20 pb-2">Continuous Integration</h3>
                 <div className="space-y-4">
-                    <section className="flex flex-col md:flex-row gap-8 items-center ">
+                    <section className="flex flex-col md:flex-row gap-3 lg:gap-8 items-center ">
                         <div className="flex-1 order-2 lg:order-1">
                             <p className="text-primary-foreground/80">
                                 I developed a suite of test functions for our RESTful APIs developed in Flask. To do this, I utilised the PyTest library due to its ease of use and flexibility. Our backend development team utilised the paradigm of <span className="font-bold text-primary-foreground">Test-Driven Development (TDD)</span>, where for each RESTful API function we would first write the code for all of its test cases, and then write and refactor the actual function&apos;s code until it worked well.
@@ -166,7 +162,7 @@ export default function SPMDetails() {
                             />
                         </div> */}
                     </section>
-                    <section className="flex flex-col md:flex-row gap-8 items-center ">
+                    <section className="flex flex-col md:flex-row gap-3 lg:gap-8 items-center ">
                         <div className="flex-1 order-2 lg:order-1">
                             <p className="text-primary-foreground/80">
                                 The next step was to make this testing automated on every push to our repo. To do this, I configured a <span className="text-primary-foreground font-bold">GitHub Actions yaml workflow</span> to run our suite of PyTest functions on every Git push to either our backend or main branch, to constantly validate that code developed and pushed by our backend team was correct and working as intended. On any test failure, notifactions would be sent to team members&apos; emails to notify us.
@@ -192,7 +188,7 @@ export default function SPMDetails() {
                     <p className="text-primary-foreground/80">
                         Continous Deployment for our frontend was handled by the platform we deployed our frontend on, <span className="text-primary-foreground font-bold">Vercel</span>. Thus, my priority was continuous deployment for our backend to our <span className="text-primary-foreground font-bold">PythonAnywhere</span> server.
                     </p>
-                    <section className="flex flex-col md:flex-row gap-8 items-center ">
+                    <section className="flex flex-col md:flex-row gap-3 lg:gap-8 items-center ">
                         <div className="flex-1 order-2 lg:order-1">
                             <p className="text-primary-foreground/80">
                                 For this, I configured a <span className="text-primary-foreground font-bold">GitHub Actions webhook</span> to an API aimed at my PythonAnywhere deployment server. Upon receiving this webhook, a script I wrote in PythonAnywhere would run a bash console command to git pull and git merge to its local codebase.
@@ -236,7 +232,7 @@ export default function SPMDetails() {
                     <p className="text-primary-foreground/80">
                         I helped to organise the team and direct development efforts throughout our 5 months of project development. We collaborated on <span className="font-bold text-primary-foreground">Jira</span>, using the integrated Backlog Boards to plan user stories, acceptance criteria, and assign story points to our user stories using Planning Poker on a fibonacci sequence.
                     </p>
-                    <section className="flex flex-col md:flex-row gap-8 items-center ">
+                    <section className="flex flex-col md:flex-row gap-3 lg:gap-8 items-center ">
                         <div className="flex-1 order-2 lg:order-1">
                             <p className="text-primary-foreground/80">
                                 User stories were managed on backlog boards, and during each 2 week sprint we tracked progress on Jira&apos;s <span className="text-primary-foreground font-bold">Kanban Boards</span> to ensure our frontend, backend, and testing developer teams were aligned.
@@ -252,7 +248,7 @@ export default function SPMDetails() {
                             />
                         </div> */}
                     </section>
-                    <section className="flex flex-col md:flex-row gap-8 items-center ">
+                    <section className="flex flex-col md:flex-row gap-3 lg:gap-8 items-center ">
                         <div className="flex-1 order-2 lg:order-1">
                             <p className="text-primary-foreground/80">
                                 Confluence was integrated to our Jira workflow, and it was used as a shared repository of information. Key documents we had included:

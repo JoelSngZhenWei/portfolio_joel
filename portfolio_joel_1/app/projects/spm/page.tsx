@@ -197,11 +197,11 @@ export default function SPM() {
             {/* photo */}
             <div className="relative rounded-lg shadow-xl">
               <Image
-                src="/assets/ANN_initial.png"
-                alt="Options Pricing Visualization"
+                src="/spm/schedule_personal.png"
+                alt="Schedule Page from Application Home"
                 width={500}
                 height={300}
-                className="transition-transform duration-300 hover:scale-105 rounded-lg shadow-lg"
+                className="transition-transform duration-300 hover:scale-105 rounded-lg shadow-lg "
               />
             </div>
           </div>
@@ -214,7 +214,7 @@ export default function SPM() {
                 In this project my group sought to develop an HRMS application while documenting our project processes, particularly how we facilitated Scrum during this project and leveraged CI/CD practices in our development. Our backend was developed in Flask, and our frontend was developed in Next.JS.
               </p>
               <p className="text-primary-foreground/80 leading-relaxed">
-                My specific contributions to this project was acting as the Scrum master for this project, and as a backend developer. As Scrum master, I maintained the Jira and Confluence platforms we used to track progress. As a backend developer, I was in charge of developing the Flask application and integrating it with the frontend my team had developed. Beyond these, I believe my most substantial contributions were developing the entire CI/CD pipeline for automated testing, integration, and deployment for our web application. 
+                My specific contributions to this project was acting as the Scrum master for this project, and as a backend developer. As Scrum master, I maintained the Jira and Confluence platforms we used to track progress. As a backend developer, I was in charge of developing the Flask application and integrating it with the frontend my team had developed. Beyond these, I believe my most substantial contributions were developing the entire CI/CD pipeline for automated testing, integration, and deployment for our web application.
               </p>
               <p className="text-primary-foreground/80 leading-relaxed">
                 This project was undertaken as part of an SMU module, &apos;IS212 Software Project Management&apos;. I received a distinction for my part in this project and for this module overall.
@@ -223,10 +223,10 @@ export default function SPM() {
           </div>
         </div>
 
-        <div className="min-h-[80vh] flex items-center justify-center mb-2 lg:mb-4">
+        <div className="min-h-[80vh] lg:min-h-[90vh] flex items-center justify-center mb-2 lg:mb-4">
           <div className="container mx-auto">
             <Tabs defaultValue="details" className="flex flex-col lg:flex-row gap-4">
-              <div className="flex flex-col w-full lg:max-w-[380px] mx-auto lg:mx-0 gap-6">
+              <div className="flex flex-col w-full lg:max-w-[300px] mx-auto lg:mx-0 gap-6">
                 <TabsList className="flex flex-row justify-center lg:justify-start w-full gap-2 lg:gap-6 lg:flex-col">
                   <TabsTrigger value="details" className="bg-secondary px-4 flex-grow lg:flex-grow-0">
                     Details

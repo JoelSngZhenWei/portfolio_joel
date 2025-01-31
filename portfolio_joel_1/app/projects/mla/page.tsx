@@ -133,10 +133,10 @@ export default function MLA() {
           </div>
         </div>
 
-        <div className="min-h-[80vh] flex items-center justify-center mb-2 lg:mb-4">
+        <div className="min-h-[80vh] lg:min-h-[90vh] flex items-center justify-center mb-2 lg:mb-4">
           <div className="container mx-auto">
             <Tabs defaultValue="details" className="flex flex-col lg:flex-row gap-4">
-              <div className="flex flex-col w-full lg:max-w-[380px] mx-auto lg:mx-0 gap-6">
+              <div className="flex flex-col w-full lg:max-w-[300px] mx-auto lg:mx-0 gap-6">
                 <TabsList className="flex flex-row justify-center lg:justify-start w-full gap-2 lg:gap-6 lg:flex-col">
                   <TabsTrigger value="details" className="bg-secondary px-4 flex-grow lg:flex-grow-0">
                     Details
