@@ -244,12 +244,12 @@ export default function SPM() {
               </div>
 
               {/* content */}
-              <div className="w-full min-h-[70vh] lg:min-h-[80vh]">
+              <div className="w-full min-h-[80vh] lg:min-h-[80vh]">
                 {/* details */}
                 <TabsContent value="details" className="w-full h-full">
-                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[70vh] lg:h-[80vh]">
+                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[80vh] lg:h-[80vh]">
                     <h3 className="text-2xl lg:text-3xl font-bold">Project Details</h3>
-                    <ScrollAreaWithProgress className="bg-primary text-left h-[70vh] lg:h-[80vh] w-full">
+                    <ScrollAreaWithProgress className="bg-primary text-left h-[80vh] lg:h-[80vh] w-full">
                       <SPMDetails />
                     </ScrollAreaWithProgress>
                   </div>
@@ -257,7 +257,7 @@ export default function SPM() {
 
                 {/* video demo */}
                 <TabsContent value="video" className="w-full h-full">
-                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[70vh] lg:h-[80vh] ">
+                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[80vh] lg:h-[80vh] ">
                     <h3 className="text-lg lg:text-3xl font-bold">Video Demo</h3>
                     <p className="h-12 max-w-2xl text-xs lg:text-base text-primary-foreground/80 mx-auto lg:mx-0">
                       Here is a video demonstration of the use of our application to conduct scheduling and management of employee scheduling.
@@ -270,7 +270,7 @@ export default function SPM() {
 
                 {/* slides */}
                 <TabsContent value="slides" className="w-full h-full">
-                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[70vh] lg:h-[80vh] ">
+                  <div className="flex flex-col gap-2 lg:gap-2  text-center lg:text-left h-[80vh] lg:h-[80vh] ">
                     <h3 className="text-lg lg:text-3xl font-bold">Slides Summary</h3>
                     <p className="h-12 max-w-2xl text-xs lg:text-base text-primary-foreground/80 mx-auto lg:mx-0">
                       A short slide deck detailing and summarising our project, Scrum practices we utilised, and CI/CD measures we implemented.
@@ -283,7 +283,7 @@ export default function SPM() {
 
                 {/* tech stack */}
                 <TabsContent value="techstack" className="w-full h-full">
-                  <div className="flex flex-col gap-[30px] h-[70vh] lg:h-[80vh]">
+                  <div className="flex flex-col gap-[30px] h-[80vh] lg:h-[80vh]">
                     <div className="flex flex-col gap-2 lg:gap-2 text-center lg:text-left">
                       <h3 className="text-lg lg:text-3xl font-bold">Tech Stack</h3>
                       <p className="h-12 max-w-2xl text-xs lg:text-base text-primary-foreground/80 mx-auto lg:mx-0">
