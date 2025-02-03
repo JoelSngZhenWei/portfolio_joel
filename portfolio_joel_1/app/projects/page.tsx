@@ -9,15 +9,6 @@ import Image from "next/image"
 const projects = [
   {
     num: '01',
-    title: 'Options Pricing using Machine Learning',
-    description: 'Using machine learning models including SVR, artificial neural networks, and LSTM, to price options and evaluating performance against traditional mathematical models.',
-    skills: ['Machine Learning', 'Data Science'],
-    href: 'projects/mla',
-    src: '/mla/ann_initial2.png',
-    inProgress: false,
-  },
-  {
-    num: '02',
     title: 'Employee Scheduling Web Application',
     description: 'Led a software development project over 5 months as Scrum Master, lead DevOps engineer, and backend developer. Developed an HRMS scheduling web application.',
     skills: ['App Development', 'Scrum'],
@@ -25,6 +16,16 @@ const projects = [
     src: '/spm/schedule_personal.png',
     inProgress: false,
   },
+  {
+    num: '02',
+    title: 'Options Pricing using Machine Learning',
+    description: 'Using machine learning models including SVR, artificial neural networks, and LSTM, to price options and evaluating performance against traditional mathematical models.',
+    skills: ['Machine Learning', 'Data Science'],
+    href: 'projects/mla',
+    src: '/mla/ann_initial2.png',
+    inProgress: false,
+  },
+
   // {
   //   num: '03',
   //   title: 'Project Management for Software Development',
@@ -65,7 +66,7 @@ export default function Projects() {
                 {/* title */}
                 <div className="grid grid-cols-6 gap-4">
                   <div className="col-span-5">
-                    <h2 className="text-[25px] xl:text-[30px] font-bold leading-none text-primary-foreground group-hover:text-accent transition-all duration-500">
+                    <h2 className="text-[20px] xl:text-[30px] font-bold leading-none text-primary-foreground group-hover:text-accent transition-all duration-500">
                       <Link href={project.href}
                       >
                         {project.title}
@@ -78,7 +79,7 @@ export default function Projects() {
                         onClick={() => handleProjectClick(project)}
                         className="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-primary-foreground group-hover:bg-accent transition-all duration-500 flex justify-center items-center group-hover:-rotate-45"
                       >
-                        <BsArrowDownRight className="text-primary text-3xl" />
+                        <BsArrowDownRight className="text-primary text-xl lg:text-3xl" />
                       </button>
                     ) : (
                       <Link
