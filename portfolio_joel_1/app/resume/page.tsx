@@ -8,10 +8,11 @@ import {
   FaHtml5,
   FaJs,
   FaReact,
-  FaNodeJs,
+  // FaNodeJs,
   FaPython,
   FaAws,
-  FaJava
+  FaJava,
+  FaVuejs
 } from 'react-icons/fa'
 import {
   SiNextdotjs,
@@ -49,12 +50,12 @@ const skills = {
         },
         {
           icon: <FaHtml5 />,
-          name: "html5",
+          name: "HTML5",
           description: "Web development."
         },
         {
           icon: <FaJs />,
-          name: "javascript",
+          name: "Javascript",
           description: "Adding interactivity and dynamic functionality to web applications."
         },
         {
@@ -70,7 +71,7 @@ const skills = {
       ],
     },
     Frameworks: {
-      title: "Frameworks",
+      title: "Frameworks \& Libraries",
       list: [
         {
           icon: <SiSelenium />,
@@ -83,14 +84,14 @@ const skills = {
           description: "Machine learning library for Python, with tools for data analysis and predictive modeling."
         },
         {
-          icon: <SiPandas />,
-          name: "Pandas",
-          description: "Python library for data manipulation and analysis."
-        },
-        {
           icon: <SiTensorflow />,
           name: "Tensor Flow",
           description: "Library in Python for machine learning and deep learning."
+        },
+        {
+          icon: <SiPandas />,
+          name: "Pandas",
+          description: "Python library for data manipulation and analysis."
         },
         {
           icon: <SiFlask />,
@@ -99,18 +100,18 @@ const skills = {
         },
         {
           icon: <SiNextdotjs />,
-          name: "next.js",
+          name: "Next.js",
           description: "Modern, react based framework for efficient web development."
-        },
-        {
-          icon: <FaNodeJs />,
-          name: "node.js",
-          description: "For building fast and scalable server-side applications."
         },
         {
           icon: <FaReact />,
           name: "React.js",
           description: "Building component-based user interfaces."
+        },
+        {
+          icon: <FaVuejs />,
+          name: "Vue.js",
+          description: "For efficiently building interactive application UI."
         },
       ]
     },
@@ -229,7 +230,7 @@ export default function Resume() {
                                       <div className="text-3xl lg:text-5xl group-hover:text-accent transition-all duration-300">
                                         {item.icon}
                                       </div>
-                                      <span className="capitalize text-sm lg:text-base group-hover:text-accent transition-all duration-300">
+                                      <span className="text-sm lg:text-base group-hover:text-accent transition-all duration-300">
                                         {item.name}
                                       </span>
                                     </TooltipTrigger>

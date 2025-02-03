@@ -117,17 +117,25 @@ export default function MLA() {
               <p className="text-primary-foreground/80 leading-relaxed">
                 In this project my group sought to analyse different machine learning techniques in tackling a
                 notoriously complex task: <span className="font-bold text-primary-foreground">Options Pricing</span>. We contrasted
-                our models&apos; performance to a traditional and widely used mathematical model.
+                our models&apos; performance to a traditional and widely used mathematical model, Black-Scholes Model.
               </p>
-              <p className="text-primary-foreground/80 leading-relaxed">
-                My specific contributions to this project were sourcing the data sets, the entirety of exploratory data
-                analysis, and constructing the ANN model. What I was most proud of in my ANN approach was developing a
-                hybrid ANN approach that used both a classification ANN and a regression ANN, and proved to be the most
-                successful model we employed.
+              <p className="text-2xl text-primary-foreground font-bold leading-relaxed">
+                My Specific Contributions:
               </p>
+              <ul className="list-disc list-inside text-primary-foreground/80">
+                <li>
+                  Sourcing the dataset of options data from <span className="font-bold text-primary-foreground">Chicago Board of Options Exchange</span>.
+                </li>
+                <li>
+                  Entirety of exploratory data analysis
+                </li>
+                <li>
+                  Planning, constructing, and refining our group&apos;s <span className="font-bold text-primary-foreground">Artifical Neural Network</span>, settling on a hybrid ANN approach using both <span className="font-bold text-primary-foreground">classification and regression</span> which proved to be our most successful model.
+                </li>
+              </ul>
               <p className="text-primary-foreground/80 leading-relaxed">
                 This project was undertaken as part of an SMU module, &apos;IS460 Machine Learning &amp;
-                Applications&apos;. My group received an A+ for this project.
+                Applications&apos;. My group received an A+, the highest possible grade, for this project.
               </p>
             </div>
           </div>

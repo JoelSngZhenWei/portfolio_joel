@@ -26,7 +26,7 @@ export default function SPMDetails() {
                     <p className="text-primary-foreground/80 mb-4">
                         There are three possible types of users that may use our application, and for each user the application will offer different capabilities.
                     </p>
-                    <ul className="text-primary-foreground/80 space-y-3 mb-4 pl-5 list-disc list-inside">
+                    <ul className="text-primary-foreground/80 space-y-3 mb-4 pl-5 list-decimal list-inside">
                         {[
                             "Staff",
                             "Managers \& Directors",
@@ -145,7 +145,7 @@ export default function SPMDetails() {
                     <section className="flex flex-col md:flex-row gap-3 lg:gap-8 items-center ">
                         <div className="flex-1 order-2 lg:order-1">
                             <p className="text-primary-foreground/80">
-                                I developed a suite of test functions for our RESTful APIs developed in Flask. To do this, I utilised the PyTest library due to its ease of use and flexibility. Our backend development team utilised the paradigm of <span className="font-bold text-primary-foreground">Test-Driven Development (TDD)</span>, where for each RESTful API function we would first write the code for all of its test cases, and then write and refactor the actual function&apos;s code until it worked well.
+                                I developed a suite of test functions for our RESTful APIs developed in Flask. To do this, I utilised the <span className="font-bold text-primary-foreground">PyTest</span> library due to its ease of use and flexibility. Our backend development team utilised the paradigm of <span className="font-bold text-primary-foreground">Test-Driven Development (TDD)</span>, where for each RESTful API function we would first write the code for all of its test cases, and then write and refactor the actual function&apos;s code until it worked well.
                             </p>
                         </div>
                         {/* <div className="flex-1 flex justify-center items-center order-1 lg:order-2 p-1">
@@ -161,7 +161,10 @@ export default function SPMDetails() {
                     <section className="flex flex-col md:flex-row gap-3 lg:gap-8 items-center ">
                         <div className="flex-1 order-2 lg:order-1">
                             <p className="text-primary-foreground/80">
-                                The next step was to make this testing automated on every push to our repo. To do this, I configured a <span className="text-primary-foreground font-bold">GitHub Actions yaml workflow</span> to run our suite of PyTest functions on every Git push to either our backend or main branch, to constantly validate that code developed and pushed by our backend team was correct and working as intended. On any test failure, notifactions would be sent to team members&apos; emails to notify us.
+                                The next step was to make this testing automated on every push to our repo. To do this, I configured a <span className="text-primary-foreground font-bold">GitHub Actions yaml workflow</span> to run our suite of PyTest functions on every Git push to either our backend or main branch, to constantly validate that code developed and pushed by our backend team was correct and working as intended. On any test failure, notifactions would be sent to team members.
+                            </p>
+                            <p className="text-primary-foreground/80">
+                                Our group enforced a minimum 80% test coverage throughout our development process to ensure we had a clean and correct code base, and ended development at a 97% test coverage.
                             </p>
                         </div>
                         {/* <div className="flex-1 flex justify-center items-center order-1 lg:order-2 p-1">
@@ -187,7 +190,7 @@ export default function SPMDetails() {
                     <section className="flex flex-col md:flex-row gap-3 lg:gap-8 items-center ">
                         <div className="flex-1 order-2 lg:order-1">
                             <p className="text-primary-foreground/80">
-                                For this, I configured a <span className="text-primary-foreground font-bold">GitHub Actions webhook</span> to an API aimed at my PythonAnywhere deployment server. Upon receiving this webhook, a script I wrote in PythonAnywhere would run a bash console command to git pull and git merge to its local codebase.
+                                For this, I configured an encoded <span className="text-primary-foreground font-bold">GitHub Actions webhook</span> to an API aimed at my PythonAnywhere deployment server. Upon receiving this webhook, a script I wrote in PythonAnywhere would run a bash console command to git pull and git merge to the server&apos;s codebase.
                             </p>
                         </div>
                         {/* <div className="flex-1 flex justify-center items-center order-1 lg:order-2 p-1">
@@ -201,7 +204,7 @@ export default function SPMDetails() {
                         </div> */}
                     </section>
                     <p className="text-primary-foreground/80">
-                        While this required webhook signature validation using webhook tokens and HMAC encoding, this allowed for seamless deployment of our Flask backends on every push to our main or backend branches, detailed deployment logs, and task scheduling functionality.
+                        While this required webhook signature validation using webhook tokens and HMAC encoding, this allowed for seamless deployment of our Flask backends on every push to our main or backend branches, usage logs, deployment logs, error logs, and scheduled running of scripts on the server.
                     </p>
                 </div>
             </div>

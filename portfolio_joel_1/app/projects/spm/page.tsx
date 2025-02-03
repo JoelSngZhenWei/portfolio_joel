@@ -211,9 +211,9 @@ export default function SPM() {
             <h2 className="text-2xl font-semibold tracking-wide">Summary</h2>
             <div className="space-y-4">
               <p className="text-primary-foreground/80 leading-relaxed">
-                My group developed an employee scheduling application while documenting our project processes, particularly how we facilitated Scrum during this project, DevOps processes, and CI/CD practices. Our backend was developed in Flask, and our frontend was developed in Next.JS.
+                My group developed an employee scheduling application while documenting our project processes, particularly how we facilitated Scrum during this project, DevOps processes, and CI/CD practices. Our backend was developed in Flask, and our frontend was developed in Next.JS. We utilised a <span className="text-primary-foreground font-bold">Model-View-Controller</span> architecture for our application.
               </p>
-              <p className="text-primary-foreground font-bold leading-relaxed">
+              <p className="text-2xl text-primary-foreground font-bold leading-relaxed">
                 My Specific Contributions:
               </p>
               <ul className="list-disc list-inside text-primary-foreground/80">
