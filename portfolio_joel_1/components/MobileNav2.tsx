@@ -58,11 +58,12 @@ const MobileNav2 = () => {
                                 <Link
                                     href={link.path}
                                     key={index}
-                                    className={`${isActive ? "text-accent border-b border-accent" : ""
-                                        } capitalize hover:text-accent transition-all duration-300 font-medium tracking-wide`}
+                                    className={`capitalize hover:text-accent transition-all duration-300 font-medium tracking-wide w-full text-start`}
                                     onClick={() => setIsOpen(false)}
                                 >
-                                    {link.name}
+                                    <span className={`${isActive ? "text-accent border-b border-accent" : ""}`}>
+                                        {link.name}
+                                    </span>
                                 </Link>
                             );
                         })}

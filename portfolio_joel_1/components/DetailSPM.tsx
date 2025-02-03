@@ -26,14 +26,13 @@ export default function SPMDetails() {
                     <p className="text-primary-foreground/80 mb-4">
                         There are three possible types of users that may use our application, and for each user the application will offer different capabilities.
                     </p>
-                    <ul className="text-primary-foreground/80 space-y-3 mb-4 pl-5">
+                    <ul className="text-primary-foreground/80 space-y-3 mb-4 pl-5 list-disc list-inside">
                         {[
                             "Staff",
                             "Managers \& Directors",
                             "Human Resources (HR) and Senior Management",
                         ].map((item, index) => (
-                            <li key={index} className="flex items-start">
-                                <span className="inline-block w-1 h-1 mr-2 mt-2 bg-accent rounded-full flex-shrink-0" />
+                            <li key={index} className="">
                                 <span>{item}</span>
                             </li>
                         ))}
@@ -50,15 +49,14 @@ export default function SPMDetails() {
                             <p className="text-primary-foreground/80">
                                 Staff are able to:
                             </p>
-                            <ul className="text-primary-foreground/80 space-y-3 mb-4 pl-5">
+                            <ul className="text-primary-foreground/80 space-y-3 mb-4 pl-5 list-disc list-inside">
                                 {[
                                     "View their own schedule.",
                                     "View their team members\' schedules.",
                                     "Apply for a working arrangement on a certain day.",
                                     "Change/Withdraw a selected working arrangement.",
                                 ].map((item, index) => (
-                                    <li key={index} className="flex items-start">
-                                        <span className="inline-block w-1 h-1 mr-2 mt-2 bg-accent rounded-full flex-shrink-0" />
+                                    <li key={index} className="">
                                         <span>{item}</span>
                                     </li>
                                 ))}
@@ -86,13 +84,12 @@ export default function SPMDetails() {
                             <p className="text-primary-foreground/80">
                                 Managers &amp; Directors are given additional capabilities to manage teams under them:
                             </p>
-                            <ul className="text-primary-foreground/80 space-y-3 mb-4 pl-5">
+                            <ul className="text-primary-foreground/80 space-y-3 mb-4 pl-5 list-disc list-inside">
                                 {[
                                     "Approve and reject arrangements from team members.",
                                     "View approved and rejected arrangements from team members."
                                 ].map((item, index) => (
-                                    <li key={index} className="flex items-start">
-                                        <span className="inline-block w-1 h-1 mr-2 mt-2 bg-accent rounded-full flex-shrink-0" />
+                                    <li key={index} className="">
                                         <span>{item}</span>
                                     </li>
                                 ))}
@@ -118,14 +115,13 @@ export default function SPMDetails() {
                             <p className="text-primary-foreground/80">
                                 HR &amp; Senior Managers are given additional capabilities to manage departments and teams:
                             </p>
-                            <ul className="text-primary-foreground/80 space-y-3 mb-4 pl-5">
+                            <ul className="text-primary-foreground/80 space-y-3 mb-4 pl-5 list-disc list-inside">
                                 {[
                                     "View all departments in organisation.",
                                     "View all teams in each department.",
                                     "View schedule of any chosen team.",
                                 ].map((item, index) => (
-                                    <li key={index} className="flex items-start">
-                                        <span className="inline-block w-1 h-1 mr-2 mt-2 bg-accent rounded-full flex-shrink-0" />
+                                    <li key={index} className="">
                                         <span>{item}</span>
                                     </li>
                                 ))}
@@ -217,14 +213,13 @@ export default function SPMDetails() {
                     <p className="text-primary-foreground/80">
                         As Scrum master I was in charge of organising the team and facilitating Scrum meetings including:
                     </p>
-                    <ul className="text-primary-foreground/80 space-y-3 mb-4 pl-5">
+                    <ul className="text-primary-foreground/80 space-y-3 mb-4 pl-5 list-disc list-inside">
                         {[
                             "Daily standups.",
                             "Sprint reviews.",
                             "Sprint retrospectives.",
                         ].map((item, index) => (
-                            <li key={index} className="flex items-start">
-                                <span className="inline-block w-1 h-1 mr-2 mt-2 bg-accent rounded-full flex-shrink-0" />
+                            <li key={index} className="">
                                 <span>{item}</span>
                             </li>
                         ))}
@@ -253,7 +248,7 @@ export default function SPMDetails() {
                             <p className="text-primary-foreground/80">
                                 Confluence was integrated to our Jira workflow, and it was used as a shared repository of information. Key documents we had included:
                             </p>
-                            <ul className="text-primary-foreground/80 space-y-3 mb-4 pl-5">
+                            <ul className="text-primary-foreground/80 space-y-3 mb-4 pl-5 list-disc list-inside">
                                 {[
                                     "Customer briefs.",
                                     "Database schemas.",
@@ -263,8 +258,7 @@ export default function SPMDetails() {
                                     "Test cases.",
                                     "Minutes for all meetings.",
                                 ].map((item, index) => (
-                                    <li key={index} className="flex items-start">
-                                        <span className="inline-block w-1 h-1 mr-2 mt-2 bg-accent rounded-full flex-shrink-0" />
+                                    <li key={index} className="">
                                         <span>{item}</span>
                                     </li>
                                 ))}
@@ -291,7 +285,7 @@ export default function SPMDetails() {
                             <section className="flex flex-col md:flex-row gap-3 lg:gap-8 items-center ">
                                 <div className="flex-1 order-2 lg:order-1 space-y-4">
                                     <p className="text-primary-foreground/80">
-                                        I made the logo too! AIO stands for our app name: All in One. 
+                                        I made the logo too! AIO stands for our app name: All in One.
                                     </p>
                                 </div>
                                 <div className="flex-1 flex justify-center items-center order-1 lg:order-2">

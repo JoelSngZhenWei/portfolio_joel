@@ -174,7 +174,7 @@ export default function SPM() {
             {/* Project Title and Date */}
             <div className="text-center lg:text-left mb-8 lg:mb-0">
               <h1 className="text-3xl lg:text-4xl font-bold  mb-4">
-                HRMS Employee Scheduling
+                Employee Scheduling
                 <br />
                 <span className="text-accent">Web Application</span>
               </h1>
@@ -211,11 +211,22 @@ export default function SPM() {
             <h2 className="text-2xl font-semibold tracking-wide">Summary</h2>
             <div className="space-y-4">
               <p className="text-primary-foreground/80 leading-relaxed">
-                In this project my group sought to develop an HRMS application while documenting our project processes, particularly how we facilitated Scrum during this project and leveraged CI/CD practices in our development. Our backend was developed in Flask, and our frontend was developed in Next.JS.
+                My group developed an employee scheduling application while documenting our project processes, particularly how we facilitated Scrum during this project, DevOps processes, and CI/CD practices. Our backend was developed in Flask, and our frontend was developed in Next.JS.
               </p>
-              <p className="text-primary-foreground/80 leading-relaxed">
-                My specific contributions to this project was acting as the Scrum master for this project, and as a backend developer. As Scrum master, I maintained the Jira and Confluence platforms we used to track progress. As a backend developer, I was in charge of developing the Flask application and integrating it with the frontend my team had developed. Beyond these, I believe my most substantial contributions were developing the entire CI/CD pipeline for automated testing, integration, and deployment for our web application. 
+              <p className="text-primary-foreground font-bold leading-relaxed">
+                My Specific Contributions:
               </p>
+              <ul className="list-disc list-inside text-primary-foreground/80">
+                <li>
+                  <span className="font-bold text-primary-foreground">Scrum master</span> for this project, maintaining collaboration platforms such as Jira and Confluence and facilitating standups, reviews, and retrospectives.
+                </li>
+                <li>
+                  <span className="font-bold text-primary-foreground">Lead DevOps engineer</span>, implemented entire CI/CD and testing pipeline for automated testing, integration, and deployment of web application. Handled deployment of backend and database.
+                </li>
+                <li>
+                  <span className="font-bold text-primary-foreground">Backend developer</span>, worked on developing backend application models and controllers in Flask connected to a relational database.
+                </li>
+              </ul>
               <p className="text-primary-foreground/80 leading-relaxed">
                 This project was undertaken as part of an SMU module, &apos;IS212 Software Project Management&apos;. I received a distinction for my part in this project and for this module overall.
               </p>

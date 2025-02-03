@@ -4,22 +4,25 @@ import { motion } from "framer-motion";
 import { BsArrowDownRight } from "react-icons/bs";
 import Link from "next/link";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import Image from "next/image"
 
 const projects = [
   {
     num: '01',
     title: 'Options Pricing using Machine Learning',
     description: 'Using machine learning models including SVR, artificial neural networks, and LSTM, to price options and evaluating performance against traditional mathematical models.',
-    skills: ['Machine Learning', 'Neural Networks'],
+    skills: ['Machine Learning', 'Data Science'],
     href: 'projects/mla',
+    src: '/mla/ann_initial2.png',
     inProgress: false,
   },
   {
     num: '02',
-    title: 'Project Management for Software Development',
-    description: 'Led a software development project over 5 months as both Scrum Master and backend developer. Developed an HRMS scheduling web application.',
+    title: 'Employee Scheduling Web Application',
+    description: 'Led a software development project over 5 months as Scrum Master, lead DevOps engineer, and backend developer. Developed an HRMS scheduling web application.',
     skills: ['App Development', 'Scrum'],
     href: 'projects/spm',
+    src: '/spm/schedule_personal.png',
     inProgress: false,
   },
   // {
@@ -43,53 +46,71 @@ export default function Projects() {
 
 
   return (
-    <section className="min-h-[80vh] flex flex-col justify-center py-6 xl:py-0">
+    <section className="min-h-[80vh] flex flex-col justify-center xl:py-0">
       <div className="container mx-auto">
-
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
             transition: { delay: 2, duration: 0.4, ease: "easeIn" }
           }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-[30px] xl:gap-[60px]"
+          className="grid grid-cols-1 md:grid-cols-2 gap-[10px] lg:gap-[60px]"
         >
           {projects.map((project, index) => {
             return (
-              <div key={index} className="flex-1 flex flex-col justify-center gap-3 xl:gap-6 group">
-                {/* Top */}
-                <div className="w-full flex justify-between items-center">
-                  <div className="text-3xl lg:text-6xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">{project.num}</div>
-                  {project.inProgress ? (
-                    <button
-                      onClick={() => handleProjectClick(project)}
-                      className="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-primary-foreground group-hover:bg-accent transition-all duration-500 flex justify-center items-center group-hover:-rotate-45"
-                    >
-                      <BsArrowDownRight className="text-primary text-3xl" />
-                    </button>
-                  ) : (
-                    <Link
-                      href={project.href}
-                      className="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-primary-foreground group-hover:bg-accent transition-all duration-500 flex justify-center items-center group-hover:-rotate-45"
-                    >
-                      <BsArrowDownRight className="text-primary text-3xl" />
-                    </Link>
-                  )}
-                </div>
+              <div
+                key={index}
+                className="flex flex-col justify-between gap-3 border border-primary-foreground/20 lg:gap-6 group rounded-lg p-6 "
+              >
                 {/* title */}
-                <h2 className="text-[30px] xl:text-[42px] font-bold leading-none text-primary-foreground group-hover:text-accent transition-all duration-500">
-                  <Link href={project.href}
-                  >
-                    {project.title}
-                  </Link>
-                </h2>
+                <div className="grid grid-cols-6 gap-4">
+                  <div className="col-span-5">
+                    <h2 className="text-[25px] xl:text-[30px] font-bold leading-none text-primary-foreground group-hover:text-accent transition-all duration-500">
+                      <Link href={project.href}
+                      >
+                        {project.title}
+                      </Link>
+                    </h2>
+                  </div>
+                  <div className="flex justify-end">
+                    {project.inProgress ? (
+                      <button
+                        onClick={() => handleProjectClick(project)}
+                        className="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-primary-foreground group-hover:bg-accent transition-all duration-500 flex justify-center items-center group-hover:-rotate-45"
+                      >
+                        <BsArrowDownRight className="text-primary text-3xl" />
+                      </button>
+                    ) : (
+                      <Link
+                        href={project.href}
+                        className="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-primary-foreground group-hover:bg-accent transition-all duration-500 flex justify-center items-center group-hover:-rotate-45"
+                      >
+                        <BsArrowDownRight className="text-primary text-3xl" />
+                      </Link>
+                    )}
+                  </div>
+
+                </div>
+
+                {/* image */}
+                <div className="relative w-full h-32 lg:h-64 rounded-lg">
+                  <Image
+                    src={project.src || "/placeholder.svg"}
+                    alt={`${project.title} preview`}
+                    fill={true}
+                    style={{ objectFit: "cover" }}
+                    className="transition-transform duration-300 rounded-lg"
+                  />
+                </div>
+
+
                 {/* description */}
-                <p className="text-primary-foreground/60 text-sm">{project.description}</p>
+                <p className="text-primary-foreground/60 text-xs lg:text-sm">{project.description}</p>
                 <div className="flex flex-row gap-4 flex-wrap">
                   {project.skills.map((skill, index) => {
                     return (
                       <div key={index}>
-                        <div className="bg-secondary rounded-full px-6 py-3 text-sm">
+                        <div className="bg-secondary rounded-full px-4 py-2 lg:px-6 lg:py-3 text-xs lg:text-sm">
                           {skill}
                         </div>
                       </div>
@@ -98,7 +119,7 @@ export default function Projects() {
                 </div>
 
                 {/* border */}
-                <div className="border-b border-primary-foreground/20 w-full"></div>
+                {/* <div className="border-b border-primary-foreground/20 w-full"></div> */}
               </div>
             )
           })}
