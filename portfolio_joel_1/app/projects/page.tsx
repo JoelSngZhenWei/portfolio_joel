@@ -10,7 +10,7 @@ const projects = [
   {
     num: '01',
     title: 'Employee Scheduling Web Application',
-    description: 'Led a software development project over 5 months as Scrum Master, lead DevOps engineer, and backend developer. Developed an HRMS scheduling web application.',
+    description: 'Led a software development project over 5 months as Scrum Master, lead DevOps engineer, and backend developer.',
     skills: ['App Development', 'Scrum'],
     href: 'projects/spm',
     src: '/spm/schedule_personal.png',
@@ -19,7 +19,7 @@ const projects = [
   {
     num: '02',
     title: 'Options Pricing using Machine Learning',
-    description: 'Using machine learning models including SVR, artificial neural networks, and LSTM, to price options and evaluating performance against traditional mathematical models.',
+    description: 'Using machine learning models including SVR, artificial neural networks, and LSTM, to price options and evaluated performance.',
     skills: ['Machine Learning', 'Data Science'],
     href: 'projects/mla',
     src: '/mla/ann_initial2.png',
@@ -61,7 +61,7 @@ export default function Projects() {
             return (
               <div
                 key={index}
-                className="flex flex-col justify-between gap-3 border border-primary-foreground/20 lg:gap-6 group rounded-lg p-6 "
+                className="flex flex-col justify-between gap-3 border border-primary-foreground/20 lg:gap-6 group rounded-lg p-3 lg:p-6 "
               >
                 {/* title */}
                 <div className="grid grid-cols-6 gap-4">

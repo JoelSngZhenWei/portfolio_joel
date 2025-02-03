@@ -17,7 +17,13 @@ import {
 
 const links = [
     { name: "home", path: "/" },
-    { name: "projects", path: "/projects" },
+    {
+        name: "projects", path: "/projects", hasSubLinks: true, subLinks:
+            [
+                { name: "home", path: "/" },
+                { name: "home", path: "/" }
+            ]
+    },
     { name: "resume", path: "/resume" },
     { name: "contact", path: "/contact" },
     { name: "settings", path: "/settings" },
