@@ -61,7 +61,7 @@ export default function Projects() {
             return (
               <div
                 key={index}
-                className="flex flex-col justify-between gap-3 border border-primary-foreground/20 lg:gap-6 group rounded-lg p-4 lg:p-6 "
+                className="flex flex-col justify-between gap-3 border border-primary-foreground/20  lg:gap-6 group rounded-lg p-4 lg:p-6 "
               >
                 {/* title */}
                 <div className="grid grid-cols-6 gap-4">
