@@ -77,14 +77,14 @@ export default function Projects() {
                     {project.inProgress ? (
                       <button
                         onClick={() => handleProjectClick(project)}
-                        className="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-primary-foreground group-hover:bg-accent transition-all duration-500 flex justify-center items-center group-hover:-rotate-45"
+                        className="w-10 h-10 lg:w-16 lg:h-16 rounded-full bg-primary-foreground group-hover:bg-accent transition-all duration-500 flex justify-center items-center group-hover:-rotate-45"
                       >
                         <BsArrowDownRight className="text-primary text-lg lg:text-3xl" />
                       </button>
                     ) : (
                       <Link
                         href={project.href}
-                        className="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-primary-foreground group-hover:bg-accent transition-all duration-500 flex justify-center items-center group-hover:-rotate-45"
+                        className="w-10 h-10 lg:w-16 lg:h-16 rounded-full bg-primary-foreground group-hover:bg-accent transition-all duration-500 flex justify-center items-center group-hover:-rotate-45"
                       >
                         <BsArrowDownRight className="text-primary text-lg lg:text-3xl" />
                       </Link>
