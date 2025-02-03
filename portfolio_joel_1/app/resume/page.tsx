@@ -10,7 +10,8 @@ import {
   FaReact,
   FaNodeJs,
   FaPython,
-  FaAws
+  FaAws,
+  FaJava
 } from 'react-icons/fa'
 import {
   SiNextdotjs,
@@ -19,12 +20,10 @@ import { TbSql } from "react-icons/tb";
 import { SiScikitlearn, SiPandas, SiTensorflow, SiSelenium, SiUipath, SiTableau, SiFlask } from "react-icons/si";
 import { VscAzure } from "react-icons/vsc";
 import { BsBarChartFill } from "react-icons/bs";
-
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { motion } from "framer-motion";
-
 import { SkillModal } from "@/components/SkillModal"
 import ResumeEducation from '@/components/ResumeEducation';
 import ResumeExperience from '@/components/ResumeExperience';
@@ -38,7 +37,7 @@ interface Skill {
 
 const skills = {
   title: "My Skills",
-  description: "I have extensive experience and expertise in machine learning, automation, data manipulation, and software development.",
+  description: "Extensive expertise in machine learning, automation, data manipulation, and software development. The following are languages, frameworks, libraries, and softwares I have experience in.",
   details: {
     Languages: {
       title: "Languages",
@@ -62,6 +61,11 @@ const skills = {
           icon: <TbSql />,
           name: "SQL",
           description: "Managing and querying relational databases efficiently."
+        },
+        {
+          icon: <FaJava />,
+          name: "Java",
+          description: "Application backend development."
         }
       ],
     },
@@ -187,7 +191,7 @@ export default function Resume() {
             {/* Resume experience, education, and cca must always be formatted the same */}
             {/* Changes to one must be reflected in the others */}
             {/* ------------------------------------------------------------------ */}
-            
+
             {/* experience */}
             <TabsContent value='experience' className='w-full h-full'>
               <ResumeExperience />

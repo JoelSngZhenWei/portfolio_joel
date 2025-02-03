@@ -103,7 +103,7 @@ export default function Contact() {
                   Let&apos;s work together
                 </h3>
                 <p className="text-primary-foreground/60 text-sm lg:text-base">
-                  Whether you&apos;re an employer seeking a passionate data scientist or developer, a collaborator with an exciting project, or simply looking to connect, I would love to hear from you! Feel free to send me an email or leave a message, and I&apos;ll get back to you as soon as possible.
+                  Whether you&apos;re an employer seeking a passionate developer, a collaborator with an exciting project, or simply looking to connect, I would love to hear from you! Feel free to send me an email, give me a call, or use the contact form below, and I&apos;ll get back to you as soon as possible.
                 </p>
                 {/* input */}
                 <div className="grid grid-cols-1 pt-4 md:grid-cols-2 gap-4">
