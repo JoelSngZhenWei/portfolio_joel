@@ -151,24 +151,24 @@ export default function Contact() {
             </div>
 
             {/* info */}
-            <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-4 xl:mb-0">
-              <ul className="flex flex-row lg:flex-col gap-2 border lg:gap-10">
+            <div className="flex-1 flex items-center lg:justify-end order-1 lg:order-none mb-4 lg:mb-0 ">
+              <ul className="flex flex-row lg:flex-col gap-2 border lg:gap-10 w-[100vw] lg:w-auto justify-center">
                 {info.map((item, index) => {
                   return (
-                    <li key={index} className="border flex items-center gap-3 xl:gap-6">
+                    <li key={index} className="border flex items-center gap-3 lg:gap-6 ">
                       <div className="w-[30px] h-[30px] lg:w-[72px] lg:h-[72px] bg-secondary text-accent rounded-md flex items-center justify-center shadow-md">
                         <div className="text-xs lg:text-2xl">{item.icon}</div>
                       </div>
                       <div className="flex-1 flex items-center">
                         <div>
                           <p className="text-primary-foreground/60 hidden lg:block text-xs lg:text-base tracking-wide">{item.title}</p>
-                          <h3 className="text-xs xl:text-xl tracking-wide">{item.description}</h3>
+                          <h3 className="text-xs lg:text-xl tracking-wide">{item.description}</h3>
                         </div>
                         <TooltipProvider>
                           <Tooltip>
                             <TooltipTrigger asChild>
                               <Button
-                                className="ml-1 lg:ml-2 transition-all bg-transparent text-primary-foreground/80 hover:bg-transparent lg:hover:bg-secondary/80
+                                className="lg:ml-2 transition-all bg-transparent text-primary-foreground/80 hover:bg-transparent lg:hover:bg-secondary/80
                                 "
                                 onClick={async () => {
                                   try {
