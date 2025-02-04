@@ -12,9 +12,10 @@ import {
   FaPython,
   FaAws,
   FaJava,
-  FaVuejs
 } from 'react-icons/fa'
 import {
+  SiDatabricks,
+  SiLangchain,
   SiNextdotjs,
 } from 'react-icons/si'
 import { TbSql } from "react-icons/tb";
@@ -38,7 +39,7 @@ interface Skill {
 
 const skills = {
   title: "My Skills",
-  description: "Extensive expertise in machine learning, automation, data manipulation, and software development. The following are languages, frameworks, libraries, and softwares I have experience in.",
+  description: "Extensive expertise in machine learning, automation, data manipulation, and software development. Scroll to see more, and click on each icon to learn more.",
   details: {
     Languages: {
       title: "Languages",
@@ -74,6 +75,11 @@ const skills = {
       title: "Frameworks \& Libraries",
       list: [
         {
+          icon: <SiLangchain />,
+          name: "LangChain",
+          description: "Developing context-aware LLM applications and agentic workflows."
+        },
+        {
           icon: <SiSelenium />,
           name: "Selenium",
           description: "Automating web browsers to perform testing, data collection, and scraping tasks."
@@ -108,11 +114,6 @@ const skills = {
           name: "React.js",
           description: "Building component-based user interfaces."
         },
-        {
-          icon: <FaVuejs />,
-          name: "Vue.js",
-          description: "For efficiently building interactive application UI."
-        },
       ]
     },
     Software: {
@@ -124,6 +125,11 @@ const skills = {
           description: "Deploying, hosting, and monitoring cloud applications for company usage."
         },
         {
+          icon: <SiDatabricks />,
+          name: "Azure Databricks",
+          description: "Developing and running data manipulation and LLM API pipelines."
+        },
+        {
           icon: <FaAws />,
           name: "AWS",
           description: "Deploying and managing backend applications and databases."
@@ -131,7 +137,7 @@ const skills = {
         {
           icon: <SiUipath />,
           name: "UiPath",
-          description: "Low-code robotic process automation to automate repetitive tasks."
+          description: "Robotic process automation to automate repetitive tasks."
         },
         {
           icon: <SiTableau />,
@@ -171,14 +177,14 @@ export default function Resume() {
     >
       <div className='container mx-auto'>
         <Tabs defaultValue='experience' className='flex flex-col lg:flex-row gap-4'>
-          <div className="flex flex-col w-full lg:max-w-[380px] mx-auto lg:mx-0 gap-2">
+          <div className="flex flex-col w-full lg:max-w-[380px] mx-auto lg:mx-0 gap-2 lg:gap-5">
             <TabsList className="flex flex-row justify-center lg:justify-start w-full gap-2 lg:gap-6 lg:flex-col">
               <TabsTrigger value="experience" className="bg-secondary px-4 flex-grow lg:flex-grow-0">Experience</TabsTrigger>
               <TabsTrigger value="education" className="bg-secondary px-4 flex-grow lg:flex-grow-0">Education</TabsTrigger>
               <TabsTrigger value="skills" className="bg-secondary px-4 flex-grow lg:flex-grow-0">Skills</TabsTrigger>
               <TabsTrigger value="cca" className="bg-secondary px-4 flex-grow lg:flex-grow-0">CCA</TabsTrigger>
             </TabsList>
-            <Button variant="outline" className="uppercase w-full lg:w-auto h-9">
+            <Button variant="outline" className="uppercase w-full lg:w-auto h-9 lg:h-11">
               <a href="/assets/resume_joelsng.pdf" download="resume_joelsng.pdf" className="flex text-xs lg:text-base items-center justify-center gap-2 w-full">
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
@@ -218,13 +224,13 @@ export default function Resume() {
                       {Object.entries(skills.details).map(([key, { title, list }]) => (
                         <div key={key}>
                           <span className="text-accent font-bold">{title}</span>
-                          <ul className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]">
+                          <ul className="grid grid-cols-3 mt-2 lg:grid-cols-4 gap-4 lg:gap-[30px]">
                             {list.map((item, index) => (
                               <li key={index}>
                                 <TooltipProvider delayDuration={100}>
                                   <Tooltip>
                                     <TooltipTrigger
-                                      className="w-full h-[90px] lg:h-[150px] bg-primary rounded-xl flex flex-col justify-center items-center group shadow-md"
+                                      className="w-full h-[90px] lg:h-[125px] bg-primary rounded-xl flex flex-col justify-center items-center group shadow-md"
                                       onClick={() => openModal(item)}
                                     >
                                       <div className="text-3xl lg:text-5xl group-hover:text-accent transition-all duration-300">

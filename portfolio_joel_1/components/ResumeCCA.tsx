@@ -41,8 +41,6 @@ export default function ResumeCCA() {
                   <h3 className='text-base lg:text-xl  font-bold'>{item.position}</h3>
                 </div>
                 <div className='flex items-center gap-3'>
-                  {/* dot */}
-                  <span className='w-[4px] h-[4px] lg:w-[6px] lg:h-[6px] rounded-full bg-accent'></span>
                   <p className='text-primary-foreground/60 text-sm lg:text-base'>{item.organisation}</p>
                 </div>
               </li>
