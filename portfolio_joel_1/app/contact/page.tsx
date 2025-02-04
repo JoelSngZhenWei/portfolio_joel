@@ -34,7 +34,6 @@ const info = [
 import { motion } from "framer-motion";
 import { Tooltip, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { FaCheck, FaCopy } from "react-icons/fa6";
-import { CheckIcon } from "lucide-react";
 
 export default function Contact() {
   const [copiedId, setCopiedId] = useState<string | null>(null); // Track copied item
