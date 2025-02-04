@@ -155,14 +155,14 @@ export default function Contact() {
               <ul className="flex flex-row lg:flex-col gap-2 border lg:gap-10">
                 {info.map((item, index) => {
                   return (
-                    <li key={index} className="flex items-center gap-3 xl:gap-6">
+                    <li key={index} className="border flex items-center gap-3 xl:gap-6">
                       <div className="w-[30px] h-[30px] lg:w-[72px] lg:h-[72px] bg-secondary text-accent rounded-md flex items-center justify-center shadow-md">
                         <div className="text-xs lg:text-2xl">{item.icon}</div>
                       </div>
                       <div className="flex-1 flex items-center">
                         <div>
                           <p className="text-primary-foreground/60 hidden lg:block text-xs lg:text-base tracking-wide">{item.title}</p>
-                          <h3 className="text-sm xl:text-xl tracking-wide">{item.description}</h3>
+                          <h3 className="text-xs xl:text-xl tracking-wide">{item.description}</h3>
                         </div>
                         <TooltipProvider>
                           <Tooltip>
