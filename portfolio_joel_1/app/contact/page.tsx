@@ -32,8 +32,12 @@ const info = [
 ]
 
 import { motion } from "framer-motion";
+import { Tooltip, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { FaCheck, FaCopy } from "react-icons/fa6";
+import { CheckIcon } from "lucide-react";
 
 export default function Contact() {
+  const [copiedId, setCopiedId] = useState<string | null>(null); // Track copied item
 
   const { register, handleSubmit, reset } = useForm<FormData>();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -156,9 +160,36 @@ export default function Contact() {
                       <div className="w-[30px] h-[30px] lg:w-[72px] lg:h-[72px] bg-secondary text-accent rounded-md flex items-center justify-center shadow-md">
                         <div className="text-[15px] lg:text-[28px]">{item.icon}</div>
                       </div>
-                      <div className="flex-1">
-                        <p className="text-primary-foreground/60 text-xs lg:text-base tracking-wide">{item.title}</p>
-                        <h3 className="text-sm xl:text-xl tracking-wide">{item.description}</h3>
+                      <div className="flex-1 flex items-center">
+                        <div>
+                          <p className="text-primary-foreground/60 text-xs lg:text-base tracking-wide">{item.title}</p>
+                          <h3 className="text-sm xl:text-xl tracking-wide">{item.description}</h3>
+                        </div>
+                        <TooltipProvider>
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <Button
+                                className="ml-2 transition-all bg-transparent text-primary-foreground/80 hover:bg-secondary/80"
+                                onClick={async () => {
+                                  try {
+                                    await navigator.clipboard.writeText(item.description);
+                                    setCopiedId(item.title); // Track copied item
+
+                                    // Reset the copied state after 5 seconds
+                                    setTimeout(() => {
+                                      setCopiedId(null);
+                                    }, 2000);
+                                  } catch (error) {
+                                    console.error("Failed to copy:", error);
+                                  }
+                                }}
+                              >
+                                {copiedId === item.title ? <FaCheck className="text-accent" /> : <FaCopy />}
+                              </Button>
+
+                            </TooltipTrigger>
+                          </Tooltip>
+                        </TooltipProvider>
                       </div>
                     </li>
                   )
