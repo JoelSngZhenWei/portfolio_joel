@@ -152,10 +152,10 @@ export default function Contact() {
 
             {/* info */}
             <div className="flex-1 flex items-center lg:justify-end order-1 lg:order-none mb-4 lg:mb-0 ">
-              <ul className="grid grid-cols-2 lg:grid-cols-none lg:grid-rows-2 gap-2 border lg:gap-10 justify-center">
+              <ul className="grid grid-cols-2 lg:grid-cols-none lg:grid-rows-2 gap-2 lg:gap-10 justify-center">
                 {info.map((item, index) => {
                   return (
-                    <li key={index} className="border flex items-center gap-3 lg:gap-6 ">
+                    <li key={index} className="flex items-center gap-1.5 lg:gap-6 ">
                       <div className="w-[30px] h-[30px] lg:w-[72px] lg:h-[72px] bg-secondary text-accent rounded-md flex items-center justify-center shadow-md">
                         <div className="text-xs lg:text-2xl">{item.icon}</div>
                       </div>
