@@ -152,7 +152,7 @@ export default function Contact() {
 
             {/* info */}
             <div className="flex-1 flex items-center lg:justify-end order-1 lg:order-none mb-4 lg:mb-0 ">
-              <ul className="flex flex-row lg:flex-col gap-2 border lg:gap-10 w-[100vw] lg:w-auto justify-center">
+              <ul className="grid grid-cols-2 lg:grid-cols-none lg:grid-rows-2 gap-2 border lg:gap-10 justify-center">
                 {info.map((item, index) => {
                   return (
                     <li key={index} className="border flex items-center gap-3 lg:gap-6 ">
