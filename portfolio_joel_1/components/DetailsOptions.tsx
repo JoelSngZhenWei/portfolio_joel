@@ -51,22 +51,22 @@ const OptionsTable: React.FC<{ data: OptionData[]; title: string }> = ({ data, t
                     {data.map((row) => (
                         <TableRow key={row.model}>
                             <TableCell className="font-medium">{row.model}</TableCell>
-                            <TableCell className={row.model === getBestModel("rmseCall") ? "bg-green-900" : ""}>
+                            <TableCell className={row.model === getBestModel("rmseCall") ? "bg-green-900 text-table-highlight" : ""}>
                                 {row.rmseCall.toFixed(2)}
                             </TableCell>
-                            <TableCell className={row.model === getBestModel("maeCall") ? "bg-green-900" : ""}>
+                            <TableCell className={row.model === getBestModel("maeCall") ? "bg-green-900 text-table-highlight" : ""}>
                                 {row.maeCall.toFixed(2)}
                             </TableCell>
-                            <TableCell className={row.model === getBestModel("r2Call", false) ? "bg-green-900" : ""}>
+                            <TableCell className={row.model === getBestModel("r2Call", false) ? "bg-green-900 text-table-highlight" : ""}>
                                 {row.r2Call.toFixed(2)}
                             </TableCell>
-                            <TableCell className={row.model === getBestModel("rmsePut") ? "bg-green-900" : ""}>
+                            <TableCell className={row.model === getBestModel("rmsePut") ? "bg-green-900 text-table-highlight" : ""}>
                                 {row.rmsePut.toFixed(2)}
                             </TableCell>
-                            <TableCell className={row.model === getBestModel("maePut") ? "bg-green-900" : ""}>
+                            <TableCell className={row.model === getBestModel("maePut") ? "bg-green-900 text-table-highlight" : ""}>
                                 {row.maePut.toFixed(2)}
                             </TableCell>
-                            <TableCell className={row.model === getBestModel("r2Put", false) ? "bg-green-900" : ""}>
+                            <TableCell className={row.model === getBestModel("r2Put", false) ? "bg-green-900 text-table-highlight" : ""}>
                                 {row.r2Put.toFixed(2)}
                             </TableCell>
                         </TableRow>
