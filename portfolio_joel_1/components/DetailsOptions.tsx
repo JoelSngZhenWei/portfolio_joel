@@ -66,7 +66,7 @@ const OptionsTable: React.FC<{ data: OptionData[]; title: string }> = ({ data, t
                             <TableCell className={row.model === getBestModel("maePut") ? "bg-green-900 text-table-highlight" : ""}>
                                 {row.maePut.toFixed(2)}
                             </TableCell>
-                            <TableCell className={row.model === getBestModel("r2Put", false) ? "bg-green-900 text-table-highlight" : ""}>
+                            <TableCell className={row.model === getBestModel("r2Put", false) ? "bg-green-900 text-red-900" : ""}>
                                 {row.r2Put.toFixed(2)}
                             </TableCell>
                         </TableRow>
