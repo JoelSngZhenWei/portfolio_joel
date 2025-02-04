@@ -21,7 +21,7 @@ body {
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
     --accent: 197 93.1% 39.8%;
-    --accent-foreground: 0 0% 9%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 89.8%;
@@ -35,6 +35,7 @@ body {
     --radius: 0.5rem;
     --outline-color: 0 0% 100%;
     --outline-hover-color: 197 93.1% 39.8%;
+    --table-highlight: 0 0% 100%;
   }
   .light {
     --primary: 216 31.3% 93.7%;
@@ -42,9 +43,10 @@ body {
     --secondary: 216 30.8% 79.6%;
     --secondary-foreground: 0 0% 9%;
     --accent: 224 86.2% 39.8%;
-    --accent-foreground: 0 0% 9%;
+    --accent-foreground: 0 0% 100%;
     --outline-color: 0 0% 0%;
     --outline-hover-color: 224 86.2% 39.8%;
+    --table-highlight: 0 0% 100%;
   }
 }
 

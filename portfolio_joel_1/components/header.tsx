@@ -17,7 +17,7 @@ export function Header() {
 
           {/* Logo */}
           <Link href="/" className="transition-all duration-300 hover:text-accent text-primary-foreground">
-            <h1 className="text-lg lg:text-3xl font-semibold tracking-wide">Joel Sng</h1>
+            <h1 className="text-lg lg:text-2xl font-semibold tracking-wide">Joel Sng</h1>
           </Link>
 
           {/* windows nav */}
