@@ -152,7 +152,7 @@ export default function Contact() {
 
             {/* info */}
             <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-4 xl:mb-0">
-              <ul className="flex flex-row lg:flex-col gap-5 lg:gap-10">
+              <ul className="flex flex-row lg:flex-col gap-2 border lg:gap-10">
                 {info.map((item, index) => {
                   return (
                     <li key={index} className="flex items-center gap-3 xl:gap-6">
@@ -168,7 +168,7 @@ export default function Contact() {
                           <Tooltip>
                             <TooltipTrigger asChild>
                               <Button
-                                className="ml-2 transition-all bg-transparent text-primary-foreground/80 hover:bg-secondary/80"
+                                className="ml-1 lg:ml-2 transition-all bg-transparent text-primary-foreground/80 hover:bg-transparent lg:hover:bg-secondary/80"
                                 onClick={async () => {
                                   try {
                                     await navigator.clipboard.writeText(item.description);
