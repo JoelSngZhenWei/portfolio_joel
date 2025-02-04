@@ -156,7 +156,7 @@ export default function Contact() {
                 {info.map((item, index) => {
                   return (
                     <li key={index} className="flex items-center gap-1.5 lg:gap-6 ">
-                      <div className="w-[30px] h-[30px] lg:w-[72px] lg:h-[72px] bg-secondary text-accent rounded-md flex items-center justify-center shadow-md">
+                      <div className="w-[25px] h-[25px] lg:w-[72px] lg:h-[72px] bg-secondary text-accent rounded-md flex items-center justify-center shadow-md">
                         <div className="text-xs lg:text-2xl">{item.icon}</div>
                       </div>
                       <div className="flex-1 flex items-center">
@@ -184,7 +184,7 @@ export default function Contact() {
                                   }
                                 }}
                               >
-                                {copiedId === item.title ? <FaCheck className="text-accent" /> : <FaCopy />}
+                                {copiedId === item.title ? <FaCheck className="text-accent text-[8px] lg:text-base" /> : <FaCopy className="text-[8px] lg:text-base"/>}
                               </Button>
 
                             </TooltipTrigger>
