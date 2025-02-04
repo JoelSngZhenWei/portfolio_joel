@@ -35,7 +35,7 @@ body {
     --radius: 0.5rem;
     --outline-color: 0 0% 100%;
     --outline-hover-color: 197 93.1% 39.8%;
-    --text-table-highlight: 0 0% 100%;
+    --table-highlight: 0 0% 100%;
   }
   .light {
     --primary: 216 31.3% 93.7%;
@@ -46,7 +46,7 @@ body {
     --accent-foreground: 0 0% 9%;
     --outline-color: 0 0% 0%;
     --outline-hover-color: 224 86.2% 39.8%;
-    --text-table-highlight: 0 0% 100%;
+    --table-highlight: 0 0% 100%;
   }
 }
 
