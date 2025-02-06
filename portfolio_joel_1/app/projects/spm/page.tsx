@@ -174,9 +174,9 @@ export default function SPM() {
             {/* Project Title and Date */}
             <div className="text-center lg:text-left mb-8 lg:mb-0">
               <h1 className="text-3xl lg:text-4xl font-bold  mb-4">
-                Employee Scheduling
+                Employee Scheduling Web Application with 
                 <br />
-                <span className="text-accent">Web Application</span>
+                <span className="text-accent">DevOps Focus</span>
               </h1>
               <div className="flex flex-row gap-3 items-center justify-between">
                 <p className="text-accent font-medium text-lg">Aug 2024 - Dec 2024</p>

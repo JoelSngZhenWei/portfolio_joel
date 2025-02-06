@@ -9,7 +9,7 @@ import Image from "next/image"
 const projects = [
   {
     num: '01',
-    title: 'Employee Scheduling Web Application',
+    title: 'Employee Scheduling Web Application with DevOps Focus',
     description: 'Led a software development project over 5 months as Scrum Master, lead DevOps engineer, and backend developer.',
     skills: ['App Development', 'Scrum'],
     href: 'projects/spm',
