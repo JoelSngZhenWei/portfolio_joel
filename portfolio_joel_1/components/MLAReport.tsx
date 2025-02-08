@@ -158,12 +158,12 @@ const ANNlatex = `
     \\frac{\\partial \\mathcal{L}}{\\partial b_{n-2}} = \\delta_{n-2} \\tag{B-7}
     \\]
 
-    \<strong>As per our module content, model weights and biases would be updated</strong>
+    \<strong>Model weights and biases would be updated</strong>
     \\[
-    \\W_i = W_i - \\eta \\cdot \\frac{\\partial \\mathcal{L}}{\\partial W_i} \\tag{B-8}
+    W_{i} = W_i - \\eta \\cdot \\frac{\\partial \\mathcal{L}}{\\partial W_i} \\tag{B-8}
     \\]
     \\[
-    \\b_i = b_i - \\eta \\cdot \\frac{\\partial \\mathcal{L}}{\\partial b_i} \tag{B-9}
+    b_i = b_i - \\eta \\cdot \\frac{\\partial \\mathcal{L}}{\\partial b_i} \\tag{B-9}
     \\]
   `;
 
