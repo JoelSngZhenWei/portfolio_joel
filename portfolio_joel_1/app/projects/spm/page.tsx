@@ -245,9 +245,12 @@ export default function SPM() {
                   {/* <TabsTrigger value="video" className="bg-secondary px-4 flex-grow lg:flex-grow-0">
                     Video Demo
                   </TabsTrigger> */}
-                  <TabsTrigger value="slides" className="bg-secondary px-4 flex-grow lg:flex-grow-0">
+                  {/* <TabsTrigger value="slides" className="bg-secondary px-4 flex-grow lg:flex-grow-0">
                     Slides
-                  </TabsTrigger>
+                  </TabsTrigger> */}
+                  {/* <TabsTrigger value="docs" className="bg-secondary px-4 flex-grow lg:flex-grow-0">
+                    Docs
+                  </TabsTrigger> */}
                   <TabsTrigger value="techstack" className="bg-secondary px-4 flex-grow lg:flex-grow-0">
                     Tech Stack
                   </TabsTrigger>

@@ -7,7 +7,6 @@ import Image from "next/image"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import OptionsDetails from "@/components/DetailsOptions"
 import { Button } from "@/components/ui/button"
-import PdfView from "@/components/PdfView"
 import { FaGithub } from "react-icons/fa"
 import Link from "next/link"
 import { ScrollArea } from "@/components/ui/scroll-area"
@@ -15,6 +14,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { SkillModal } from "@/components/SkillModal"
 import { useState } from "react"
 import { ScrollAreaWithProgress } from "@/components/ui/scroll-area-progress"
+import MLAReport from "@/components/MLAReport"
 
 interface Skill {
   icon: React.ReactElement
@@ -178,9 +178,9 @@ export default function MLA() {
                       My group wrote a research paper-style report on our findings with extensive citations, details on
                       the mathematical formulas involved in our models, and possible future work.
                     </p>
-                    <div className="h-[55vh] lg:h-[80vh]">
-                      <PdfView pdfPath="/assets/MLA_Final_Report.pdf" fileName="MLA_Final_Report.pdf" />
-                    </div>
+                    <ScrollArea className="bg-secondary p-4 rounded-xl flex h-[55vh] lg:h-[67.5vh]">
+                      <MLAReport pdfPath="/assets/MLA_Final_Report.pdf" fileName="MLA_Final_Report.pdf" />
+                    </ScrollArea>
                   </div>
                 </TabsContent>
 

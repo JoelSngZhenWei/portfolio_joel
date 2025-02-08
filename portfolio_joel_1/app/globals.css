@@ -79,6 +79,7 @@ body {
   .text-outline-hover {
     -webkit-text-stroke: 1px hsl(var(--outline-hover-color));
   }
+  
 }
 
 @layer utilities {
