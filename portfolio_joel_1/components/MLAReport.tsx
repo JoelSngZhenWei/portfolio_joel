@@ -84,7 +84,7 @@ const OptionsTable: React.FC<{ data: OptionData[]; title: string }> = ({ data, t
 }
 
 const ANNlatex = `
-    \<strong>Forwards Propagation Formulas (Binary Classifier)}</strong>
+    \<strong>Forwards Propagation Formulas (Binary Classifier)</strong>
     \\[
     z_{n-1} = a_{n-2} W_{n-1} + b_{n-1} \\tag{1}
     \\]
@@ -222,16 +222,16 @@ export default function MLAReport({ pdfPath, fileName }: PdfViewProps) {
         <h3 className="text-xl font-bold border-b border-white/20 pb-2">
           ANN Formulae
         </h3>
-        <div className="prose">
+        <div className="prose text-xs lg:text-base">
           <Latex>{ANNlatex}</Latex>
         </div>
       </section>
 
       <section>
         <h3 className="text-xl font-bold border-b border-white/20 pb-2">
-          BSM (Traditional Mathematical Method) Formulae
+          BSM (Traditional Pricing Method) Formulae
         </h3>
-        <div className="prose">
+        <div className="prose text-sm lg:text-base">
           <Latex>{BSMlatex}</Latex>
           <table className="min-w-full border border-primary-foreground">
             <thead>
