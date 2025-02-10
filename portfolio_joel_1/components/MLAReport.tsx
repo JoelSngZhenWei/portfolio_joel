@@ -212,8 +212,8 @@ export default function MLAReport({ pdfPath, fileName }: PdfViewProps) {
   return (
     <div className="w-full h-full space-y-4">
       <section>
-        <div className="flex w-full h-[60vh] justify-center">
-          <iframe src={pdfPath} allow="fullscreen" className="w-[75%] h-full rounded-lg"></iframe>
+        <div className="flex w-full h-[40vh] lg:h-[60vh] justify-center">
+          <iframe src={pdfPath} allow="fullscreen" className="w-[50%] lg:w-[75%] h-full rounded-lg"></iframe>
         </div>
       </section>
 
