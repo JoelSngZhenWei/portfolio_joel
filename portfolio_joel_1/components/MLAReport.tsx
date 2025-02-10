@@ -167,6 +167,46 @@ const ANNlatex = `
     \\]
   `;
 
+const BSMlatex = `
+  The BSM model is represented by a second-order partial differential equation.
+  \\[
+  \\frac{\\partial V}{\\partial t} + \\frac{1}{2}\\sigma^2 \\frac{\\partial^2 V}{\\partial S^2} + r S \\frac{\\partial^2 V}{\\partial S} -r V = 0
+  \\]
+
+  A key insight behind the equation is the concept of risk-neutral pricing, where the option's value can be hedged perfectly by dynamically buying or selling the underlying asset and a risk-free bond. This ensures that the option has a unique "fair" price, calculated by solving the equation under appropriate boundary and terminal conditions.
+
+  For European call and put options, the closed-form solutions are given as:
+  \\[
+      C(S_t, t) = N(d_1) S_t - N(d_2) K e^{-r (T - t)}
+  \\]
+  \\[
+      P(S_t, t) = N(-d_2) K e^{-r (T - t)} - N(-d_1) S_t
+  \\]
+  Where:
+  \\[
+      d_1 = \\frac{1}{\\sigma \\sqrt{T - t}} \\left[ \\ln \\left(\\frac{S_t}{K}\\right) + \\left(r + \\frac{\\sigma^2}{2}\\right) (T - t) \\right]
+  \\]
+  \\[
+      d_2 = d_1 - \\sigma \\sqrt{T - t}
+  \\]
+`;
+
+const BSMTableData = [
+  { symbol: "S_t", description: "Current price of the underlying asset" },
+  { symbol: "K", description: "Strike price of the option" },
+  { symbol: "T - t", description: "Time to maturity (in years)" },
+  { symbol: "r", description: "Risk-free interest rate" },
+  { symbol: "σ", description: "Volatility of the asset's returns" },
+  { symbol: "C(S_t, t)", description: "Price of a European call option" },
+  { symbol: "P(S_t, t)", description: "Price of a European put option" },
+  { symbol: "N(⋅)", description: "Cumulative distribution function of the standard normal distribution" },
+  { symbol: "d₁", description: "Intermediate calculation term for the Black-Scholes formula" },
+  { symbol: "d₂", description: "Intermediate calculation term for the Black-Scholes formula" },
+  { symbol: "V", description: "Option price as a function of time and stock price" },
+  { symbol: "∂V/∂t", description: "Partial derivative of V with respect to time" },
+  { symbol: "∂²V/∂S²", description: "Second partial derivative of V with respect to stock price" },
+];
+
 export default function MLAReport({ pdfPath, fileName }: PdfViewProps) {
   console.log(pdfPath, fileName);
   return (
@@ -192,7 +232,28 @@ export default function MLAReport({ pdfPath, fileName }: PdfViewProps) {
           BSM (Traditional Mathematical Method) Formulae
         </h3>
         <div className="prose">
-          <Latex>{ANNlatex}</Latex>
+          <Latex>{BSMlatex}</Latex>
+          <table className="min-w-full border border-primary-foreground">
+            <thead>
+              <tr className="">
+                <th className="border border-primary-foreground px-4 py-2">Symbol</th>
+                <th className="border border-primary-foreground px-4 py-2">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="">
+                <td colSpan={2} className="border border-primary-foreground px-4 py-2 font-bold text-center">
+                  Black-Scholes Model Symbols
+                </td>
+              </tr>
+              {BSMTableData.map((row, index) => (
+                <tr key={index} className="odd:bg-secondary even:bg-primary">
+                  <td className="border border-primary-foreground px-4 py-2 font-mono">{row.symbol}</td>
+                  <td className="border border-primary-foreground px-4 py-2">{row.description}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </section>
 
