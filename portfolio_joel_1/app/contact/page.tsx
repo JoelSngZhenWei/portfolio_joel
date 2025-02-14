@@ -95,9 +95,9 @@ export default function Contact() {
         className="py-6"
       >
         <div className="container mx-auto">
-          <div className="flex flex-col xl:flex-row gap-1 lg:gap-[30px]">
+          <div className="flex flex-col lg:flex-row gap-1 lg:gap-[30px]">
             {/* form */}
-            <div className="xl:h-[54%] order-2 xl:order-none ">
+            <div className="lg:h-[54%] order-2 lg:order-none ">
               <form className="flex flex-col p-4 lg:p-10 lg:gap-2 bg-secondary rounded-xl shadow-md" onSubmit={(event) => handleSubmit(onSubmit)(event)}>
                 <h3 className="text-lg lg:text-4xl text-accent font-semibold">
                   Let&apos;s work together
@@ -148,17 +148,17 @@ export default function Contact() {
             </div>
 
             {/* info */}
-            <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-4 xl:mb-0">
+            <div className="flex-1 flex items-center lg:justify-end order-1 lg:order-none mb-4 lg:mb-0">
               <ul className="flex flex-row lg:flex-col gap-5 lg:gap-10">
                 {info.map((item, index) => {
                   return (
-                    <li key={index} className="flex items-center gap-3 xl:gap-6">
+                    <li key={index} className="flex items-center gap-3 lg:gap-6">
                       <div className="w-[30px] h-[30px] lg:w-[72px] lg:h-[72px] bg-secondary text-accent rounded-md flex items-center justify-center shadow-md">
                         <div className="text-[15px] lg:text-[28px]">{item.icon}</div>
                       </div>
                       <div className="flex-1">
                         <p className="text-primary-foreground/60 text-xs lg:text-base tracking-wide">{item.title}</p>
-                        <h3 className="text-sm xl:text-xl tracking-wide">{item.description}</h3>
+                        <h3 className="text-sm lg:text-xl tracking-wide">{item.description}</h3>
                       </div>
                     </li>
                   )
