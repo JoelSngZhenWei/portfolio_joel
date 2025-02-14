@@ -57,6 +57,11 @@ const skills = {
         description: "Development of RESTful APIs in Python for backend microservices.",
       },
       {
+        icon: <SiPythonanywhere />,
+        name: "PythonAnywhere",
+        description: "Hosted Python Flask application for testing and production environments.",
+      },
+      {
         icon: <FaAws />,
         name: "AWS RDS",
         description: "Managed relational databases for storing and accessing project employee data.",
@@ -85,21 +90,6 @@ const skills = {
         icon: <SiTailwindcss />,
         name: "Tailwind CSS",
         description: "Framework for enhancing ease and efficiency of frontend designing process.",
-      },
-    ],
-  },
-  Deployment: {
-    title: "Deployment",
-    list: [
-      {
-        icon: <SiPythonanywhere />,
-        name: "PythonAnywhere",
-        description: "Hosted Python Flask application for testing and production environments.",
-      },
-      {
-        icon: <SiVercel />,
-        name: "Vercel",
-        description: "Deployment and monitoring platform for web application frontend.",
       },
     ],
   },
