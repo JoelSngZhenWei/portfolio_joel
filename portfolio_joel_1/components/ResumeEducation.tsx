@@ -40,7 +40,7 @@ export default function ResumeEducation() {
             return (
               <li key={index} className='bg-secondary h-[120px] py-4 px-6 lg:h-[184px] lg:py-6 lg:px-10 rounded-xl flex flex-col justify-center items-center lg:items-start shadow-md'>
                 <span className='text-accent text-sm lg:text-base'>{item.duration}</span>
-                <div className='flex w-full items-center max-w-[290px] min-h-[30px] lg:min-h-[60px] justify-center lg:justify-normal'>
+                <div className='flex w-full items-center max-w-[350px] min-h-[30px] lg:min-h-[60px] justify-center lg:justify-normal'>
                   <h3 className='text-base lg:text-xl  font-bold'>{item.degree}</h3>
                 </div>
                 <div className='flex items-center gap-3'>
