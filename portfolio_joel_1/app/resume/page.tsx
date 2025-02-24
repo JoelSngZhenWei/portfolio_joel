@@ -186,7 +186,7 @@ export default function Resume() {
             </TabsList>
             <Button variant="outline" className="uppercase w-full lg:w-auto h-9 lg:h-11">
               <a href="/assets/resume_joelsng.pdf" download="resume_joelsng.pdf" className="flex text-xs lg:text-base items-center justify-center gap-2 w-full">
-                <span>Download CV</span>
+                <span>Download Resume</span>
                 <FiDownload className="text-xl" />
               </a>
             </Button>

@@ -17,14 +17,20 @@ export default function Home() {
             <h1 className="h2 lg:h1 mb-2 lg:mb-2">
               <span className="text-accent tracking-wide">Joel Sng</span>
             </h1>
-            <p className="max-w-[500px] mb-4 lg:mb-9 text-primary-foreground/80">
-              I am a first class honours double degree undergraduate specialising in machine learning, automation, and software development. Expected graduation in <span className="text-accent font-semibold tracking-wide">May 2026</span>.
-            </p>
+            <div>
+              <p className="max-w-[500px] text-primary-foreground/80">
+                I am a first class honours double degree undergraduate from Singapore Management University specialising in machine learning, automation, and software development.
+              </p>
+              <p className="max-w-[500px] mb-4 lg:mb-9 text-primary-foreground/80">
+                Expected graduation in <span className="text-accent font-semibold tracking-wide">May 2026</span>.
+              </p>
+            </div>
+
             {/* btn and socials */}
             <div className="flex flex-row justify-center items-center gap-6">
               <Button variant="outline" className="uppercase lg:text-lg h-9 lg:h-10 px-6">
                 <a href="/assets/resume_joelsng.pdf" download="resume_joelsng.pdf" className='flex items-center gap-2'>
-                  <span>Download CV</span>
+                  <span>Resume</span>
                   <FiDownload className="text-xl" />
                 </a>
               </Button>
